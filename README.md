@@ -20,6 +20,8 @@ Code and the A1--A15 records behind every quantitative claim in the manuscript.
 | `library/` | the modelling library the scripts import |
 | `artefacts/` | the A1--A15 records, a SHA-256 manifest and the recomputed summaries |
 
+Released under the MIT licence; see `LICENSE`.
+
 ## Paths
 
 Nothing in this repository refers to a path outside it. `paths.py` resolves archived records under
