@@ -1,0 +1,161 @@
+{
+ "sigma_pix_measured": {
+  "median": 2.7365,
+  "p10": 1.9285,
+  "p90": 3.25,
+  "chord_factor": 1.6852476017630282
+ },
+ "widths_used": {
+  "nominal": 2.0,
+  "wide": 3.3704952035260565,
+  "wider": 5.6801189584960765
+ },
+ "window_capture": {
+  "nominal": 1.0,
+  "wide": 1.0000000000000002,
+  "wider": 0.9999999999999998
+ },
+ "wide_window_capture": {
+  "nominal": 1.0,
+  "wide": 1.0000000000000002,
+  "wider": 1.0
+ },
+ "integral_ratio_to_nominal": {
+  "nominal": 1.0,
+  "wide": 1.0,
+  "wider": 1.0000000000000002
+ },
+ "temperature_scale_if_width_is_doppler": {
+  "nominal": 1.0,
+  "wide": 0.3521053017751479,
+  "wider": 0.123978143538168
+ },
+ "note": "a factor 2.2 in width leaves the line integral unchanged to numerical precision, so a ratio-based inversion is insensitive to it; the same factor changes a Doppler width by 4.8 in temperature, which is why no temperature is inferred from the real widths",
+ "deconvolution_mismatch": {
+  "matched": {
+   "width_factor": 1.0,
+   "median_rel_error": 0.6797353456200389,
+   "p90_rel_error": 12.583526863628213,
+   "ratio_spread": 8.02823638019769,
+   "worst_line": 30.752662263272935
+  },
+  "narrower_true": {
+   "width_factor": 1.6852476017630282,
+   "median_rel_error": 0.7688706844960949,
+   "p90_rel_error": 8.802990193212324,
+   "ratio_spread": 5.793835672722102,
+   "worst_line": 21.915332659938247
+  },
+  "wider_true": {
+   "width_factor": 0.5933846153846154,
+   "median_rel_error": 0.6698948609434734,
+   "p90_rel_error": 15.520465713218002,
+   "ratio_spread": 9.764047672464299,
+   "worst_line": 37.6180094087639
+  },
+  "note": "the deconvolving basis is matched to the generating width in the closure path, so an instrument-width error is invisible to the closure error; a mismatch of the measured size leaves line ratios intact to the stated level, which is why the ratio-based inversion is insensitive to it, and absolute line intensities carry the full mismatch as a scale error"
+ },
+ "frame_mismatch": {
+  "matched": {
+   "width_factor": 1.0,
+   "median_pixel_deviation": 0.0,
+   "p90_pixel_deviation": 0.0,
+   "total_integral_ratio": 1.0
+  },
+  "narrower_true": {
+   "width_factor": 1.6852476017630282,
+   "median_pixel_deviation": 0.309860559974845,
+   "p90_pixel_deviation": 2.605343074629838,
+   "total_integral_ratio": 0.999976685937943
+  },
+  "wider_true": {
+   "width_factor": 0.5933846153846154,
+   "median_pixel_deviation": 0.471314099648092,
+   "p90_pixel_deviation": 0.9778372418962754,
+   "total_integral_ratio": 1.0000000489632002
+  },
+  "direct_inverse": {
+   "condition_number": 3.2154573482864864e+17,
+   "singular_values_tail": [
+    3.912076494210207e-15,
+    1.0426214413027218e-15,
+    1.2075502467895368e-16
+   ],
+   "note": "the matched basis is invertible in principle; the conditioning reported here is what decides whether the intensity can be recovered by an explicit solve or has to be carried by the learned layer"
+  }
+ },
+ "line_centers": {
+  "band": [
+   40.0,
+   65.0
+  ],
+  "n_pix": 2048,
+  "centers_ang": [
+   58.7,
+   44.04,
+   43.74,
+   61.76,
+   59.34,
+   41.34,
+   40.87,
+   40.84,
+   59.4,
+   57.78,
+   60.09,
+   45.18,
+   59.49,
+   58.18,
+   50.27,
+   59.61,
+   58.59,
+   59.75,
+   59.03,
+   59.94,
+   59.5,
+   42.1,
+   60.0,
+   60.14,
+   60.52,
+   60.38,
+   43.76,
+   60.13,
+   61.08,
+   60.64,
+   61.23,
+   42.14,
+   61.68,
+   61.66,
+   60.94,
+   40.7,
+   62.28,
+   62.01,
+   45.08,
+   61.76,
+   61.94,
+   63.15,
+   63.48,
+   62.44,
+   61.62,
+   63.15,
+   64.37,
+   62.14,
+   61.31,
+   62.83,
+   61.83,
+   40.26,
+   61.01,
+   62.52,
+   61.54,
+   42.84,
+   60.73,
+   62.24,
+   64.59,
+   41.06,
+   61.96,
+   61.23,
+   63.27,
+   62.29,
+   62.52
+  ]
+ }
+}

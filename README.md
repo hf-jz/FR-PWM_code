@@ -10,12 +10,12 @@
 
 # FR-PWM: code and archived records
 
-Code and the A1--A15 records behind every quantitative claim in the manuscript.
+Code and the A1--A16 records behind every quantitative claim in the manuscript.
 
 | folder | content |
 |---|---|
 | `figures/` | one script per figure, plus the identifiability table and the temperature sweep |
-| `analysis/` | identifiability, ablation, contraction, timing, QP, conformal and bias-injection studies |
+| `analysis/` | identifiability, ablation, contraction, timing, QP, conformal, bias-injection and spectral-provenance studies |
 | `tools/` | the package check and the manifest verifier a reader can run without the paper source |
 | `library/` | the modelling library the scripts import |
 | `artefacts/` | the A1--A15 records, a SHA-256 manifest and the recomputed summaries |
@@ -24,7 +24,7 @@ Released under the MIT licence; see `LICENSE`.
 
 ## What runs with nothing installed
 
-Measured on a fresh clone with every external-data variable unset: **18 of the 22 scripts run to
+Measured on a fresh clone with every external-data variable unset: **19 of the 23 scripts run to
 completion**, and `tools/check_manifest.py` reports 66 files checked, 0 problems afterwards, so the
 examples do not overwrite the records they read. The four that do not run need one of these:
 
@@ -36,6 +36,7 @@ examples do not overwrite the records they read. The four that do not run need o
 | `analysis/run_ablation.py` | runs, but only after `diag_ablate.py` has produced its intermediates |
 
 Each of them stops with a sentence naming the variable to set; none of them silently substitutes data.
+
 
 ## Dependencies
 

@@ -1,6 +1,6 @@
 {
- "files": 133,
- "total_bytes": 2523482,
+ "files": 139,
+ "total_bytes": 2536477,
  "entries": [
   {
    "path": "A11_Rollout/t3e4_rollout.json",
@@ -31,6 +31,36 @@
    "path": "A15_QP_Safety/safety_qp/report.json",
    "bytes": 221,
    "sha256": "981a031b95a07e90f2727eedc42eb05bc0730788126e4cebe03f00fe18843756"
+  },
+  {
+   "path": "A16_Spectral_Provenance/instrument_width.json",
+   "bytes": 3651,
+   "sha256": "6ab859cde0ae38ba7f6257dea7bf3516444420c970ec4e2c90e3c44e19014237"
+  },
+  {
+   "path": "A16_Spectral_Provenance/jorek_imp_profile.json",
+   "bytes": 789,
+   "sha256": "d0220bc690ba932fcad82af4700b04448ab3503b100cbc881f992940119280a6"
+  },
+  {
+   "path": "A16_Spectral_Provenance/jorek_imp_verdict.json",
+   "bytes": 2709,
+   "sha256": "716dfda4eb13e766041d3d6c5eaceec266b58b5426d109b84d3eb598b858eab2"
+  },
+  {
+   "path": "A16_Spectral_Provenance/jorek_readiness.json",
+   "bytes": 1355,
+   "sha256": "c5ea61f69e0756d9e4f8a4db07b30ae87451663354d60509cb02eb06ab0e6ae3"
+  },
+  {
+   "path": "A16_Spectral_Provenance/jorek_state_report.json",
+   "bytes": 713,
+   "sha256": "508d212b49ec19cd6ce2deee71c5759bdd86a59127370c452ba5cc034a95c445"
+  },
+  {
+   "path": "A16_Spectral_Provenance/line_centers.json",
+   "bytes": 648,
+   "sha256": "1742ed505284c96d1890f641d22e1986146eaa51b507dd69806bb351674004cf"
   },
   {
    "path": "A1_A2_Closure_Calibration/conformal_predictions.csv",
@@ -529,13 +559,13 @@
   },
   {
    "path": "source_code/stage23_review_audit.py",
-   "bytes": 13197,
-   "sha256": "1655b804a722ad0259e17a5ccbfefb694cfb9457fab7b221f79c8daf405e2574"
+   "bytes": 14611,
+   "sha256": "26ddd3793be1aef33d0443b20401ac99347ab8181bc5ca5aa972f540fa208167"
   },
   {
    "path": "source_code/stage7_build_package.py",
-   "bytes": 18918,
-   "sha256": "b6a4715bb6ab499b0820ac54f05b68054ddd903ee268612888cf4154226692a9"
+   "bytes": 19382,
+   "sha256": "7ba79938313ea5ed62974638ea88c2b3f69455b4c286268e246d33e4b3f4acf6"
   },
   {
    "path": "source_code/stage7_docx_probe.py",
@@ -609,8 +639,8 @@
   },
   {
    "path": "source_code/verify_numbers.py",
-   "bytes": 16411,
-   "sha256": "098ed5055ad61750228653a1d480da8307f136f7d8d9a34617b3695165914c18"
+   "bytes": 17663,
+   "sha256": "4244ae3dc6a7cb63c5e08584d870d2a311a40d2143ce27532d36633cbb0d17a9"
   },
   {
    "path": "stage14_P0/AUDIT.md",

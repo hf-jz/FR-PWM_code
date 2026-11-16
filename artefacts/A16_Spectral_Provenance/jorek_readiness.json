@@ -1,0 +1,28 @@
+{
+ "checks": {
+  "density_absolute": {
+   "passed": false,
+   "detail": "ne_norm_range is [1.0, 1.0], so the electron density carries no radial information and no absolute scale"
+  },
+  "temperature_absolute": {
+   "passed": false,
+   "detail": "Te_norm_range is [2.0793360067298567e-07, 9.999550561099844e-07], in code units rather than eV"
+  },
+  "impurity_profile_resolved": {
+   "passed": false,
+   "detail": "verdict: no resolvable transport profile: per-flux-surface spread exceeds the mean, so the field is grid-scale structure rather than a transported profile"
+  },
+  "impurity_fit_quality": {
+   "passed": false,
+   "detail": "rms_log_residual 1.16, max_rel_residual 13.7"
+  },
+  "multiple_time_slices": {
+   "passed": false,
+   "detail": "every record is a single dump (jorek000020.h5 at t=100.0), so no trajectory"
+  }
+ },
+ "usable_as_independent_state": false,
+ "usable_as_independent_diagnostic": false,
+ "requirement": "a state dump with absolute ne and Te in eV on the flux grid, an impurity density profile resolved to better than the bin scale, and at least one time sequence, none of which the archived dumps contain",
+ "note": "the archived JOREK output supports the coordinate and impurity-profile checks already reported and nothing further; it cannot serve as the independent generator that the synthetic-data question would need"
+}

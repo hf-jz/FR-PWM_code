@@ -1,5 +1,5 @@
 {
- "files": 66,
+ "files": 72,
  "entries": [
   {
    "path": "A11_Rollout/t3e4_rollout.json",
@@ -35,6 +35,36 @@
    "path": "A15_QP_Safety/safety_qp/report.json",
    "sha256": "981a031b95a07e90f2727eedc42eb05bc0730788126e4cebe03f00fe18843756",
    "bytes": 221
+  },
+  {
+   "path": "A16_Spectral_Provenance/instrument_width.json",
+   "sha256": "6ab859cde0ae38ba7f6257dea7bf3516444420c970ec4e2c90e3c44e19014237",
+   "bytes": 3651
+  },
+  {
+   "path": "A16_Spectral_Provenance/jorek_imp_profile.json",
+   "sha256": "d0220bc690ba932fcad82af4700b04448ab3503b100cbc881f992940119280a6",
+   "bytes": 789
+  },
+  {
+   "path": "A16_Spectral_Provenance/jorek_imp_verdict.json",
+   "sha256": "716dfda4eb13e766041d3d6c5eaceec266b58b5426d109b84d3eb598b858eab2",
+   "bytes": 2709
+  },
+  {
+   "path": "A16_Spectral_Provenance/jorek_readiness.json",
+   "sha256": "c5ea61f69e0756d9e4f8a4db07b30ae87451663354d60509cb02eb06ab0e6ae3",
+   "bytes": 1355
+  },
+  {
+   "path": "A16_Spectral_Provenance/jorek_state_report.json",
+   "sha256": "508d212b49ec19cd6ce2deee71c5759bdd86a59127370c452ba5cc034a95c445",
+   "bytes": 713
+  },
+  {
+   "path": "A16_Spectral_Provenance/line_centers.json",
+   "sha256": "1742ed505284c96d1890f641d22e1986146eaa51b507dd69806bb351674004cf",
+   "bytes": 648
   },
   {
    "path": "A1_A2_Closure_Calibration/conformal_predictions.csv",
@@ -318,13 +348,13 @@
   },
   {
    "path": "MANIFEST.sha256",
-   "sha256": "9a8b42d6771228dc0b28885526cc2971a223892e882f152cc3939b9068924a58",
-   "bytes": 14055
+   "sha256": "e68d2bcff3d65e76b8923b4fd55c2ec6007da7890ef8a4608e42ade94280c446",
+   "bytes": 14726
   },
   {
    "path": "manifest.json",
-   "sha256": "2db818901c9b677ed6dcfb2edb52a02af17a88be3851df74a81b7c5083f84600",
-   "bytes": 21431
+   "sha256": "35355d6353485ef80d079a21b776d9c6a4cd4029ca16f4517a1551ea2392454f",
+   "bytes": 22429
   },
   {
    "path": "recomputed_summary.json",

@@ -1,0 +1,122 @@
+{
+  "file": "/tmp/j501_run/jorek000020.h5",
+  "t_now": 20.0,
+  "psi_axis": -0.3922982646310076,
+  "rho_min": 0.00605017795743584,
+  "rho_max": 1.0000000000000004,
+  "nodes_inside_plasma": 1049,
+  "bins_with_3plus_nodes": 18,
+  "median_rel_spread": 3.5902964145240777,
+  "resolved": false,
+  "verdict": "no resolvable transport profile: per-flux-surface spread exceeds the mean, so the field is grid-scale structure rather than a transported profile",
+  "bins": [
+    {
+      "bin": 0,
+      "nodes": 7,
+      "mean": 6.801116751728826e-14,
+      "rel_spread": 1.8730247161868758
+    },
+    {
+      "bin": 1,
+      "nodes": 6,
+      "mean": 7.964295074101328e-09,
+      "rel_spread": 2.2360113048039425
+    },
+    {
+      "bin": 2,
+      "nodes": 15,
+      "mean": 5.2625309489276835e-08,
+      "rel_spread": 3.7119017366486813
+    },
+    {
+      "bin": 3,
+      "nodes": 125,
+      "mean": 1.7034606300617177e-10,
+      "rel_spread": 13.363143269162094
+    },
+    {
+      "bin": 4,
+      "nodes": 86,
+      "mean": 3.97521164488469e-09,
+      "rel_spread": 8.24223981940447
+    },
+    {
+      "bin": 5,
+      "nodes": 66,
+      "mean": -2.9159200678822948e-08,
+      "rel_spread": 7.849913324196853
+    },
+    {
+      "bin": 6,
+      "nodes": 170,
+      "mean": 1.0809980867740346e-07,
+      "rel_spread": 8.00515187032429
+    },
+    {
+      "bin": 7,
+      "nodes": 165,
+      "mean": 1.1574760405823742e-09,
+      "rel_spread": 77.78439923643245
+    },
+    {
+      "bin": 8,
+      "nodes": 108,
+      "mean": 2.077038144152335e-10,
+      "rel_spread": 26.489262703257317
+    },
+    {
+      "bin": 9,
+      "nodes": 75,
+      "mean": -1.3872726442228485e-10,
+      "rel_spread": 22.215284230521853
+    },
+    {
+      "bin": 10,
+      "nodes": 60,
+      "mean": -4.77559376696084e-09,
+      "rel_spread": 8.199482555520182
+    },
+    {
+      "bin": 11,
+      "nodes": 12,
+      "mean": 1.371405149080022e-10,
+      "rel_spread": 1.7710277632124023
+    },
+    {
+      "bin": 12,
+      "nodes": 30,
+      "mean": 9.272851394063918e-12,
+      "rel_spread": 3.468691092399474
+    },
+    {
+      "bin": 14,
+      "nodes": 31,
+      "mean": 1.2885530102740454e-12,
+      "rel_spread": 2.420737547169377
+    },
+    {
+      "bin": 16,
+      "nodes": 22,
+      "mean": 1.5500107367603208e-13,
+      "rel_spread": 1.8346811415666888
+    },
+    {
+      "bin": 17,
+      "nodes": 9,
+      "mean": -1.7507006930479845e-15,
+      "rel_spread": 0.9257360680283405
+    },
+    {
+      "bin": 18,
+      "nodes": 31,
+      "mean": 1.0079923062081183e-14,
+      "rel_spread": 2.179006543883878
+    },
+    {
+      "bin": 19,
+      "nodes": 31,
+      "mean": 8.310179831186685e-16,
+      "rel_spread": 3.076157141854482
+    }
+  ]
+}
