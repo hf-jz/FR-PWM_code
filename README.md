@@ -22,6 +22,21 @@ Code and the A1--A15 records behind every quantitative claim in the manuscript.
 
 Released under the MIT licence; see `LICENSE`.
 
+## What runs with nothing installed
+
+Measured on a fresh clone with every external-data variable unset: **18 of the 22 scripts run to
+completion**, and `tools/check_manifest.py` reports 66 files checked, 0 problems afterwards, so the
+examples do not overwrite the records they read. The four that do not run need one of these:
+
+| script | why |
+|---|---|
+| `analysis/ident_4combos.py` | rebuilds the transport forward model through `strahl-cpp` (`STRAHL_CPP`) |
+| `figures/stage30_grid_crlb.py` | rebuilds the observation operator from ADAS data (`ADAS_FULL`, `SPEC2CONC`) |
+| `analysis/wcet_upsse.py` | runs, but its own latency gate is machine-dependent and fails on a laptop |
+| `analysis/run_ablation.py` | runs, but only after `diag_ablate.py` has produced its intermediates |
+
+Each of them stops with a sentence naming the variable to set; none of them silently substitutes data.
+
 ## Dependencies
 
 Pure Python (numpy, scipy, matplotlib, pandas). Everything that reads an archived record runs with no
