@@ -29,5 +29,6 @@ a = np.sort(np.array(ts))
 out = dict(backend="cpp" if _HAS_CPP else "scipy",
            n=len(a), P50=float(np.percentile(a, 50)), P99=float(np.percentile(a, 99)),
            WCET=float(a.max()), problem=dict(n_state=n, n_constraint=m))
-json.dump(out, open("../tests/results/safety_wcet.json", "w"), indent=1)
+os.makedirs(OUT, exist_ok=True)
+json.dump(out, open(os.path.join(OUT, "safety_wcet.json"), "w"), indent=1)
 print(json.dumps(out, indent=1))

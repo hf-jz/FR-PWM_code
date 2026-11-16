@@ -20,7 +20,7 @@ from frpwm.neural.pgm_zeff import PGMZeff  # noqa: E402
 torch.manual_seed(0)
 torch.set_num_threads(max(1, os.cpu_count() // 2))
 
-BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results")
+BASE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "artefacts", "A9_A10_Timing")
 z = np.load(os.path.join(BASE, "library", "train_w96.npz"))
 X = torch.tensor(np.log1p(z["frames"][:8]).astype(np.float32))
 N = X.shape[0]

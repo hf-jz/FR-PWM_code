@@ -1,0 +1,124 @@
+{
+ "theta": {
+  "dmax": 4.0,
+  "decay": 4.5,
+  "v": 15.0
+ },
+ "step": {
+  "dmax": 0.4,
+  "v": 1.5
+ },
+ "noise": 0.03,
+ "te_scales": [
+  0.5,
+  1.0,
+  1.5,
+  2.0
+ ],
+ "ne_scales": [
+  0.5,
+  1.0,
+  2.0
+ ],
+ "grid": {
+  "Te x0.5, ne x0.5": {
+   "rank": 2,
+   "cond": 19.317649632921317,
+   "sigma_D_rel_pct": 1.4253837006551975,
+   "sigma_V_rel_pct": 3.1746153830963806
+  },
+  "Te x0.5, ne x1.0": {
+   "rank": 2,
+   "cond": 19.29697198774903,
+   "sigma_D_rel_pct": 1.4282418354098756,
+   "sigma_V_rel_pct": 3.173669456482934
+  },
+  "Te x0.5, ne x2.0": {
+   "rank": 2,
+   "cond": 19.287554314316022,
+   "sigma_D_rel_pct": 1.43005433211055,
+   "sigma_V_rel_pct": 3.173747530573069
+  },
+  "Te x1.0, ne x0.5": {
+   "rank": 2,
+   "cond": 16.504256490150127,
+   "sigma_D_rel_pct": 1.5425775514963749,
+   "sigma_V_rel_pct": 2.9653228406532413
+  },
+  "Te x1.0, ne x1.0": {
+   "rank": 2,
+   "cond": 16.47873081271551,
+   "sigma_D_rel_pct": 1.546255565863897,
+   "sigma_V_rel_pct": 2.963223135424254
+  },
+  "Te x1.0, ne x2.0": {
+   "rank": 2,
+   "cond": 16.46140946712368,
+   "sigma_D_rel_pct": 1.5478714334852328,
+   "sigma_V_rel_pct": 2.9623030120766534
+  },
+  "Te x1.5, ne x0.5": {
+   "rank": 2,
+   "cond": 15.11231337433613,
+   "sigma_D_rel_pct": 1.6034345789081017,
+   "sigma_V_rel_pct": 2.8439983533636597
+  },
+  "Te x1.5, ne x1.0": {
+   "rank": 2,
+   "cond": 15.075912557123598,
+   "sigma_D_rel_pct": 1.6061378336083316,
+   "sigma_V_rel_pct": 2.840247372075164
+  },
+  "Te x1.5, ne x2.0": {
+   "rank": 2,
+   "cond": 15.051758285752532,
+   "sigma_D_rel_pct": 1.606872459402044,
+   "sigma_V_rel_pct": 2.83839992203151
+  },
+  "Te x2.0, ne x0.5": {
+   "rank": 2,
+   "cond": 14.242695784023656,
+   "sigma_D_rel_pct": 1.623665480851053,
+   "sigma_V_rel_pct": 2.762468783078524
+  },
+  "Te x2.0, ne x1.0": {
+   "rank": 2,
+   "cond": 14.204902100555499,
+   "sigma_D_rel_pct": 1.6259752331212542,
+   "sigma_V_rel_pct": 2.7584273765534677
+  },
+  "Te x2.0, ne x2.0": {
+   "rank": 2,
+   "cond": 14.165940226313886,
+   "sigma_D_rel_pct": 1.6258239317928875,
+   "sigma_V_rel_pct": 2.755113260054054
+  }
+ },
+ "note": "multi-time observation set (four lines, eight time slices)",
+ "density_invariant": true,
+ "summary": {
+  "sigma_D_rel_pct": {
+   "min": 1.4253837006551975,
+   "max": 1.6259752331212542
+  },
+  "sigma_V_rel_pct": {
+   "min": 2.755113260054054,
+   "max": 3.1746153830963806
+  },
+  "rank_min": 2,
+  "grade_flips_at_12pct": [
+   "Te x0.5, ne x0.5",
+   "Te x0.5, ne x1.0",
+   "Te x0.5, ne x2.0",
+   "Te x1.0, ne x0.5",
+   "Te x1.0, ne x1.0",
+   "Te x1.0, ne x2.0",
+   "Te x1.5, ne x0.5",
+   "Te x1.5, ne x1.0",
+   "Te x1.5, ne x2.0",
+   "Te x2.0, ne x0.5",
+   "Te x2.0, ne x1.0",
+   "Te x2.0, ne x2.0"
+  ]
+ }
+}
