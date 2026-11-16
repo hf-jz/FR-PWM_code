@@ -10,7 +10,13 @@
 import json, os, sys
 import numpy as np
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "library"))
+import os
+import sys
+
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(_HERE))
+from paths import ARTEFACTS, OUT, record  # noqa: E402
 from frpwm.neural.world import DualWorldModel, PhysicsStep
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results", "core_contraction")

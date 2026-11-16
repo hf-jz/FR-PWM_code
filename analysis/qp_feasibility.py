@@ -8,7 +8,13 @@ filter() 走 safe_lookup 且返回的 u 在执行器盒与量程内（回退可�
 import json, os, sys
 import numpy as np
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "library"))
+import os
+import sys
+
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(_HERE))
+from paths import ARTEFACTS, OUT, record  # noqa: E402
 from frpwm.runtime.safety import SafetyKernel
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results", "safety_qp")

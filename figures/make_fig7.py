@@ -9,10 +9,16 @@ import csv, os
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
+import os
+import sys
+
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(_HERE))
+from paths import ARTEFACTS, OUT, record  # noqa: E402
 import matplotlib.pyplot as plt
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SRC = os.path.join(HERE, "stage5", "data", "uncertainty_budget.csv")
+SRC = record("A6_Uncertainty_Budget/uncertainty_budget.csv")
 
 rows = list(csv.DictReader(open(SRC)))
 assert len(rows) == 304, len(rows)

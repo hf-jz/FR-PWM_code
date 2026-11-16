@@ -17,6 +17,12 @@ _RECORD_MAP = {
     "tests/results/safety_wcet.json": "A9_A10_Timing/safety_wcet.json",
     "tests/results/wcet_upsse/report.json": "A9_A10_Timing/wcet_upsse/report.json",
     "tests/results/ablation": "A8_Diagnostic_Ablation/ablation",
+    "tests/results/ablation/base_folds.json": "A8_Diagnostic_Ablation/ablation/base_folds.json",
+    "tests/results/ident4/ident4_report.json": "A12_Fisher_Observation_Sets/ident4_report.json",
+    "tests/results/upsse/report.json": "A1_A2_Closure_Calibration/upsse/report.json",
+    "A6_Uncertainty_Budget/uncertainty_budget.csv": "A6_Uncertainty_Budget/uncertainty_budget.csv",
+    "A1_A2_Closure_Calibration/conformal_rows.csv": "A1_A2_Closure_Calibration/conformal_rows.csv",
+    "A5_MAST_60Shot_Replay/mast_mast_frame_logs.csv": "A5_MAST_60Shot_Replay/mast_mast_frame_logs.csv",
 }
 
 

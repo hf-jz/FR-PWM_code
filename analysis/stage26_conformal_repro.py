@@ -10,10 +10,16 @@ import json
 import math
 import os
 import random
+import os
+import sys
+
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(_HERE))
+from paths import ARTEFACTS, OUT, record  # noqa: E402
 import statistics as st
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROWS = os.path.join(HERE, "FRPWM_Reproducibility/A1_A2_Closure_Calibration/conformal_rows.csv")
+ROWS = record("A1_A2_Closure_Calibration/conformal_rows.csv")
 OUT = os.path.join(HERE, "stage26_conformal")
 LEVEL = 0.90
 

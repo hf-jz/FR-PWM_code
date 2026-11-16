@@ -1,8 +1,14 @@
 """Recompute the MAST replay percentages from the archived frame log (A5)."""
 import csv
+import os
+import sys
+
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(_HERE))
+from paths import ARTEFACTS, OUT, record  # noqa: E402
 import statistics
 
-rows = list(csv.DictReader(open("stage5/data/mast_frame_logs.csv")))
+rows = list(csv.DictReader(open(record("A5_MAST_60Shot_Replay/mast_mast_frame_logs.csv"))))
 n = len(rows)
 def truth(v):
     return str(v).strip().lower() in ("true", "1", "1.0", "yes")

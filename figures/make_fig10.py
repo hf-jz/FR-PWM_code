@@ -8,10 +8,16 @@ import json, os
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
+import os
+import sys
+
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(_HERE))
+from paths import ARTEFACTS, OUT, record  # noqa: E402
 import matplotlib.pyplot as plt
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-REP = os.path.join(HERE, "..", "frpwm", "tests", "results", "ident4", "ident4_report.json")
+REP = record("tests/results/ident4/ident4_report.json")
 rep = json.load(open(REP))
 c = rep["combos"]
 

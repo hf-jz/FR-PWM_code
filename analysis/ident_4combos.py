@@ -11,11 +11,17 @@
 import json, os, sys
 import numpy as np
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "library"))
 
 from frpwm.physics.transport import run_forward_dv
 from frpwm.data.strahl_library import parse_pp
 from frpwm.data.frame_labels import build_case, C_LINES, WL_GRID_VUV, A_LCFS
+import os
+import sys
+
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(_HERE))
+from paths import ARTEFACTS, OUT, record  # noqa: E402
 from frpwm.data.euv_frame import load_pec_tables
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results", "ident4")

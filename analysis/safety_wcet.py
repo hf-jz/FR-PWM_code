@@ -4,8 +4,14 @@ Writes results/safety_wcet.json so the number quoted for the shield has a stored
 """
 import json, os, sys, time
 import numpy as np
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "library"))
 
+import os
+import sys
+
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(_HERE))
+from paths import ARTEFACTS, OUT, record  # noqa: E402
 from frpwm.runtime.safety_cpp import cbf_qp, _HAS_CPP
 
 rng = np.random.default_rng(0)

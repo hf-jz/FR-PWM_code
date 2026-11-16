@@ -15,7 +15,7 @@ from paths import ARTEFACTS, OUT, record  # noqa: E402
 import os
 
 REPO = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "library")
-SRC = os.path.join(REPO, "tests", "results", "ident4", "ident4_report.json")
+SRC = record("tests/results/ident4/ident4_report.json")
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "table_ident.tex")
 
 LABEL = {"single-steady": "steady, two lines", "multi-steady": "steady, four lines",

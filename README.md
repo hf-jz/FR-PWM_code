@@ -25,17 +25,17 @@ Released under the MIT licence; see `LICENSE`.
 ## Dependencies
 
 Pure Python (numpy, scipy, matplotlib, pandas). Everything that reads an archived record runs with no
-other software. Regenerating the records is different, and the third column says what each group needs:
+other software; regenerating the records needs the external data named below.
 
 | what you want to run | needs |
 |---|---|
 | `figures/` | numpy, matplotlib, and the records in `artefacts/` |
-| `analysis/` (identifiability, contraction, timing, QP, ablation, conformal, bias injection) | the modelling library in `library/` |
-| records A1, A2, A3, A4, A12 (spectral inversion, six-line solve, Fisher bounds) | ADAS data (`ADAS_FULL`) and the ionisation-balance code (`SPEC2CONC`) |
-| records A2, A6, A7 (transport, budget, refinement) | a compiled `strahl-cpp` (`STRAHL_CPP`) and the STRAHL atomic data (`STRAHL_ROOT`) |
-| record A5 and the two real-spectra checks | the public MAST archive (`TOKAMARK_DIR`) and EFIT geometry (`MAST_GILE`) |
+| `analysis/` | the modelling library in `library/` |
+| records A1--A4, A12 | ADAS data (`ADAS_FULL`) and the ionisation-balance code (`SPEC2CONC`) |
+| records A2, A6, A7 | a compiled `strahl-cpp` (`STRAHL_CPP`) and the STRAHL atomic data (`STRAHL_ROOT`) |
+| record A5, real-spectra checks | the public MAST archive (`TOKAMARK_DIR`) and EFIT geometry (`MAST_GILE`) |
 
-JOREK is cited in the paper for a coordinate check that contributes no result; no code here calls it.
+JOREK is cited for a coordinate check that contributes no result; no code here calls it.
 
 ## Paths
 

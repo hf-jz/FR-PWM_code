@@ -6,9 +6,15 @@ run_all 子进程运行；断言 P99<1.5ms 设计预算（超预算则 FAIL 并�
 import json, os, sys, time
 import numpy as np
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "library"))
 import torch  # noqa: E402
 
+import os
+import sys
+
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(_HERE))
+from paths import ARTEFACTS, OUT, record  # noqa: E402
 from frpwm.neural.pgm_zeff import PGMZeff  # noqa: E402
 
 torch.manual_seed(0)

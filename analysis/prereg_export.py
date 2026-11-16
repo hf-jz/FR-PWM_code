@@ -7,7 +7,13 @@
 import json, os, sys
 from datetime import datetime, timezone
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "library"))
+import os
+import sys
+
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(_HERE))
+from paths import ARTEFACTS, OUT, record  # noqa: E402
 from frpwm.app.prereg import PREREG, STAGES, stage_config, lock
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results", "prereg")
