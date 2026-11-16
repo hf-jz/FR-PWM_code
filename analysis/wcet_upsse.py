@@ -53,8 +53,8 @@ def stats(a):
 
 res = dict(batch8_per_frame=stats(ts), single_frame=stats(ts1))
 print(json.dumps(res, indent=1))
-os.makedirs(os.path.join(BASE, "wcet_upsse"), exist_ok=True)
-json.dump(res, open(os.path.join(BASE, "wcet_upsse", "report.json"), "w"), indent=1)
+os.makedirs(OUT, exist_ok=True)
+json.dump(res, open(os.path.join(OUT, "wcet_upsse_report.json"), "w"), indent=1)
 
 p99 = res["single_frame"]["P99"]
 print(f"Shared Spectral Encoder/Species Heads 单帧 P99 = {p99:.3f} ms（设计预算 1.5 ms）")
