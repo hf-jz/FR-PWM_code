@@ -1,0 +1,61 @@
+{
+ "ts": "2026-09-11 09:51:31",
+ "n_pass": 6,
+ "n_total": 6,
+ "checks": [
+  {
+   "name": "strahl-cpp 参数级 D/V 反演",
+   "ok": true,
+   "detail": "θ̂=(Dmax=4,v=20) vs θ*=(4.0,18)（v 网格最近邻），库 16 工况 157s"
+  },
+  {
+   "name": "反演唯一性（D 维强分离）",
+   "ok": true,
+   "detail": "全局次优/最优 6.1×；Dmax 维次优 6.1×"
+  },
+  {
+   "name": "参数灵敏度（Dmax 对剖面强有效）",
+   "ok": true,
+   "detail": "芯部 Dmax±×2 剖面 std=0.166（死参数排除验证）"
+  },
+  {
+   "name": "PINN 域内：物理锚+学习残差优于纯物理",
+   "ok": true,
+   "detail": "mix=0.081 < F_P=0.245（free=76.350）"
+  },
+  {
+   "name": "PINN 域外：物理锚定防发散",
+   "ok": true,
+   "detail": "OOD mix=1.205 vs free=1710.576（F_P=1.359）"
+  },
+  {
+   "name": "PINN 可信域裁剪：OOD 满档退化为纯物理",
+   "ok": true,
+   "detail": "‖R_φ‖ 裁剪后 0.00e+00（B_R→0，xMix≡xP）"
+  }
+ ],
+ "strahl": {
+  "theta": [
+   4.0,
+   20.0
+  ],
+  "lib_size": 16,
+  "seconds": 157.4
+ },
+ "pinn": {
+  "in_domain": {
+   "physics": 0.24464034938157359,
+   "free": 76.35044663162277,
+   "mix": 0.08052924341086339
+  },
+  "ood": {
+   "physics": 1.3591130521198214,
+   "free": 1710.576269305527,
+   "mix": 1.2053293855675793
+  }
+ },
+ "figs": [
+  "P1_strahl_dv.png",
+  "P2_pinn.png"
+ ]
+}

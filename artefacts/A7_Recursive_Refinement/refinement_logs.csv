@@ -1,0 +1,13 @@
+run_id,discharge_id,frame_id,iteration,residual_norm,transport_residual,state_increment,step_length,confidence_factor,accepted,stop_reason
+0,library,0,0,0.031996,,,,,1,k_max
+0,library,0,1,0.0277599,,,,,1,k_max
+0,library,0,2,0.0250847,,,,,1,k_max
+0,library,0,3,0.0232123,,,,,1,k_max
+1,library,1,0,0.0532853,,,,,1,k_max
+1,library,1,1,0.046801,,,,,1,k_max
+1,library,1,2,0.0431072,,,,,1,k_max
+1,library,1,3,0.0407699,,,,,1,k_max
+2,library,2,0,0.0523192,,,,,1,k_max
+2,library,2,1,0.0481083,,,,,1,k_max
+2,library,2,2,0.0444453,,,,,1,k_max
+2,library,2,3,0.0412544,,,,,1,k_max

@@ -1,0 +1,161 @@
+{
+ "theta": {
+  "dmax": 4.0,
+  "decay": 4.5,
+  "v": 15.0
+ },
+ "step": {
+  "dmax": 0.4,
+  "v": 1.5
+ },
+ "c_frac": 0.03,
+ "noise": 0.03,
+ "element": "C",
+ "window_vs_time": {
+  "1": {
+   "n_obs": 9,
+   "sigma_D_rel_pct": 7.2672997228375875,
+   "sigma_V_rel_pct": 21.843166076842586
+  },
+  "2": {
+   "n_obs": 18,
+   "sigma_D_rel_pct": 4.935197296189986,
+   "sigma_V_rel_pct": 16.743724884070954
+  },
+  "4": {
+   "n_obs": 36,
+   "sigma_D_rel_pct": 2.236999711510477,
+   "sigma_V_rel_pct": 4.7919233136098836
+  },
+  "8": {
+   "n_obs": 72,
+   "sigma_D_rel_pct": 1.546255565863896,
+   "sigma_V_rel_pct": 2.963223135424252
+  }
+ },
+ "n_times": 8,
+ "n_lines": 9,
+ "stages": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "selected_stage": 3,
+ "combos": {
+  "single-steady": {
+   "n_obs": 3,
+   "n_lines": 3,
+   "n_times": 1,
+   "stage": 3,
+   "rank": 2,
+   "sing_whitened": [
+    27.79562843364161,
+    0.8424722069000408
+   ],
+   "fisher_eig": [
+    772.5969600210663,
+    0.7097594193990207
+   ],
+   "cond": 1088.533577582179,
+   "sigma_D": 0.4079135990278648,
+   "sigma_V": 1.1152707946574398,
+   "sigma_D_rel_pct": 40.791359902786475,
+   "sigma_V_rel_pct": 111.52707946574398,
+   "degenerate_direction": [
+    0.3424739974094514,
+    -0.9395273072659417
+   ]
+  },
+  "multi-steady": {
+   "n_obs": 9,
+   "n_lines": 9,
+   "n_times": 1,
+   "stage": 3,
+   "rank": 2,
+   "sing_whitened": [
+    46.25216596395454,
+    11.685842790607385
+   ],
+   "fisher_eig": [
+    2139.2628563571943,
+    136.5589217267905
+   ],
+   "cond": 15.665493175445219,
+   "sigma_D": 0.04349922004437859,
+   "sigma_V": 0.07679918575018121,
+   "sigma_D_rel_pct": 4.349922004437859,
+   "sigma_V_rel_pct": 7.679918575018122,
+   "degenerate_direction": [
+    0.45587968369712695,
+    -0.8900414113917439
+   ]
+  },
+  "single-time": {
+   "n_obs": 24,
+   "n_lines": 3,
+   "n_times": 8,
+   "stage": 3,
+   "rank": 2,
+   "sing_whitened": [
+    76.05015661184201,
+    4.440522814209247
+   ],
+   "fisher_eig": [
+    5783.6263206857,
+    19.718242863513215
+   ],
+   "cond": 293.313474264371,
+   "sigma_D": 0.07311832072872974,
+   "sigma_V": 0.21340354050688598,
+   "sigma_D_rel_pct": 7.311832072872974,
+   "sigma_V_rel_pct": 21.3403540506886,
+   "degenerate_direction": [
+    0.3199360479624708,
+    -0.9474391406386774
+   ]
+  },
+  "multi-time": {
+   "n_obs": 72,
+   "n_lines": 9,
+   "n_times": 8,
+   "stage": 3,
+   "rank": 2,
+   "sing_whitened": [
+    125.08271647572103,
+    30.813102223723792
+   ],
+   "fisher_eig": [
+    15645.68596094561,
+    949.4472686496525
+   ],
+   "cond": 16.47873081271551,
+   "sigma_D": 0.015462555658638969,
+   "sigma_V": 0.029632231354242543,
+   "sigma_D_rel_pct": 1.546255565863897,
+   "sigma_V_rel_pct": 2.963223135424254,
+   "degenerate_direction": [
+    0.42079056903643897,
+    -0.9071578126268823
+   ]
+  }
+ },
+ "comparisons": {
+  "single": {
+   "ratio_sigma_D": 5.5788151992881705,
+   "ratio_sigma_V": 5.226111956757592,
+   "time_better_both": true
+  },
+  "multi": {
+   "ratio_sigma_D": 2.8131973138654778,
+   "ratio_sigma_V": 2.591744942595611,
+   "time_better_both": true
+  },
+  "multi_vs_single_steady": {
+   "ratio_sigma_D": 9.377492254153175,
+   "ratio_sigma_V": 14.521909103115826,
+   "multi_better_both": true
+  }
+ }
+}

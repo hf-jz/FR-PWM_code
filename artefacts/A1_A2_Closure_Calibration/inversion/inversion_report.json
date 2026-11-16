@@ -1,0 +1,70 @@
+{
+ "ts": "2026-09-11 09:21:28",
+ "n_pass": 5,
+ "n_total": 5,
+ "checks": [
+  {
+   "name": "D/V 反演（网格内真值）",
+   "ok": true,
+   "detail": "θ̂=(1.00,-1.50) vs (1.0,−1.5)，误差 0.0%/0.0%（2% 噪声）"
+  },
+  {
+   "name": "D/V 反演（网格间真值）",
+   "ok": true,
+   "detail": "θ̂=(1.40,-2.12) vs (1.37,−2.23)，误差 2.2%/4.7%"
+  },
+  {
+   "name": "D/V 可辨识性（pinch 有无可区分）",
+   "ok": true,
+   "detail": "V̂0=-1.50<0；V0=0 列最差 cost 为最优 14.4×"
+  },
+  {
+   "name": "strahl-cpp 反演（杂质含量，L2 锚）",
+   "ok": true,
+   "detail": "strahl 输运形状×40 振幅谱库 → 测量比较 → c_est=0.0306 vs c*=0.03（2.0%）"
+  },
+  {
+   "name": "Z_eff 计算全过程",
+   "ok": true,
+   "detail": "Z_eff(芯)=1.900 体平均=1.895 LOS=1.899 轫致回算=1.900（闭环差 0.0%）"
+  }
+ ],
+ "dv": {
+  "case_A": {
+   "theta": [
+    1.0,
+    -1.5
+   ],
+   "err": [
+    0.0,
+    0.0
+   ]
+  },
+  "case_B": {
+   "theta": [
+    1.4000000000000001,
+    -2.125
+   ],
+   "err": [
+    0.0219,
+    0.0471
+   ]
+  }
+ },
+ "strahl": {
+  "c_est": 0.0306,
+  "seconds": 9.5
+ },
+ "zeff": {
+  "core": 1.9,
+  "vol": 1.895,
+  "los": 1.899,
+  "back": 1.9
+ },
+ "figs": [
+  "D1_dv_inversion.png",
+  "D2_cost_surface.png",
+  "D3_strahl_inversion.png",
+  "D4_zeff_process.png"
+ ]
+}

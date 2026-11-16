@@ -1,0 +1,247 @@
+{
+ "exported_at": "2026-11-02T14:09:22+00:00",
+ "bundle_id": "987023de6ff7af11",
+ "criteria": [
+  {
+   "id": "C1",
+   "metric": "zeff_rel_err_p50",
+   "op": "<=",
+   "thr": 0.15,
+   "desc": "Z_eff^LOS 相对误差 P50 ≤15%"
+  },
+  {
+   "id": "C2",
+   "metric": "latency_p99_ms",
+   "op": "<=",
+   "thr": 10.0,
+   "desc": "快环延迟 P99 ≤10ms"
+  },
+  {
+   "id": "C3",
+   "metric": "missing_rate",
+   "op": "<=",
+   "thr": 0.2,
+   "desc": "缺失率(不静默插值) ≤20%"
+  },
+  {
+   "id": "C4",
+   "metric": "no_control",
+   "op": "==",
+   "thr": true,
+   "desc": "全程不控制(shadow only)"
+  },
+  {
+   "id": "C5",
+   "metric": "stale_events",
+   "op": ">=",
+   "thr": 0,
+   "desc": "Stale 事件全部记录"
+  }
+ ],
+ "stages": {
+  "50": {
+   "role": "MVP-1 Entry Gate",
+   "lock": "105851bfc23a24b7",
+   "config": {
+    "name": "FR-PWM MVP-1 首50炮预注册验收·50炮[MVP-1 Entry Gate]",
+    "criteria": [
+     {
+      "id": "C1",
+      "metric": "zeff_rel_err_p50",
+      "op": "<=",
+      "thr": 0.15,
+      "desc": "Z_eff^LOS 相对误差 P50 ≤15%"
+     },
+     {
+      "id": "C2",
+      "metric": "latency_p99_ms",
+      "op": "<=",
+      "thr": 10.0,
+      "desc": "快环延迟 P99 ≤10ms"
+     },
+     {
+      "id": "C3",
+      "metric": "missing_rate",
+      "op": "<=",
+      "thr": 0.2,
+      "desc": "缺失率(不静默插值) ≤20%"
+     },
+     {
+      "id": "C4",
+      "metric": "no_control",
+      "op": "==",
+      "thr": true,
+      "desc": "全程不控制(shadow only)"
+     },
+     {
+      "id": "C5",
+      "metric": "stale_events",
+      "op": ">=",
+      "thr": 0,
+      "desc": "Stale 事件全部记录"
+     },
+     {
+      "id": "C6",
+      "metric": "picp90",
+      "op": ">=",
+      "thr": 0.8,
+      "desc": "PICP90 ≥ 0.90−ε_stat(=0.1, Clopper-Pearson 单侧)"
+     }
+    ]
+   }
+  },
+  "200": {
+   "role": "Shadow Consolidation",
+   "lock": "d43f2a8cdd343916",
+   "config": {
+    "name": "FR-PWM MVP-1 首50炮预注册验收·200炮[Shadow Consolidation]",
+    "criteria": [
+     {
+      "id": "C1",
+      "metric": "zeff_rel_err_p50",
+      "op": "<=",
+      "thr": 0.12,
+      "desc": "Z_eff^LOS 相对误差 P50 ≤15%"
+     },
+     {
+      "id": "C2",
+      "metric": "latency_p99_ms",
+      "op": "<=",
+      "thr": 10.0,
+      "desc": "快环延迟 P99 ≤10ms"
+     },
+     {
+      "id": "C3",
+      "metric": "missing_rate",
+      "op": "<=",
+      "thr": 0.2,
+      "desc": "缺失率(不静默插值) ≤20%"
+     },
+     {
+      "id": "C4",
+      "metric": "no_control",
+      "op": "==",
+      "thr": true,
+      "desc": "全程不控制(shadow only)"
+     },
+     {
+      "id": "C5",
+      "metric": "stale_events",
+      "op": ">=",
+      "thr": 0,
+      "desc": "Stale 事件全部记录"
+     },
+     {
+      "id": "C6",
+      "metric": "picp90",
+      "op": ">=",
+      "thr": 0.8400000000000001,
+      "desc": "PICP90 ≥ 0.90−ε_stat(=0.06, Clopper-Pearson 单侧)"
+     }
+    ]
+   }
+  },
+  "500": {
+   "role": "Pre-Production",
+   "lock": "588708ab94d66f9a",
+   "config": {
+    "name": "FR-PWM MVP-1 首50炮预注册验收·500炮[Pre-Production]",
+    "criteria": [
+     {
+      "id": "C1",
+      "metric": "zeff_rel_err_p50",
+      "op": "<=",
+      "thr": 0.1,
+      "desc": "Z_eff^LOS 相对误差 P50 ≤15%"
+     },
+     {
+      "id": "C2",
+      "metric": "latency_p99_ms",
+      "op": "<=",
+      "thr": 10.0,
+      "desc": "快环延迟 P99 ≤10ms"
+     },
+     {
+      "id": "C3",
+      "metric": "missing_rate",
+      "op": "<=",
+      "thr": 0.2,
+      "desc": "缺失率(不静默插值) ≤20%"
+     },
+     {
+      "id": "C4",
+      "metric": "no_control",
+      "op": "==",
+      "thr": true,
+      "desc": "全程不控制(shadow only)"
+     },
+     {
+      "id": "C5",
+      "metric": "stale_events",
+      "op": ">=",
+      "thr": 0,
+      "desc": "Stale 事件全部记录"
+     },
+     {
+      "id": "C6",
+      "metric": "picp90",
+      "op": ">=",
+      "thr": 0.86,
+      "desc": "PICP90 ≥ 0.90−ε_stat(=0.04, Clopper-Pearson 单侧)"
+     }
+    ]
+   }
+  },
+  "1000": {
+   "role": "Production Gate",
+   "lock": "7a85a9bfc4956a6f",
+   "config": {
+    "name": "FR-PWM MVP-1 首50炮预注册验收·1000炮[Production Gate]",
+    "criteria": [
+     {
+      "id": "C1",
+      "metric": "zeff_rel_err_p50",
+      "op": "<=",
+      "thr": 0.08,
+      "desc": "Z_eff^LOS 相对误差 P50 ≤15%"
+     },
+     {
+      "id": "C2",
+      "metric": "latency_p99_ms",
+      "op": "<=",
+      "thr": 10.0,
+      "desc": "快环延迟 P99 ≤10ms"
+     },
+     {
+      "id": "C3",
+      "metric": "missing_rate",
+      "op": "<=",
+      "thr": 0.2,
+      "desc": "缺失率(不静默插值) ≤20%"
+     },
+     {
+      "id": "C4",
+      "metric": "no_control",
+      "op": "==",
+      "thr": true,
+      "desc": "全程不控制(shadow only)"
+     },
+     {
+      "id": "C5",
+      "metric": "stale_events",
+      "op": ">=",
+      "thr": 0,
+      "desc": "Stale 事件全部记录"
+     },
+     {
+      "id": "C6",
+      "metric": "picp90",
+      "op": ">=",
+      "thr": 0.87,
+      "desc": "PICP90 ≥ 0.90−ε_stat(=0.03, Clopper-Pearson 单侧)"
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,6 @@
+sample_id,case_id,target_name,true_value,predicted_value,relative_error,split,model_hash
+pooled,library,EUV,,,0.0197121,3fold_cv,987023de6ff7af11
+pooled,library,Balmer,,,0.0955041,3fold_cv,987023de6ff7af11
+pooled,library,isotopes,,,0.0859321,3fold_cv,987023de6ff7af11
+pooled,library,cW,,,0.0791399,3fold_cv,987023de6ff7af11
+pooled,library,nz_R2,,0.955234,,3fold_cv,987023de6ff7af11

@@ -1,0 +1,1031 @@
+{
+ "n_shots": 60,
+ "n_checks": 900,
+ "n_pass": 899,
+ "problems": [
+  "shot 11892: Safety 语义 FAIL approved 1/39"
+ ],
+ "shots": [
+  {
+   "shot": 12053,
+   "duration": 0.303,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.002,
+    0.45
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 17.3,
+   "approved": 20,
+   "rejected": 19,
+   "train_s": 2.1
+  },
+  {
+   "shot": 12055,
+   "duration": 0.294,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.01,
+    0.5
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 18.4,
+   "approved": 31,
+   "rejected": 8,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11847,
+   "duration": 0.472,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.0,
+    0.457
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 24.0,
+   "approved": 30,
+   "rejected": 3,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11823,
+   "duration": 0.411,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.0,
+    0.456
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 36.3,
+   "approved": 19,
+   "rejected": 13,
+   "train_s": 2.5
+  },
+  {
+   "shot": 11820,
+   "duration": 0.473,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.0,
+    0.451
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 23.7,
+   "approved": 28,
+   "rejected": 3,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11819,
+   "duration": 0.451,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.0,
+    0.458
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 16.9,
+   "approved": 26,
+   "rejected": 12,
+   "train_s": 2.1
+  },
+  {
+   "shot": 11816,
+   "duration": 0.464,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.0,
+    0.454
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 18.8,
+   "approved": 26,
+   "rejected": 13,
+   "train_s": 2.1
+  },
+  {
+   "shot": 11889,
+   "duration": 0.461,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.003,
+    0.472
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 17.3,
+   "approved": 35,
+   "rejected": 4,
+   "train_s": 2.0
+  },
+  {
+   "shot": 12033,
+   "duration": 0.481,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.261,
+    0.432
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 28.0,
+   "approved": 20,
+   "rejected": 9,
+   "train_s": 2.1
+  },
+  {
+   "shot": 11940,
+   "duration": 0.444,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.007,
+    0.5
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 21.2,
+   "approved": 31,
+   "rejected": 4,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11955,
+   "duration": 0.481,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.002,
+    0.478
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 26.9,
+   "approved": 31,
+   "rejected": 7,
+   "train_s": 2.1
+  },
+  {
+   "shot": 11811,
+   "duration": 0.46,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.001,
+    0.47
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 16.5,
+   "approved": 33,
+   "rejected": 5,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11775,
+   "duration": 0.454,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.034,
+    0.509
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 24.4,
+   "approved": 30,
+   "rejected": 6,
+   "train_s": 2.1
+  },
+  {
+   "shot": 11944,
+   "duration": 0.481,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.001,
+    0.488
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 18.9,
+   "approved": 32,
+   "rejected": 6,
+   "train_s": 2.1
+  },
+  {
+   "shot": 11776,
+   "duration": 0.455,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.045,
+    0.506
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 20.0,
+   "approved": 32,
+   "rejected": 6,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11956,
+   "duration": 0.481,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.001,
+    0.455
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 25.1,
+   "approved": 25,
+   "rejected": 7,
+   "train_s": 2.1
+  },
+  {
+   "shot": 11780,
+   "duration": 0.431,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.002,
+    0.488
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 23.1,
+   "approved": 32,
+   "rejected": 5,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11948,
+   "duration": 0.481,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.002,
+    0.468
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 17.7,
+   "approved": 29,
+   "rejected": 9,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11893,
+   "duration": 0.433,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.001,
+    0.484
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 17.8,
+   "approved": 35,
+   "rejected": 4,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11824,
+   "duration": 0.417,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.0,
+    0.453
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 19.4,
+   "approved": 23,
+   "rejected": 14,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11892,
+   "duration": 0.155,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.073,
+    0.473
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 22.3,
+   "approved": 1,
+   "rejected": 38,
+   "train_s": 1.9
+  },
+  {
+   "shot": 11805,
+   "duration": 0.419,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.001,
+    0.472
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 24.3,
+   "approved": 32,
+   "rejected": 3,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11821,
+   "duration": 0.427,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.0,
+    0.454
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 26.4,
+   "approved": 24,
+   "rejected": 12,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11773,
+   "duration": 0.406,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.078,
+    0.501
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 17.3,
+   "approved": 31,
+   "rejected": 7,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11950,
+   "duration": 0.278,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.046,
+    0.501
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 17.3,
+   "approved": 29,
+   "rejected": 9,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11798,
+   "duration": 0.383,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.002,
+    0.474
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 20.0,
+   "approved": 38,
+   "rejected": 0,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11841,
+   "duration": 0.422,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.001,
+    0.475
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 18.8,
+   "approved": 27,
+   "rejected": 12,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11896,
+   "duration": 0.44,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.002,
+    0.497
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 37.0,
+   "approved": 30,
+   "rejected": 5,
+   "train_s": 2.1
+  },
+  {
+   "shot": 11946,
+   "duration": 0.481,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.004,
+    0.474
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 19.4,
+   "approved": 28,
+   "rejected": 6,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11771,
+   "duration": 0.365,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.044,
+    0.509
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 18.7,
+   "approved": 22,
+   "rejected": 16,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11825,
+   "duration": 0.429,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.001,
+    0.46
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 18.2,
+   "approved": 33,
+   "rejected": 5,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11897,
+   "duration": 0.367,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.002,
+    0.485
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 20.1,
+   "approved": 33,
+   "rejected": 6,
+   "train_s": 2.0
+  },
+  {
+   "shot": 12016,
+   "duration": 0.448,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.001,
+    0.484
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 24.7,
+   "approved": 26,
+   "rejected": 10,
+   "train_s": 2.1
+  },
+  {
+   "shot": 11912,
+   "duration": 0.481,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.0,
+    0.471
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 22.2,
+   "approved": 24,
+   "rejected": 11,
+   "train_s": 2.0
+  },
+  {
+   "shot": 12003,
+   "duration": 0.453,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.0,
+    0.473
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 19.9,
+   "approved": 27,
+   "rejected": 11,
+   "train_s": 2.0
+  },
+  {
+   "shot": 12006,
+   "duration": 0.473,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.0,
+    0.464
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 24.9,
+   "approved": 28,
+   "rejected": 11,
+   "train_s": 2.1
+  },
+  {
+   "shot": 12017,
+   "duration": 0.476,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.0,
+    0.452
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 17.0,
+   "approved": 34,
+   "rejected": 2,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11899,
+   "duration": 0.241,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.032,
+    0.481
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 18.9,
+   "approved": 32,
+   "rejected": 6,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11908,
+   "duration": 0.481,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.003,
+    0.513
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 25.0,
+   "approved": 23,
+   "rejected": 12,
+   "train_s": 2.0
+  },
+  {
+   "shot": 12093,
+   "duration": 0.421,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.011,
+    0.511
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 27.0,
+   "approved": 27,
+   "rejected": 9,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11933,
+   "duration": 0.463,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.002,
+    0.465
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 16.3,
+   "approved": 32,
+   "rejected": 6,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11917,
+   "duration": 0.456,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.002,
+    0.487
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 46.8,
+   "approved": 22,
+   "rejected": 13,
+   "train_s": 2.3
+  },
+  {
+   "shot": 11767,
+   "duration": 0.323,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.052,
+    0.506
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 16.3,
+   "approved": 31,
+   "rejected": 7,
+   "train_s": 2.0
+  },
+  {
+   "shot": 11915,
+   "duration": 0.337,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.009,
+    0.509
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 17.6,
+   "approved": 30,
+   "rejected": 9,
+   "train_s": 2.1
+  },
+  {
+   "shot": 12035,
+   "duration": 0.429,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.007,
+    0.509
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 24.4,
+   "approved": 27,
+   "rejected": 5,
+   "train_s": 2.2
+  },
+  {
+   "shot": 11837,
+   "duration": 0.396,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.001,
+    0.495
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 24.7,
+   "approved": 33,
+   "rejected": 4,
+   "train_s": 2.1
+  },
+  {
+   "shot": 12018,
+   "duration": 0.445,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.0,
+    0.464
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 17.1,
+   "approved": 29,
+   "rejected": 10,
+   "train_s": 2.2
+  },
+  {
+   "shot": 12089,
+   "duration": 0.319,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.001,
+    0.481
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 26.3,
+   "approved": 35,
+   "rejected": 2,
+   "train_s": 2.1
+  },
+  {
+   "shot": 11934,
+   "duration": 0.41,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.01,
+    0.488
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 17.5,
+   "approved": 32,
+   "rejected": 6,
+   "train_s": 2.1
+  },
+  {
+   "shot": 11958,
+   "duration": 0.394,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.013,
+    0.511
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 28.9,
+   "approved": 25,
+   "rejected": 9,
+   "train_s": 2.2
+  },
+  {
+   "shot": 11923,
+   "duration": 0.391,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.006,
+    0.494
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 21.8,
+   "approved": 31,
+   "rejected": 4,
+   "train_s": 2.3
+  },
+  {
+   "shot": 11949,
+   "duration": 0.434,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.003,
+    0.495
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 21.4,
+   "approved": 30,
+   "rejected": 6,
+   "train_s": 2.2
+  },
+  {
+   "shot": 12088,
+   "duration": 0.328,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.001,
+    0.48
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 19.8,
+   "approved": 37,
+   "rejected": 1,
+   "train_s": 2.2
+  },
+  {
+   "shot": 12090,
+   "duration": 0.335,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.0,
+    0.476
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 22.3,
+   "approved": 32,
+   "rejected": 1,
+   "train_s": 2.3
+  },
+  {
+   "shot": 12008,
+   "duration": 0.353,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.007,
+    0.508
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 21.9,
+   "approved": 35,
+   "rejected": 0,
+   "train_s": 2.3
+  },
+  {
+   "shot": 12012,
+   "duration": 0.357,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.003,
+    0.512
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 19.5,
+   "approved": 38,
+   "rejected": 0,
+   "train_s": 2.4
+  },
+  {
+   "shot": 12080,
+   "duration": 0.264,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.005,
+    0.496
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 20.9,
+   "approved": 36,
+   "rejected": 0,
+   "train_s": 2.4
+  },
+  {
+   "shot": 11902,
+   "duration": 0.443,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.004,
+    0.507
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 29.3,
+   "approved": 28,
+   "rejected": 3,
+   "train_s": 2.4
+  },
+  {
+   "shot": 11849,
+   "duration": 0.336,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.022,
+    0.494
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 16.4,
+   "approved": 39,
+   "rejected": 0,
+   "train_s": 2.8
+  },
+  {
+   "shot": 11903,
+   "duration": 0.412,
+   "zeff": [
+    1.159,
+    1.193
+   ],
+   "Q": [
+    0.002,
+    0.506
+   ],
+   "trm_cover": "39/39",
+   "p95_ms": 32.2,
+   "approved": 16,
+   "rejected": 3,
+   "train_s": 2.3
+  }
+ ],
+ "ts": "2026-10-28 20:35:09"
+}

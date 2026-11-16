@@ -1,0 +1,35 @@
+{
+ "units_library": 2,
+ "truth_column_present": false,
+ "comparisons": {},
+ "conformal": {
+  "units": 256,
+  "frames": 256,
+  "coverage": 0.90625,
+  "cluster_bootstrap_ci": [
+   0.8671875,
+   0.94140625
+  ],
+  "wilson_ci": [
+   0.8642979648370562,
+   0.9361901518169232
+  ],
+  "min_unit_cov": 0.0,
+  "max_unit_cov": 1.0
+ },
+ "domain_shift": {
+  "campaign_a_units": 60,
+  "campaign_a_frames": 2400,
+  "campaign_a_mean": 0.7995833333333333,
+  "campaign_b_units": 10,
+  "campaign_b_frames": 576,
+  "campaign_b_mean": 0.5511111111111111,
+  "diff": 0.2484722222222222,
+  "diff_ci95": [
+   0.0593055555555555,
+   0.4209756944444444
+  ],
+  "p_mannwhitney": 0.032472307757125944,
+  "cliffs_delta": 0.425
+ }
+}

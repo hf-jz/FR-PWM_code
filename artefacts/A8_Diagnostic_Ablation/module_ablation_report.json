@@ -1,0 +1,92 @@
+[
+ {
+  "config": "full",
+  "frames": 240,
+  "Q_mean": 0.41198090441884694,
+  "Q_min": 0.0033123541744712283,
+  "ood_mean": 0.5656006524955329,
+  "allowed_frac": 0.9416666666666667,
+  "decisions": {
+   "corrected": 43,
+   "approved": 183,
+   "rejected": 14
+  },
+  "lat_median": 10.4217529296875,
+  "c_err_median": 0.029994925766550832,
+  "c_err_p95": 0.09662945299642682,
+  "delta_allowed": 0.0,
+  "delta_Q": 0.0
+ },
+ {
+  "config": "no_jepa",
+  "frames": 240,
+  "Q_mean": 0.4380409049755812,
+  "Q_min": 0.3242850906727344,
+  "ood_mean": 0.5656006524955329,
+  "allowed_frac": 0.9375,
+  "decisions": {
+   "corrected": 63,
+   "approved": 162,
+   "rejected": 15
+  },
+  "lat_median": 14.320969581604004,
+  "c_err_median": 0.0301225983492088,
+  "c_err_p95": 0.09662945299642682,
+  "delta_allowed": -0.0042,
+  "delta_Q": 0.0261
+ },
+ {
+  "config": "no_trm",
+  "frames": 240,
+  "Q_mean": 0.4140452020645375,
+  "Q_min": 0.0033123541744712283,
+  "ood_mean": 0.5656006524955329,
+  "allowed_frac": 0.95,
+  "decisions": {
+   "corrected": 36,
+   "approved": 192,
+   "rejected": 12
+  },
+  "lat_median": 7.071733474731445,
+  "c_err_median": 0.020442784496504246,
+  "c_err_p95": 0.05321558971274959,
+  "delta_allowed": 0.0083,
+  "delta_Q": 0.0021
+ },
+ {
+  "config": "no_world",
+  "frames": 240,
+  "Q_mean": 0.8035795845111305,
+  "Q_min": 0.0064515849816471705,
+  "ood_mean": 0.5656006524955329,
+  "allowed_frac": 0.95,
+  "decisions": {
+   "corrected": 40,
+   "approved": 188,
+   "rejected": 12
+  },
+  "lat_median": 11.346101760864258,
+  "c_err_median": 0.029994925766550832,
+  "c_err_p95": 0.09662945299642682,
+  "delta_allowed": 0.0083,
+  "delta_Q": 0.3916
+ },
+ {
+  "config": "no_neural",
+  "frames": 240,
+  "Q_mean": 0.8648509779511312,
+  "Q_min": 0.6433554085364162,
+  "ood_mean": 0.5656006524955329,
+  "allowed_frac": 0.9416666666666667,
+  "decisions": {
+   "corrected": 35,
+   "approved": 191,
+   "rejected": 14
+  },
+  "lat_median": 5.280017852783203,
+  "c_err_median": 0.020442784496504246,
+  "c_err_p95": 0.05321558971274959,
+  "delta_allowed": 0.0,
+  "delta_Q": 0.4529
+ }
+]

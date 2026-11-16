@@ -1,0 +1,62 @@
+{
+ "ts": "2026-09-10 20:53:37",
+ "n_pass": 8,
+ "n_total": 8,
+ "checks": [
+  {
+   "name": "外部测量注入运行",
+   "ok": true,
+   "detail": "39 帧 c_est 有限"
+  },
+  {
+   "name": "反演跟踪：低段 c=0.02（3 种子统计）",
+   "ok": true,
+   "detail": "主种子 mean=0.0201 偏差 0.7%；三种子偏差 [9.7 0.7 2.2]%"
+  },
+  {
+   "name": "反演跟踪：高段 c=0.04（3 种子统计）",
+   "ok": true,
+   "detail": "主种子 mean=0.0386 偏差 3.4%；三种子偏差 [15.9  3.4  6. ]%（含 ±3% 通道标定抽取，实装可标定消除）"
+  },
+  {
+   "name": "TRM 精修覆盖（外部测量驱动）",
+   "ok": true,
+   "detail": "100%"
+  },
+  {
+   "name": "Z_eff^LOS 随阶跃上移",
+   "ok": true,
+   "detail": "低段 1.111 → 高段 1.233"
+  },
+  {
+   "name": "模块健康",
+   "ok": true,
+   "detail": "{'fabric': 'ok', 'physics_chain': 'ok', 'ood': 'ok', 'jepa': 'ok', 'hrm': 'ok', 'trm': 'ok', 'worldmodel': 'ok', 'risk': 'ok', 'safety': 'ok', 'supervisor': 'ok'}"
+  },
+  {
+   "name": "在线预算 P95<100ms",
+   "ok": true,
+   "detail": "P95=11.7ms"
+  },
+  {
+   "name": "BundleID 一致",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "shot": 11776,
+ "n_records": 1088,
+ "e_lo": 0.0073,
+ "e_hi": 0.034,
+ "trm_cover": 1.0,
+ "zeff": [
+  1.111,
+  1.233
+ ],
+ "figs": [
+  "M1_meas_overview.png",
+  "M2_tracking.png",
+  "M3_zeff_q.png",
+  "M4_flow.png"
+ ]
+}

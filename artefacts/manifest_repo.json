@@ -1,0 +1,325 @@
+{
+ "files": 64,
+ "entries": [
+  {
+   "path": "A11_Rollout/t3e4_rollout.json",
+   "sha256": "8ff93074b2c7f697e073a5ed928d4f3b1e8d7e875624fac0595499adf2f990dc",
+   "bytes": 3224
+  },
+  {
+   "path": "A12_Fisher_Observation_Sets/ident4_report.json",
+   "sha256": "04cdcea751d90b2d7187d9509c4cdee9299edbce330200aa9531138b3b8884cd",
+   "bytes": 3195
+  },
+  {
+   "path": "A13_Contraction/core_contraction/report.json",
+   "sha256": "70ee823faff662231708948d17628af1eca455111f4509a2325d05d8d0263422",
+   "bytes": 1049
+  },
+  {
+   "path": "A14_Preregistration/prereg/prereg_lock.json",
+   "sha256": "cf8c2420f09134a62429518283f7b7c48ae7a62fa00a03482cb1a2686cbc46d6",
+   "bytes": 5180
+  },
+  {
+   "path": "A15_QP_Safety/hil_step_logs.csv",
+   "sha256": "b35c30d0ddba4418dc76db28f7b8e77459bf542fe0c789fcc445d180d1e760d4",
+   "bytes": 426804
+  },
+  {
+   "path": "A15_QP_Safety/safety_qp/report.json",
+   "sha256": "981a031b95a07e90f2727eedc42eb05bc0730788126e4cebe03f00fe18843756",
+   "bytes": 221
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/conformal_predictions.csv",
+   "sha256": "04be58a49ae81e97a755813bc5125be638bf15aaae0057e80442da97b91d1e1e",
+   "bytes": 24241
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/conformal_repro.json",
+   "sha256": "d7610427332f92e90af4158ac1d761458080e6232f1af0c883496d06cb9e7a24",
+   "bytes": 2038
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/conformal_rows.csv",
+   "sha256": "7ccca12cdf7cee715fbc3d3b6c930772e7e8d0a59afa71a9d0bda09916b423f5",
+   "bytes": 11873
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/conformal_split.json",
+   "sha256": "d8044b162c9533ae5f3a2b0f010bf77f19d988d2bd510ecb8117ec250640c4be",
+   "bytes": 49150
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/figure3_closure.csv",
+   "sha256": "8ea58bfe72b5e56c1b73b07c9f539b5c852aa7e957f97f6a99184cf7eee8e354",
+   "bytes": 388
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/inversion/figs/D1_dv_inversion.png",
+   "sha256": "fb8af3ceabe3e992e230104f0b7b8344cee2e862ceb1c9a3e59935ebcbb60900",
+   "bytes": 72279
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/inversion/figs/D2_cost_surface.png",
+   "sha256": "c742af6fe6f63a86c2a2d17d41798eba99e9467a744165ea037dd9efe020b30b",
+   "bytes": 32521
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/inversion/figs/D3_strahl_inversion.png",
+   "sha256": "1bc4b109d5aa7764d0ad7dc6c12e6f29f89ee3f22bddb5d46ed1fb02249e09f5",
+   "bytes": 41942
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/inversion/figs/D4_zeff_process.png",
+   "sha256": "47fc5a71d96a63428fb7139b10cbc57d9ba3ee857b9e09cb2c6740e51cb0f879",
+   "bytes": 61914
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/inversion/inversion_report.json",
+   "sha256": "d5dc6da98277ae5dacd1ae524eed79fd0ad4be6ce4119109e790df62a486248d",
+   "bytes": 1330
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/meas_ingest/figs/M1_meas_overview.png",
+   "sha256": "487cf7867a673801dab3aa41018134b1a52682f4c92261f71919aa4a80b1a55e",
+   "bytes": 35033
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/meas_ingest/figs/M2_tracking.png",
+   "sha256": "49b38946e40fcdc3dede00c4e2a450f1868e823a65689e9c560d2efc288bb89a",
+   "bytes": 38189
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/meas_ingest/figs/M3_zeff_q.png",
+   "sha256": "e2278eec136db54df50a2cf47275f08e0e6428ea5a881250766397944c5fd104",
+   "bytes": 30520
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/meas_ingest/figs/M4_flow.png",
+   "sha256": "77cfca0d71208a7af21b7e1c7ff58b246a3fca27d523701cfa414b775f535259",
+   "bytes": 26177
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/meas_ingest/meas_ingest_report.json",
+   "sha256": "1350952209b677d410125ebc810a6bc16b0518922ea5d78c5e8537366393281d",
+   "bytes": 1384
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/pgm_zeff/report.json",
+   "sha256": "0ca600545c6aa4a221767b798f5a0b214a62e611b60b0b60c7d87c4294e867ca",
+   "bytes": 1024
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/stats_report.json",
+   "sha256": "04279fef9525bd224c30706ff229d976516cf891f24e742011913056fb6d0938",
+   "bytes": 700
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/strahl_pinn/strahl_pinn_report.json",
+   "sha256": "e71027d60d9b562e5d7b49954e1bc34aed74a996eea1b97c4da5e24f6aa38ca1",
+   "bytes": 1358
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/upsse/conformal_rows.csv",
+   "sha256": "7ccca12cdf7cee715fbc3d3b6c930772e7e8d0a59afa71a9d0bda09916b423f5",
+   "bytes": 11873
+  },
+  {
+   "path": "A1_A2_Closure_Calibration/upsse/report.json",
+   "sha256": "d5c256a0ffaccf1d25b8c894d118d1d13391fc4ed7566bb37bb99e6a4e2507ce",
+   "bytes": 639
+  },
+  {
+   "path": "A3_A4_Identifiability/ident4/ident4_report.json",
+   "sha256": "04cdcea751d90b2d7187d9509c4cdee9299edbce330200aa9531138b3b8884cd",
+   "bytes": 3195
+  },
+  {
+   "path": "A5_MAST_60Shot_Replay/demo_mast_report.json",
+   "sha256": "c2c3426c05ee86fd41f64b5f27f91e6bbe772d4dd13e7f1c5a628f161f37de73",
+   "bytes": 13641
+  },
+  {
+   "path": "A5_MAST_60Shot_Replay/mast28_campaign_frames.csv",
+   "sha256": "92614b7d353572da731d8d7832a210d696480a0f35feec58ece083e8a8d80e6f",
+   "bytes": 207366
+  },
+  {
+   "path": "A5_MAST_60Shot_Replay/mast28_campaign_report.json",
+   "sha256": "2478a1baa2daa255f8088375a64714598852d180616fc0b93b835bba5034951c",
+   "bytes": 20600
+  },
+  {
+   "path": "A5_MAST_60Shot_Replay/mast28_campaign_summary.json",
+   "sha256": "5214a5663d144304b59793d37984896af50540fd5459fa28ef6e20c867a1c56c",
+   "bytes": 159
+  },
+  {
+   "path": "A5_MAST_60Shot_Replay/mast28_real_spectra_chords.csv",
+   "sha256": "456492663b53a8a4e63c8200cd2aa010d4ca3202d3ec4b8ed4b097e3e24f6c80",
+   "bytes": 21404
+  },
+  {
+   "path": "A5_MAST_60Shot_Replay/mast28_real_spectra_report.json",
+   "sha256": "fd83f5269595776f8c2d1e44e4c0b6e9ed39688c9d935d9e38d290e395ab0269",
+   "bytes": 2883
+  },
+  {
+   "path": "A5_MAST_60Shot_Replay/mast28_real_spectra_summary.json",
+   "sha256": "b1c2ab9ed8748c271555b86ab65d8fb5608a2b53d84fee0c6edba4ee6915d098",
+   "bytes": 1451
+  },
+  {
+   "path": "A5_MAST_60Shot_Replay/mast_figure5_replay.csv",
+   "sha256": "875f13a9a236ca33443756f95b8e540732f9fa1537a05095c82781dae07f5513",
+   "bytes": 2082
+  },
+  {
+   "path": "A5_MAST_60Shot_Replay/mast_mast_frame_logs.csv",
+   "sha256": "80f50c1fd3a011779de71b1bc9689e038fe3ad362575ed50a10bcc6279e52758",
+   "bytes": 564427
+  },
+  {
+   "path": "A6_Uncertainty_Budget/b1b2_stats.json",
+   "sha256": "613f99620945464ca53439c13916b8e39a8dec2024537650684b5824df9c1f32",
+   "bytes": 578
+  },
+  {
+   "path": "A6_Uncertainty_Budget/baseline/baseline_metrics.json",
+   "sha256": "4df51a9023caeba493abc9bd2aac85d7d8e8eba57ed51fb492cd07bb52ce564d",
+   "bytes": 254
+  },
+  {
+   "path": "A6_Uncertainty_Budget/figure6_uncertainty.csv",
+   "sha256": "ac1d685cc3ad5442cf6079f46a11992fe81cb21bbf28987250b637ba39c9f6d0",
+   "bytes": 14964
+  },
+  {
+   "path": "A6_Uncertainty_Budget/uncertainty_budget.csv",
+   "sha256": "2d55b32a7a8a8853ec2459d883841658fb7da47ad4f49fb66f21afad82ec8d5d",
+   "bytes": 18114
+  },
+  {
+   "path": "A7_Recursive_Refinement/figure7_refinement.csv",
+   "sha256": "2b58abc891e2b29e039389c9797acdc30d5f751ae155d3d374fdf02083419a06",
+   "bytes": 301
+  },
+  {
+   "path": "A7_Recursive_Refinement/fullflow_report.json",
+   "sha256": "ce6afd9369d93e40a488cea9a34cd89efb70d5ea0328e091d21dc9e2a2e5c218",
+   "bytes": 2069
+  },
+  {
+   "path": "A7_Recursive_Refinement/refinement_logs.csv",
+   "sha256": "0a07fdf099c0054d7f575ffce57cfb8eb4145deaaaf09fe88bdc3cb983ad0e87",
+   "bytes": 582
+  },
+  {
+   "path": "A8_Diagnostic_Ablation/ablation/bal.json",
+   "sha256": "2ac3f93421dccad1eae16119b82412dc32ba974536ddaad21a4b3466e51520e9",
+   "bytes": 655
+  },
+  {
+   "path": "A8_Diagnostic_Ablation/ablation/base.json",
+   "sha256": "dbe7acca903a45aaa588b538f36e091bf59cff9927db43203fd4b49183da7d78",
+   "bytes": 577
+  },
+  {
+   "path": "A8_Diagnostic_Ablation/ablation/base_folds.json",
+   "sha256": "ddd0337c8f50aea1c5df23dbfe110718217275a45c8ce8bd766e96353d095c72",
+   "bytes": 1133
+  },
+  {
+   "path": "A8_Diagnostic_Ablation/ablation/brem.json",
+   "sha256": "28c1a72520eebd10af390bdae0097abbca73652a39b02622a9b93fa63b66614b",
+   "bytes": 660
+  },
+  {
+   "path": "A8_Diagnostic_Ablation/ablation/euv+bal+brem+ph.json",
+   "sha256": "61fc5ccee604af095310325a557f3ef00ae2239115d88f3559a62439f077fa89",
+   "bytes": 688
+  },
+  {
+   "path": "A8_Diagnostic_Ablation/ablation/euv+bal+brem.json",
+   "sha256": "efb46bf39a6bf39ac6cb0c6cb85e420bbf40b977a00e8f13a94521c06687960c",
+   "bytes": 680
+  },
+  {
+   "path": "A8_Diagnostic_Ablation/ablation/euv+bal.json",
+   "sha256": "1e6d8d77a563f65d8bbc9ed77e4a24b32c04b47bb5de24063f3bcc5bb2fb8854",
+   "bytes": 665
+  },
+  {
+   "path": "A8_Diagnostic_Ablation/ablation/euv.json",
+   "sha256": "dce92aa77683a4cf2237f8556967c9a07ff8b0d63d1761c856067450313f63b4",
+   "bytes": 663
+  },
+  {
+   "path": "A8_Diagnostic_Ablation/ablation/none.json",
+   "sha256": "71225fe867b0bc1ad4e796c9599ebce385453cec3d95a0ebef079f3b0e8e2297",
+   "bytes": 647
+  },
+  {
+   "path": "A8_Diagnostic_Ablation/ablation/ph.json",
+   "sha256": "0c59a699c4fe9e1688bbe9a2396c2207c71ab00a4532bc2c4c890783080dff74",
+   "bytes": 662
+  },
+  {
+   "path": "A8_Diagnostic_Ablation/ablation/t_none.json",
+   "sha256": "a62a2762a6e670098f4fd2018f27d5277ee7d633567ae00b20cef808dc167314",
+   "bytes": 559
+  },
+  {
+   "path": "A8_Diagnostic_Ablation/baseline_estimator_report.json",
+   "sha256": "c8bf64fc1dbff9eac7fdb9836ceb05a1aa31f1f6af11983510aba6ec02a4de90",
+   "bytes": 2662
+  },
+  {
+   "path": "A8_Diagnostic_Ablation/figure8_ablation.csv",
+   "sha256": "0d122f02324770883aec9913d75db94c46bb5c5bbb49625a5f12876b23fa33a6",
+   "bytes": 1716
+  },
+  {
+   "path": "A8_Diagnostic_Ablation/module_ablation_report.csv",
+   "sha256": "1f83c18bfc16c2fe8360a6929781dc40b6565c7c669f916f9d8d644d2b7cd787",
+   "bytes": 650
+  },
+  {
+   "path": "A8_Diagnostic_Ablation/module_ablation_report.json",
+   "sha256": "04010332160aa18ada9ba4c8006ffa84a204e45217aaee61bb03f3ad39a8d3e9",
+   "bytes": 2062
+  },
+  {
+   "path": "A9_A10_Timing/hil_step_logs.csv",
+   "sha256": "b35c30d0ddba4418dc76db28f7b8e77459bf542fe0c789fcc445d180d1e760d4",
+   "bytes": 426804
+  },
+  {
+   "path": "A9_A10_Timing/safety_wcet.json",
+   "sha256": "2736194a6423ceff9e8b0275835b6ea8b744ad717e80c63934d5c8a820d09fe4",
+   "bytes": 169
+  },
+  {
+   "path": "A9_A10_Timing/wcet_upsse/report.json",
+   "sha256": "224b2e0d139906d916f182345b39b1bde0b4da767f20c1c2758579a6bdda1645",
+   "bytes": 225
+  },
+  {
+   "path": "MANIFEST.sha256",
+   "sha256": "9a8b42d6771228dc0b28885526cc2971a223892e882f152cc3939b9068924a58",
+   "bytes": 14055
+  },
+  {
+   "path": "manifest.json",
+   "sha256": "2db818901c9b677ed6dcfb2edb52a02af17a88be3851df74a81b7c5083f84600",
+   "bytes": 21431
+  },
+  {
+   "path": "recomputed_summary.json",
+   "sha256": "aad8b01f2b3c22f6faad9cb14d9d60a0b840108284759f18bf160aaf2faead68",
+   "bytes": 4720
+  }
+ ]
+}

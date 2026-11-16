@@ -1,0 +1,27 @@
+{
+ "shots": 8,
+ "frames": 304,
+ "n_frames_per_shot": 38,
+ "r_median": 0.07076445721142222,
+ "total_median": 0.2879236009777594,
+ "ratio_median": 0.24577511871591384,
+ "ratio_p90": 0.3006855673378945,
+ "ratio_max": 0.30394736801715333,
+ "frac_within_1sigma": 1.0,
+ "frac_within_2sigma": 1.0,
+ "source_share": {
+  "meas": 0.03370979514234583,
+  "cal": 0.004807413954515693,
+  "epi": 0.4807413954515692,
+  "mf": 0.4807413954515692,
+  "proc": 0.0
+ },
+ "invariants": {
+  "c_nonneg": 1.0,
+  "zeff_ge1": 1.0,
+  "zeff_le3": 1.0,
+  "te_pos": 1.0,
+  "ne_pos": 1.0,
+  "nz_nonneg": 1.0
+ }
+}
