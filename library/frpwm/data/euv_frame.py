@@ -2,6 +2,7 @@
 与逐线模式的差别：一次产出整帧 I(λ)（SpectrumSynth.reconstruct 高斯线型叠加+连续谱本底）。
 PEC 直读对应价态 ADF15 文件（绕开 PecCache 全目录扫描，批量库场景快 ~40×）。"""
 import os, sys
+from .._env import external  # noqa: E402
 import numpy as np
 
 _SPEC2CONC = external("", "SPEC2CONC", "path of the plasma_spec2conc package")

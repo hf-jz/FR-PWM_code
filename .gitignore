@@ -1,8 +1,6 @@
-generated/
 __pycache__/
 *.pyc
 *.aux
 *.log
 *.out
 .DS_Store
-*.png

@@ -1,12 +1,13 @@
 """gfile 生成与解析（流水线步 2）。
 解析：EFIT EQDsk ASCII（g143613 实测格式）；生成：圆截面参数化平衡 ψ(R,Z)。"""
+import numpy as np, re
 import os
 import sys
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(_HERE))
 from paths import ARTEFACTS, OUT, record  # noqa: E402
-import numpy as np, re
+from .._env import external  # noqa: E402
 
 _EFMT = re.compile(r"[+-]?(?:\d+\.\d*|\.\d+|\d+)[EeDd][+-]\d+")
 

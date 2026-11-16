@@ -1,5 +1,6 @@
 """L1 Abel/半解析反演 与 L3 RF 代理——复用 spectra-real-time-system/rt 已验证实现。"""
 import sys
+from .._env import external  # noqa: E402
 sys.path.insert(0, external("", "SPEC2CONC", "path of the plasma_spec2conc package"))
 import invert_l1 as _l1      # noqa: F401  半解析核 + 正则化 Abel（0.099ms/帧）
 import os

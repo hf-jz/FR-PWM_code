@@ -3,6 +3,7 @@
 背景 Te/ne 剖面从 strahl base pp00020.0 解析（真实 HL-2A 背景，所有工况共享）。
 用法: /usr/bin/python3 -m frpwm.data.strahl_library c 64 4  (元素 n_cases n_workers)"""
 import json, math, os, sys, time
+from .._env import external  # noqa: E402
 from concurrent.futures import ThreadPoolExecutor
 import numpy as np
 

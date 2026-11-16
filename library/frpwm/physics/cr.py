@@ -3,6 +3,7 @@
 用途：L1 快演化动力学标签生成 + L_CR 物理一致性残差（PINN 训练损失）。
 自检：t→∞ 应收敛到 adas.ion_fractions 电离平衡。"""
 import math, os, sys
+from .._env import external  # noqa: E402
 import numpy as np
 from scipy.linalg import solve_banded
 

@@ -2,6 +2,7 @@
 batch tar → 每 shot 一个 .zarr：读取 39 谐波信号中对 FR-PWM 有用的多诊断子集，
 统一时间基准（不重采样，保留原生率）→ Y_t 序列 + provenance（附录 B Schema）。"""
 import os, tarfile, zipfile, shutil
+from .._env import external  # noqa: E402
 import numpy as np
 import os
 import sys

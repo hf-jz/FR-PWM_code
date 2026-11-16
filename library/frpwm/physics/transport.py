@@ -2,6 +2,7 @@
 复用 strahl-cpp/python/fusion_forward 已验证封装；在线链不直接调（秒级），
 作为 L2 离线锚与解析链交叉校验（电荷态分布/浓度一致性）。"""
 import os, sys
+from .._env import external  # noqa: E402
 import numpy as np
 
 _REPO = external("", "STRAHL_CPP", "path of the strahl-cpp build")

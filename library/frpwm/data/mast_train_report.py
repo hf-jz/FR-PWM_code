@@ -2,6 +2,7 @@
 数据源：公开 MAST 归档 batch_00000.tar（1.94 GB，hf-mirror 下载），路径见环境变量 TOKAMARK_DIR。
 产出：frpwm/results/MAST真实数据-JEPA训练报告.docx + loss_curve.png。"""
 import os, time
+from .._env import external  # noqa: E402
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")

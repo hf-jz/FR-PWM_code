@@ -1,6 +1,7 @@
 """ADAS 数据获取 + PEC 计算（流水线步 7-8）。
 本地 adas_full 镜像优先命中；PEC 按 (元素,价态,波长) 查 ADF15（EXCIT 优先，log 网格插值）。"""
 import os, sys
+from .._env import external  # noqa: E402
 import numpy as np
 
 _ADAS_FULL = external("", "ADAS_FULL", "path of the ADAS release")
