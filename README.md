@@ -20,6 +20,13 @@ Code and the A1--A15 records behind every quantitative claim in the manuscript.
 | `library/` | the modelling library the scripts import |
 | `artefacts/` | the A1--A15 records, a SHA-256 manifest and the recomputed summaries |
 
+## Paths
+
+Nothing in this repository refers to a path outside it. `paths.py` resolves archived records under
+`artefacts/` and writes generated output to `$FRPWM_OUT` (default `generated/`). External data that cannot
+be redistributed is read from an environment variable and the script stops with a message naming it:
+`ADAS_FULL`, `SPEC2CONC`, `STRAHL_ROOT`, `STRAHL_CPP`, `MAST_GILE`, `TOKAMARK_DIR`.
+
 ## Check a number
 
 ```bash
