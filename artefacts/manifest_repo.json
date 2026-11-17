@@ -348,12 +348,12 @@
   },
   {
    "path": "MANIFEST.sha256",
-   "sha256": "e68d2bcff3d65e76b8923b4fd55c2ec6007da7890ef8a4608e42ade94280c446",
+   "sha256": "be196d07184ec673fe1a563fa8aced8b5560ccd1c9dc0c01df0dfe530c9b4500",
    "bytes": 14726
   },
   {
    "path": "manifest.json",
-   "sha256": "35355d6353485ef80d079a21b776d9c6a4cd4029ca16f4517a1551ea2392454f",
+   "sha256": "079563c1f882a92ce5d21259429687e76dd95045e6c680a0c44880d4dc332f4f",
    "bytes": 22429
   },
   {

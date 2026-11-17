@@ -29,6 +29,8 @@ S = json.loads(Path(record("tests/results/strahl_pinn/strahl_pinn_report.json"))
 
 closure = [U["closure_euv_pct"], U["closure_bal_pct"], U["iso"], U["cw"]]
 nz_r2, cover = U["nz_r2"], U["picp90"]
+C = json.loads((Path(__file__).resolve().parent / "stage26_conformal" / "conformal_repro.json").read_text())
+cover_split = C["repeated_stratified_4fold"]["mean_coverage"]
 clean = [Z["exp1"]["baseline_A"], Z["exp1"]["pgm_physics"], Z["exp1"]["pgm_fused"]]
 degen = [Z["exp2"]["baseline_A"], Z["exp2"]["pgm_physics"], Z["exp2"]["pgm_fused"]]
 factor = degen[0] / degen[2]
@@ -61,7 +63,7 @@ fig.subplots_adjust(left=0.07, right=0.985, top=0.93, bottom=0.075, wspace=0.30,
 ax = axs[0, 0]
 bars(ax, ["EUV\nlines", "Balmer\nlines", "Isotopes", "Impurities"], closure,
      [GREEN, BLUE, OLIVE, RED], (0, 12), "Closure error [%]",
-     f"(a) Forward-inverse closure\n$n_z\\ R^2$ = {nz_r2:.3f}, coverage = {cover:.3f}", rotate=0)
+     f"(a) Forward-inverse closure\n$n_z\\ R^2$ = {nz_r2:.3f}\ncoverage {cover_split:.3f} (split), {cover:.3f} (pooled)", rotate=0)
 
 ax = axs[0, 1]
 groups = ["single W\n(clean)", "C + W\n(degenerate)"]
@@ -93,7 +95,7 @@ ax = axs[1, 1]
 bars(ax, [r"$D$", r"$v$"], [dv_grid[0] * 100, dv_grid[1] * 100], [BLUE, OLIVE],
      (0, 6), "parameter error [%]", "(d) $D/v$ inversion, truth between grid nodes", rotate=0)
 
-out = Path(__file__).with_name("figure3_results.png")
+out = Path(__file__).with_name("figure3.png")
 fig.savefig(out, dpi=400, facecolor="white")
 fig.savefig(str(out).replace(".png", ".pdf"), facecolor="white")
 
@@ -102,6 +104,8 @@ assert abs(closure[0] - 1.97) < 0.01 and abs(closure[1] - 9.55) < 0.01
 assert abs(clear := dv_in[0]) < 1e-9
 assert abs(factor - 4.59) < 0.02 and ratio_pinch > 10 and ratio_d > 5
 print("saved", out)
-print("closure", [round(v, 2) for v in closure], "R2", round(nz_r2, 3), "coverage", round(cover, 3))
+print("closure", [round(v, 2) for v in closure], "R2", round(nz_r2, 3),
+      "coverage split", round(cover_split, 3), "pooled", round(cover, 3))
+assert abs(cover_split - 0.901) < 0.001 and abs(cover - 0.906) < 0.001, "coverage record drifted"
 print("zeff clean", [round(v, 2) for v in clean], "degenerate", [round(v, 2) for v in degen], "factor", round(factor, 2))
 print("cost ratios", ratio_pinch, ratio_d, "DV between nodes", [round(v * 100, 2) for v in dv_grid])

@@ -1,6 +1,6 @@
 {
  "files": 139,
- "total_bytes": 2536477,
+ "total_bytes": 2538138,
  "entries": [
   {
    "path": "A11_Rollout/t3e4_rollout.json",
@@ -364,8 +364,8 @@
   },
   {
    "path": "figure_generation/make_fig3.py",
-   "bytes": 5002,
-   "sha256": "df91f5ddbc5013cdf54b3c2c60c5c64bd266c8fac9d27b0e0063420b845b0a0d"
+   "bytes": 5342,
+   "sha256": "f37ae73d91eec647cecbb5c4057cfa24b1e8052011d4c2fb8c8896029d85d06c"
   },
   {
    "path": "figure_generation/make_fig4.py",
@@ -559,8 +559,8 @@
   },
   {
    "path": "source_code/stage23_review_audit.py",
-   "bytes": 14611,
-   "sha256": "26ddd3793be1aef33d0443b20401ac99347ab8181bc5ca5aa972f540fa208167"
+   "bytes": 15932,
+   "sha256": "71207226f4dcad2df0ecf1146fbd08a67302a11f647b59a77895ea99f39a5377"
   },
   {
    "path": "source_code/stage7_build_package.py",
