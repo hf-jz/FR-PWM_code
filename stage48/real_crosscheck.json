@@ -1,0 +1,48 @@
+{
+ "pairs": 0,
+ "per_shot": [
+  {
+   "shot": "28315",
+   "error": "no analysed profile cached"
+  },
+  {
+   "shot": "28316",
+   "error": "no analysed profile cached"
+  },
+  {
+   "shot": "28317",
+   "error": "no analysed profile cached"
+  },
+  {
+   "shot": "28318",
+   "error": "no analysed profile cached"
+  },
+  {
+   "shot": "28319",
+   "error": "no analysed profile cached"
+  },
+  {
+   "shot": "28320",
+   "error": "no analysed profile cached"
+  },
+  {
+   "shot": "28321",
+   "error": "no analysed profile cached"
+  },
+  {
+   "shot": "28322",
+   "error": "no analysed profile cached"
+  },
+  {
+   "shot": "28323",
+   "error": "no analysed profile cached"
+  },
+  {
+   "shot": "28324",
+   "error": "no analysed profile cached"
+  }
+ ],
+ "timing_real_input": {
+  "error": "RuntimeError: ADAS_FULL is not set: path of the ADAS release"
+ }
+}

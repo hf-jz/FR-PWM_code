@@ -1,0 +1,61 @@
+{
+ "q90": 0.01363785216156316,
+ "horizon": 40,
+ "noise": 0.005,
+ "cases": {
+  "nominal": {
+   "coverage_over_horizon": 0.6,
+   "coverage_final_step": 0.36666666666666664,
+   "half_width": 0.01363785216156316,
+   "mean_abs_residual_final": 22.922546881295496,
+   "mean_signed_residual_final": -7.637537082979607,
+   "recovered_diff": 0.031882184707814676,
+   "recovered_gain": -0.005602132685409382
+  },
+  "diff +10%": {
+   "coverage_over_horizon": 0.6041666666666667,
+   "coverage_final_step": 0.36666666666666664,
+   "half_width": 0.01363785216156316,
+   "mean_abs_residual_final": 23.625008858431656,
+   "mean_signed_residual_final": -5.24912733974505,
+   "recovered_diff": 0.059896784563853465,
+   "recovered_gain": -0.004766550320258512
+  },
+  "diff +25%": {
+   "coverage_over_horizon": 0.6041666666666666,
+   "coverage_final_step": 0.3333333333333333,
+   "half_width": 0.01363785216156316,
+   "mean_abs_residual_final": 24.654827424472092,
+   "mean_signed_residual_final": -1.8760138639895625,
+   "recovered_diff": 0.09907842302151026,
+   "recovered_gain": -0.003588004508742847
+  },
+  "diff +50%": {
+   "coverage_over_horizon": 0.5933333333333334,
+   "coverage_final_step": 0.3,
+   "half_width": 0.01363785216156316,
+   "mean_abs_residual_final": 26.43146904294559,
+   "mean_signed_residual_final": 3.2782838023871315,
+   "recovered_diff": 0.15830779944622092,
+   "recovered_gain": -0.0017911999369059006
+  },
+  "gain +10%": {
+   "coverage_over_horizon": 0.4833333333333333,
+   "coverage_final_step": 0.2,
+   "half_width": 0.01363785216156316,
+   "mean_abs_residual_final": 40.082531438390774,
+   "mean_signed_residual_final": -34.52592226063614,
+   "recovered_diff": 0.032201663558127085,
+   "recovered_gain": -0.02172385646725097
+  },
+  "gain +25%": {
+   "coverage_over_horizon": 0.325,
+   "coverage_final_step": 0.1,
+   "half_width": 0.01363785216156316,
+   "mean_abs_residual_final": 78.31410617310634,
+   "mean_signed_residual_final": -74.8585000271209,
+   "recovered_diff": 0.032680881833595896,
+   "recovered_gain": -0.04590644214001334
+  }
+ }
+}

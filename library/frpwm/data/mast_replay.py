@@ -13,7 +13,10 @@ import os
 import sys
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.dirname(_HERE))
+_ROOT = _HERE
+while not os.path.exists(os.path.join(_ROOT, "paths.py")) and os.path.dirname(_ROOT) != _ROOT:
+    _ROOT = os.path.dirname(_ROOT)
+sys.path.insert(0, _ROOT)
 from paths import ARTEFACTS, OUT, record  # noqa: E402
 from ..physics.chords import default_chords
 
