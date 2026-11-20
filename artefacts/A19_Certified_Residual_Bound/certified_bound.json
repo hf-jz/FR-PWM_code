@@ -1,0 +1,23 @@
+{
+ "n_nodes": 120,
+ "hidden": [
+  64,
+  64
+ ],
+ "boxes": {
+  "physical band 150-4000 eV": {
+   "residual_lo": -17.21918350932446,
+   "residual_hi": 17.6131558004728,
+   "abs_bound_eV": 17.6131558004728,
+   "certified_inner_set_eV": 3982.3868441995273
+  },
+  "full non-negative range 0-4000 eV": {
+   "residual_lo": -17.21918350932446,
+   "residual_hi": 17.6131558004728,
+   "abs_bound_eV": 17.6131558004728,
+   "certified_inner_set_eV": 3982.3868441995273
+  }
+ },
+ "empirical_max_eV": null,
+ "note": "interval propagation over the input box; sound for every state in the box, and loose by construction. The empirical maximum is the largest residual seen on the replay, which is what the 5.4 eV allowance was drawn from."
+}

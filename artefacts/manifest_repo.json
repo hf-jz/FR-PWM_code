@@ -1,5 +1,5 @@
 {
- "files": 72,
+ "files": 83,
  "entries": [
   {
    "path": "A11_Rollout/t3e4_rollout.json",
@@ -65,6 +65,41 @@
    "path": "A16_Spectral_Provenance/line_centers.json",
    "sha256": "1742ed505284c96d1890f641d22e1986146eaa51b507dd69806bb351674004cf",
    "bytes": 648
+  },
+  {
+   "path": "A17_Output_Contract/output_contract.py",
+   "sha256": "009be4919abcc0d19542f162b3b6138f4ec94f23503930b6839ca6e7d5b2f022",
+   "bytes": 6559
+  },
+  {
+   "path": "A17_Output_Contract/target_contract.json",
+   "sha256": "b02dd2270d69fef86bb9863b9c0466f8a140adc91f3ad0b1d08016f5a6f973e5",
+   "bytes": 2842
+  },
+  {
+   "path": "A18_Real_Data_Crosscheck/loopback_hil.json",
+   "sha256": "3651f769d12cbdff51553cd6eeac3ad66c047b1477ab9b7f049e439278914e0b",
+   "bytes": 770
+  },
+  {
+   "path": "A18_Real_Data_Crosscheck/real_input_timing.json",
+   "sha256": "9e82e6f9f2133c8b684b81791986bde7b5581b143674d14feff1d507c3dfb0b6",
+   "bytes": 1241
+  },
+  {
+   "path": "A18_Real_Data_Crosscheck/width_vs_ti.json",
+   "sha256": "ebf98bc69449ee3216abaa746678b4c65954b4342d6731c655e286f06f087662",
+   "bytes": 2367
+  },
+  {
+   "path": "A19_Certified_Residual_Bound/certified_bound.json",
+   "sha256": "93074167fc06bdb4e6bc17109acb0c3c5fe6d6192dfe0513059bf4f16c9ce83e",
+   "bytes": 722
+  },
+  {
+   "path": "A19_Certified_Residual_Bound/determinism.json",
+   "sha256": "101b69d1e9317619135640a4727f4d0843ecadadf9adbfccf377e339fcbf6eae",
+   "bytes": 455
   },
   {
    "path": "A1_A2_Closure_Calibration/conformal_predictions.csv",
@@ -167,6 +202,16 @@
    "bytes": 639
   },
   {
+   "path": "A20_Closed_Loop/model_in_the_loop.json",
+   "sha256": "028cbf0b6302c34c572c4a70aae5596e314c97f5daca80d91ca5cfda7b2527c7",
+   "bytes": 1465
+  },
+  {
+   "path": "A20_Closed_Loop/replay_plant_closed_loop.json",
+   "sha256": "8c724b78a6f2cf97270b2ab878d7cf9d7342ad7f035f671dc7d11661a190d165",
+   "bytes": 2439
+  },
+  {
    "path": "A3_A4_Identifiability/ident4/ident4_report.json",
    "sha256": "04cdcea751d90b2d7187d9509c4cdee9299edbce330200aa9531138b3b8884cd",
    "bytes": 3195
@@ -215,6 +260,16 @@
    "path": "A5_MAST_60Shot_Replay/mast_mast_frame_logs.csv",
    "sha256": "80f50c1fd3a011779de71b1bc9689e038fe3ad362575ed50a10bcc6279e52758",
    "bytes": 564427
+  },
+  {
+   "path": "A5_MAST_60Shot_Replay_postlock/postfreeze_checks.json",
+   "sha256": "071a74c3e7dd20adfc00a3dc61fbd27ce44255245625f9f87aeb189611cd668a",
+   "bytes": 3805
+  },
+  {
+   "path": "A5_MAST_60Shot_Replay_postlock/trm_gate_diagnostic.json",
+   "sha256": "4310436aee30c7b1ea689c31706d3a0dfb45053f0b4738fef17ee9342cd1b87a",
+   "bytes": 18468
   },
   {
    "path": "A6_Uncertainty_Budget/b1b2_stats.json",
@@ -348,13 +403,13 @@
   },
   {
    "path": "MANIFEST.sha256",
-   "sha256": "be196d07184ec673fe1a563fa8aced8b5560ccd1c9dc0c01df0dfe530c9b4500",
-   "bytes": 14726
+   "sha256": "abdcacb5828c7b7afb8eb54a1db6ecf512d1d7a9499ab1c677286dd6d4462a2a",
+   "bytes": 15956
   },
   {
    "path": "manifest.json",
-   "sha256": "079563c1f882a92ce5d21259429687e76dd95045e6c680a0c44880d4dc332f4f",
-   "bytes": 22429
+   "sha256": "5d1a1176db0b5c62df89d3967847ead57fa6325a692f18bc1a9a890d638472d4",
+   "bytes": 24262
   },
   {
    "path": "recomputed_summary.json",

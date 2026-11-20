@@ -1,0 +1,63 @@
+{
+ "pairs": 4,
+ "per_shot": [
+  {
+   "shot": "28315",
+   "slices": 4,
+   "chords": 160,
+   "pairs": 4,
+   "Ti_range": [
+    58.74402293496724,
+    433.82232796734024
+   ]
+  },
+  {
+   "shot": "28316",
+   "error": "no analysed profile cached"
+  },
+  {
+   "shot": "28317",
+   "error": "no analysed profile cached"
+  },
+  {
+   "shot": "28318",
+   "error": "no analysed profile cached"
+  },
+  {
+   "shot": "28319",
+   "error": "no analysed profile cached"
+  },
+  {
+   "shot": "28320",
+   "error": "no analysed profile cached"
+  },
+  {
+   "shot": "28321",
+   "error": "no analysed profile cached"
+  },
+  {
+   "shot": "28322",
+   "error": "no analysed profile cached"
+  },
+  {
+   "shot": "28323",
+   "error": "no analysed profile cached"
+  },
+  {
+   "shot": "28324",
+   "error": "no analysed profile cached"
+  }
+ ],
+ "timing_real_input": {
+  "frames": 100,
+  "p50": 8.664811999999245,
+  "p95": 77.63208189999628,
+  "worst": 1437.5937079999944,
+  "status": {
+   "corrected": 11,
+   "approved": 84,
+   "rejected": 5
+  },
+  "note": "real scalars and real equilibrium, one real spectral line present; the chain steps the same code path as in the replay, and the decision mix is reported because a single line cannot support the six-line inversion"
+ }
+}

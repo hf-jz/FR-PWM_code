@@ -1,0 +1,140 @@
+{
+ "operator": {
+  "shape": [
+   6,
+   7
+  ],
+  "rank": 6,
+  "null_direction": "e1 - e2",
+  "ones_orthogonal_to_null": true
+ },
+ "scenarios": [
+  {
+   "scenario": "six observations, total concentration",
+   "cls": "supported",
+   "reason": "ok",
+   "value": 16.0,
+   "null_projection": null,
+   "expected": "supported",
+   "ok": true
+  },
+  {
+   "scenario": "six observations, one charge state",
+   "cls": "withheld",
+   "reason": "non_identifiable",
+   "value": null,
+   "null_projection": 0.707,
+   "expected": "withheld",
+   "ok": true
+  },
+  {
+   "scenario": "one observation removed",
+   "cls": "withheld",
+   "reason": "non_identifiable",
+   "value": null,
+   "null_projection": 0.626,
+   "expected": "withheld",
+   "ok": true
+  },
+  {
+   "scenario": "noise sigma = 0.5",
+   "cls": "degraded",
+   "reason": "interval_wide",
+   "value": 16.0,
+   "null_projection": null,
+   "expected": "degraded",
+   "ok": true
+  },
+  {
+   "scenario": "state age 25 ms above the 20 ms limit",
+   "cls": "invalid",
+   "reason": "stale_state",
+   "value": null,
+   "null_projection": null,
+   "expected": "invalid",
+   "ok": true
+  },
+  {
+   "scenario": "model outside its validity region",
+   "cls": "invalid",
+   "reason": "model_invalid",
+   "value": null,
+   "null_projection": null,
+   "expected": "invalid",
+   "ok": true
+  },
+  {
+   "scenario": "5 per cent gain error, folded into the interval",
+   "cls": "degraded",
+   "reason": "interval_wide",
+   "value": 17.9914,
+   "null_projection": null,
+   "expected": "degraded",
+   "ok": true
+  },
+  {
+   "scenario": "5 per cent gain error, ignored by the model",
+   "cls": "supported",
+   "reason": "ok",
+   "value": 17.9914,
+   "null_projection": null,
+   "expected": "supported",
+   "ok": true
+  },
+  {
+   "scenario": "minimum rank above the observation count",
+   "cls": "withheld",
+   "reason": "rank_condition_unreachable",
+   "value": null,
+   "null_projection": 1.0,
+   "expected": "withheld",
+   "ok": true
+  }
+ ],
+ "noise_sweep": [
+  {
+   "sigma": 0.005,
+   "supported": 1.0,
+   "degraded": 0.0,
+   "withheld": 0.0,
+   "invalid": 0.0
+  },
+  {
+   "sigma": 0.01,
+   "supported": 1.0,
+   "degraded": 0.0,
+   "withheld": 0.0,
+   "invalid": 0.0
+  },
+  {
+   "sigma": 0.02,
+   "supported": 1.0,
+   "degraded": 0.0,
+   "withheld": 0.0,
+   "invalid": 0.0
+  },
+  {
+   "sigma": 0.05,
+   "supported": 1.0,
+   "degraded": 0.0,
+   "withheld": 0.0,
+   "invalid": 0.0
+  },
+  {
+   "sigma": 0.1,
+   "supported": 0.0,
+   "degraded": 1.0,
+   "withheld": 0.0,
+   "invalid": 0.0
+  },
+  {
+   "sigma": 0.2,
+   "supported": 0.0,
+   "degraded": 1.0,
+   "withheld": 0.0,
+   "invalid": 0.0
+  }
+ ],
+ "ignored_bias_relative_error": 0.1245,
+ "note": "the operator is synthetic: it exercises the contract, not the spectroscopy; a rise in noise moves the total from supported to degraded and never back to a confident value"
+}

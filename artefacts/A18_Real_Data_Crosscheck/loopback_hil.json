@@ -1,0 +1,17 @@
+{
+ "steps": 2000,
+ "period_ms": 10.0,
+ "backend": "cpp",
+ "work_p50_ms": 0.44535450000182664,
+ "work_p99_ms": 1.646598930000138,
+ "work_max_ms": 6.379833000000001,
+ "deadline_miss_rate": 0.9525,
+ "busy_p50": 0.44535450000182664,
+ "busy_p99": 1.646598930000138,
+ "rtt_p50": 0.41525000000053325,
+ "rtt_p99": 1.5219880000000336,
+ "rtt_max": 6.333917000000078,
+ "timer_floor_p50_ms": 17.109083500000068,
+ "timer_floor_max_ms": 21.05758400000002,
+ "note": "loopback transport, CPU-only, no device: the loop exercises pacing, the compiled shield and the client/server interface of the closed path, and it does not exercise an actuator or a plasma; the timer floor is the overshoot of a bare 5 ms sleep on this host, which bounds the pacing layer independently of the shield"
+}

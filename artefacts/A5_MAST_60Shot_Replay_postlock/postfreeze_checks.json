@@ -1,0 +1,257 @@
+{
+ "scope": "ten campaign discharges, post-lock code, fifteen checks per discharge",
+ "shots": 10,
+ "checks": 150,
+ "passed": 142,
+ "failed_names": [
+  "TRM \u53cd\u6f14\u8986\u76d6"
+ ],
+ "rows": [
+  {
+   "shot": "28315",
+   "checks": 15,
+   "passed": 14,
+   "failed": [
+    "TRM \u53cd\u6f14\u8986\u76d6"
+   ],
+   "metrics": {
+    "shot": 28315,
+    "duration": 0.279,
+    "zeff": [
+     1.169,
+     1.19
+    ],
+    "Q": [
+     0.408,
+     0.469
+    ],
+    "trm_cover": "0/39",
+    "p95_ms": 9.0,
+    "approved": 39,
+    "rejected": 0,
+    "train_s": 2.6
+   }
+  },
+  {
+   "shot": "28316",
+   "checks": 15,
+   "passed": 14,
+   "failed": [
+    "TRM \u53cd\u6f14\u8986\u76d6"
+   ],
+   "metrics": {
+    "shot": 28316,
+    "duration": 0.437,
+    "zeff": [
+     1.169,
+     1.19
+    ],
+    "Q": [
+     0.279,
+     0.483
+    ],
+    "trm_cover": "0/39",
+    "p95_ms": 10.2,
+    "approved": 26,
+    "rejected": 8,
+    "train_s": 2.7
+   }
+  },
+  {
+   "shot": "28317",
+   "checks": 15,
+   "passed": 14,
+   "failed": [
+    "TRM \u53cd\u6f14\u8986\u76d6"
+   ],
+   "metrics": {
+    "shot": 28317,
+    "duration": 0.3,
+    "zeff": [
+     1.169,
+     1.19
+    ],
+    "Q": [
+     0.32,
+     0.493
+    ],
+    "trm_cover": "5/39",
+    "p95_ms": 8.8,
+    "approved": 26,
+    "rejected": 8,
+    "train_s": 2.9
+   }
+  },
+  {
+   "shot": "28318",
+   "checks": 15,
+   "passed": 14,
+   "failed": [
+    "TRM \u53cd\u6f14\u8986\u76d6"
+   ],
+   "metrics": {
+    "shot": 28318,
+    "duration": 0.312,
+    "zeff": [
+     1.169,
+     1.19
+    ],
+    "Q": [
+     0.27,
+     0.465
+    ],
+    "trm_cover": "0/39",
+    "p95_ms": 10.2,
+    "approved": 21,
+    "rejected": 11,
+    "train_s": 2.7
+   }
+  },
+  {
+   "shot": "28319",
+   "checks": 15,
+   "passed": 14,
+   "failed": [
+    "TRM \u53cd\u6f14\u8986\u76d6"
+   ],
+   "metrics": {
+    "shot": 28319,
+    "duration": 0.354,
+    "zeff": [
+     1.169,
+     1.19
+    ],
+    "Q": [
+     0.36,
+     0.463
+    ],
+    "trm_cover": "27/39",
+    "p95_ms": 12.6,
+    "approved": 39,
+    "rejected": 0,
+    "train_s": 2.6
+   }
+  },
+  {
+   "shot": "28320",
+   "checks": 15,
+   "passed": 15,
+   "failed": [],
+   "metrics": {
+    "shot": 28320,
+    "duration": 0.421,
+    "zeff": [
+     1.169,
+     1.19
+    ],
+    "Q": [
+     0.306,
+     0.451
+    ],
+    "trm_cover": "34/39",
+    "p95_ms": 12.6,
+    "approved": 26,
+    "rejected": 6,
+    "train_s": 2.7
+   }
+  },
+  {
+   "shot": "28321",
+   "checks": 15,
+   "passed": 14,
+   "failed": [
+    "TRM \u53cd\u6f14\u8986\u76d6"
+   ],
+   "metrics": {
+    "shot": 28321,
+    "duration": 0.146,
+    "zeff": [
+     1.169,
+     1.19
+    ],
+    "Q": [
+     0.091,
+     0.416
+    ],
+    "trm_cover": "3/39",
+    "p95_ms": 8.8,
+    "approved": 17,
+    "rejected": 6,
+    "train_s": 3.7
+   }
+  },
+  {
+   "shot": "28322",
+   "checks": 15,
+   "passed": 14,
+   "failed": [
+    "TRM \u53cd\u6f14\u8986\u76d6"
+   ],
+   "metrics": {
+    "shot": 28322,
+    "duration": 0.5,
+    "zeff": [
+     1.169,
+     1.19
+    ],
+    "Q": [
+     0.275,
+     0.459
+    ],
+    "trm_cover": "0/39",
+    "p95_ms": 9.6,
+    "approved": 23,
+    "rejected": 6,
+    "train_s": 3.4
+   }
+  },
+  {
+   "shot": "28323",
+   "checks": 15,
+   "passed": 15,
+   "failed": [],
+   "metrics": {
+    "shot": 28323,
+    "duration": 0.537,
+    "zeff": [
+     1.169,
+     1.19
+    ],
+    "Q": [
+     0.336,
+     0.453
+    ],
+    "trm_cover": "39/39",
+    "p95_ms": 12.6,
+    "approved": 37,
+    "rejected": 1,
+    "train_s": 2.7
+   }
+  },
+  {
+   "shot": "28324",
+   "checks": 15,
+   "passed": 14,
+   "failed": [
+    "TRM \u53cd\u6f14\u8986\u76d6"
+   ],
+   "metrics": {
+    "shot": 28324,
+    "duration": 0.396,
+    "zeff": [
+     1.169,
+     1.19
+    ],
+    "Q": [
+     0.296,
+     0.465
+    ],
+    "trm_cover": "0/39",
+    "p95_ms": 8.4,
+    "approved": 23,
+    "rejected": 6,
+    "train_s": 2.7
+   }
+  }
+ ]
+}

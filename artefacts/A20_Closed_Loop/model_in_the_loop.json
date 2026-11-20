@@ -1,0 +1,82 @@
+{
+ "steps": 400,
+ "reference_eV": 400.0,
+ "band_eV": [
+  150.0,
+  8000.0
+ ],
+ "released": 0,
+ "released_share": 0.0,
+ "u_applied_abs_mean": 0.0,
+ "u_wanted_abs_mean": 0.17848663203227244,
+ "core_start_eV": 500.0,
+ "core_end_eV": 410.46175753190374,
+ "core_min_eV": 410.46175753190374,
+ "core_max_eV": 500.0372355270046,
+ "settling_error_eV": 10.461757531903743,
+ "overshoot_eV": 100.03723552700461,
+ "divergent": false,
+ "margin_min": -238.31897057323556,
+ "margin_median": -229.56369517025757,
+ "lipshitz": 13.146131587611295,
+ "note": "the plant here is the world model, so this is a model-in-the-loop run: it shows that the closed loop settles and how often the barrier passes the command, and it cannot show what a device would do",
+ "eps_sweep": [
+  {
+   "eps_rel": 0.05,
+   "released": 0,
+   "steps": 60
+  },
+  {
+   "eps_rel": 0.02,
+   "released": 0,
+   "steps": 60
+  },
+  {
+   "eps_rel": 0.01,
+   "released": 0,
+   "steps": 60
+  },
+  {
+   "eps_rel": 0.005,
+   "released": 60,
+   "steps": 60
+  },
+  {
+   "eps_rel": 0.002,
+   "released": 60,
+   "steps": 60
+  },
+  {
+   "eps_rel": 0.001,
+   "released": 60,
+   "steps": 60
+  }
+ ],
+ "lf_sweep": [
+  {
+   "lf_scale": 1.0,
+   "released": 0,
+   "steps": 60
+  },
+  {
+   "lf_scale": 0.5,
+   "released": 0,
+   "steps": 60
+  },
+  {
+   "lf_scale": 0.2,
+   "released": 0,
+   "steps": 60
+  },
+  {
+   "lf_scale": 0.1,
+   "released": 57,
+   "steps": 60
+  },
+  {
+   "lf_scale": 0.05,
+   "released": 60,
+   "steps": 60
+  }
+ ]
+}

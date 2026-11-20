@@ -1,0 +1,111 @@
+{
+ "frames": 40,
+ "by_band": {
+  "frozen 150-8000 eV": {
+   "28315": {
+    "band": "frozen 150-8000 eV",
+    "shot": "28315",
+    "status": {
+     "corrected": 1,
+     "approved": 39
+    },
+    "released": 38,
+    "u_safe_abs_mean": 0.310897951962605,
+    "u_cand_abs_mean": 0.31582345886002167,
+    "te_min": 112.55134869410765,
+    "te_max": 600.0,
+    "outside_band": 40,
+    "drift_eV": 0.0,
+    "drift_open_eV": 0.0,
+    "finite": true
+   },
+   "28316": {
+    "band": "frozen 150-8000 eV",
+    "shot": "28316",
+    "status": {
+     "corrected": 1,
+     "approved": 39
+    },
+    "released": 38,
+    "u_safe_abs_mean": 0.20909966641741318,
+    "u_cand_abs_mean": 0.21746335225001548,
+    "te_min": 112.55134869410765,
+    "te_max": 600.0,
+    "outside_band": 40,
+    "drift_eV": 0.0,
+    "drift_open_eV": 0.0,
+    "finite": true
+   },
+   "28317": {
+    "band": "frozen 150-8000 eV",
+    "shot": "28317",
+    "status": {
+     "corrected": 1,
+     "approved": 39
+    },
+    "released": 38,
+    "u_safe_abs_mean": 0.20910034988439427,
+    "u_cand_abs_mean": 0.21688674558187776,
+    "te_min": 112.55134869410765,
+    "te_max": 600.0,
+    "outside_band": 40,
+    "drift_eV": 0.0,
+    "drift_open_eV": 0.0,
+    "finite": true
+   }
+  },
+  "widened 50-8000 eV": {
+   "28315": {
+    "band": "widened 50-8000 eV",
+    "shot": "28315",
+    "status": {
+     "corrected": 1,
+     "approved": 39
+    },
+    "released": 38,
+    "u_safe_abs_mean": 0.310897951962605,
+    "u_cand_abs_mean": 0.31582345886002167,
+    "te_min": 112.55134869410765,
+    "te_max": 600.0,
+    "outside_band": 0,
+    "drift_eV": 0.0,
+    "drift_open_eV": 0.0,
+    "finite": true
+   },
+   "28316": {
+    "band": "widened 50-8000 eV",
+    "shot": "28316",
+    "status": {
+     "corrected": 1,
+     "approved": 39
+    },
+    "released": 38,
+    "u_safe_abs_mean": 0.20909966641741318,
+    "u_cand_abs_mean": 0.21746335225001548,
+    "te_min": 112.55134869410765,
+    "te_max": 600.0,
+    "outside_band": 0,
+    "drift_eV": 0.0,
+    "drift_open_eV": 0.0,
+    "finite": true
+   },
+   "28317": {
+    "band": "widened 50-8000 eV",
+    "shot": "28317",
+    "status": {
+     "corrected": 1,
+     "approved": 39
+    },
+    "released": 38,
+    "u_safe_abs_mean": 0.20910034988439427,
+    "u_cand_abs_mean": 0.21688674558187776,
+    "te_min": 112.55134869410765,
+    "te_max": 600.0,
+    "outside_band": 0,
+    "drift_eV": 0.0,
+    "drift_open_eV": 0.0,
+    "finite": true
+   }
+  }
+ }
+}

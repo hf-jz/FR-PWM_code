@@ -1,0 +1,15 @@
+{
+ "runs": {
+  "28315": {
+   "first": "a71adb94eb89697f33b66e5a5e2ede60",
+   "second": "a71adb94eb89697f33b66e5a5e2ede60",
+   "identical": true
+  },
+  "28317": {
+   "first": "61aefe3de216c5e172b4d622e906c190",
+   "second": "61aefe3de216c5e172b4d622e906c190",
+   "identical": true
+  }
+ },
+ "claim": "same bundle, same frames, two independent processes on this machine and this software stack; cross-machine bitwise identity is not tested and not claimed"
+}
