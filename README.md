@@ -18,41 +18,37 @@ Code and the A1--A16 records behind every quantitative claim in the manuscript.
 | `analysis/` | identifiability, ablation, contraction, timing, QP, conformal, bias-injection and spectral-provenance studies |
 | `tools/` | the package check and the manifest verifier a reader can run without the paper source |
 | `library/` | the modelling library the scripts import |
-| `artefacts/` | the A1--A20 records, a SHA-256 manifest and the recomputed summaries |
+| `artefacts/` | the A1--A15 records, a SHA-256 manifest and the recomputed summaries |
 
 Released under the MIT licence; see `LICENSE`.
 
 ## What runs with nothing installed
 
-Measured by running every script in a clean environment with the external-data variables unset
-(a probe script in the paper tree produces the table; it is not shipped here because its results depend on the machine): **20 of the 31 scripts run to
-completion**. The other eleven fall into three named groups, and each stops with a sentence naming what is missing
-rather than substituting data.
+Measured by running every script in a clean environment with the external-data variables unset: **18 of the
+34 scripts run to completion**. The other sixteen fall into named groups, and each stops with a sentence
+naming what is missing rather than substituting data.
 
 | group | scripts | what is missing |
 |---|---|---|
-| external data | `analysis/stage53_certified_bound.py`, `analysis/stage55_determinism.py`, `analysis/stage57_closed_loop.py`, `analysis/stage59_model_loop.py` | `ADAS_FULL`, the ADAS release used to build the plant |
-| external data | `figures/stage30_grid_crlb.py` | `ADAS_FULL`, `SPEC2CONC` |
-| external data | `analysis/ident_4combos.py` | `STRAHL_CPP`, the strahl-cpp build |
-| external data | `analysis/stage40_postlock_checks.py` | the `fairmast_zarr` reader |
-| network | `analysis/stage48b_width_vs_ti.py` | the public MAST store; it downloads ten discharges |
-| paper build tree | `figures/make_fig3.py`, `figures/make_realdata.py`, `analysis/stage56_evidence_map.py` | the per-frame replay log and the record tree that the paper is built from |
+| ADAS release | `analysis/stage53_certified_bound.py`, `analysis/stage55_determinism.py`, `analysis/stage57_closed_loop.py`, `analysis/stage59_model_loop.py`, `analysis/stage64_seven_unknowns.py`, `analysis/stage65_populated_functional.py` | `ADAS_FULL` |
+| ADAS and the plasma_spec2conc package | `figures/stage30_grid_crlb.py` | `ADAS_FULL`, `SPEC2CONC` |
+| strahl-cpp build | `analysis/ident_4combos.py` | `STRAHL_CPP` |
+| the fairmast reader | `analysis/stage40_postlock_checks.py` | the `fairmast_zarr` module |
+| network | `analysis/stage48_real_crosscheck.py`, `analysis/stage48b_width_vs_ti.py` | the public MAST store; each downloads ten discharges and exceeds a 90 s probe timeout |
+| paper build tree | `figures/make_fig3.py`, `figures/make_realdata.py`, `analysis/stage56_evidence_map.py`, `analysis/stage67_coverage_by_regime.py` | the per-frame replay log and the record tree the paper is built from |
+| machine-dependent gate | `analysis/wcet_upsse.py` | runs, and fails its own latency budget on a laptop, which is the honest result |
 
 ## Three counts, and what each one counts
-
-The numbers that appear in reviews of this repository are three different measurements, and they are not
-interchangeable:
 
 | number | what it is | where it is checked |
 |---|---|---|
 | 150 | files in the archived record package (`artefacts/manifest.json`, field `files`) | not verified by the shipped tool: the record package travels as a zip beside the paper |
-| 83 | files tracked in the repository manifest (`artefacts/manifest_repo.json`, field `files`) | `tools/check_manifest.py`, which prints "83 files checked, 0 problems" |
-| 20 of 31 | scripts that run with no external data | the table above, produced by the probe script |
+| 86 | files tracked in the repository manifest (`artefacts/manifest_repo.json`) | `tools/check_manifest.py`, which prints "86 files checked, 0 problems" |
+| 18 of 34 | scripts that run with no external data | the table above |
 
-The canonical check is `python3 tools/check_manifest.py`: it verifies the 83 repository files against their digests
-and exits non-zero on any mismatch. The record package count is a property of the archive, not of the repository, and
-the script count is a property of the environment the probe ran in; both are reported here so that a reviewer does not
-have to reconcile three numbers that measure three things.
+The canonical check is `python3 tools/check_manifest.py`: it verifies the repository files against their digests and exits non-zero on any mismatch. The record count is a property of the archive and the script count a property of the environment, so all three are stated rather than reconciled.
+
+
 
 ## Dependencies
 

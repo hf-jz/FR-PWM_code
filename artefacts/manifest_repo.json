@@ -1,5 +1,5 @@
 {
- "files": 83,
+ "files": 86,
  "entries": [
   {
    "path": "A11_Rollout/t3e4_rollout.json",
@@ -212,6 +212,21 @@
    "bytes": 2439
   },
   {
+   "path": "A21_Identifiability_By_Stage/coverage_by_regime.json",
+   "sha256": "8906b578c702a97e896f16841daf932aecc4501112c70c59c465082b324e5c76",
+   "bytes": 956
+  },
+  {
+   "path": "A21_Identifiability_By_Stage/populated_functional.json",
+   "sha256": "c53bd75cb7a22a3eb0b1f4ac2ec5a1ec0483072e964b15d6dc05a1b9a8dffffa",
+   "bytes": 4690
+  },
+  {
+   "path": "A21_Identifiability_By_Stage/seven_unknowns.json",
+   "sha256": "daf25e688d5d3413953d6dc69f2813ffec10d234ad4da347bb2cfc3bdca9f655",
+   "bytes": 3328
+  },
+  {
    "path": "A3_A4_Identifiability/ident4/ident4_report.json",
    "sha256": "04cdcea751d90b2d7187d9509c4cdee9299edbce330200aa9531138b3b8884cd",
    "bytes": 3195
@@ -403,13 +418,13 @@
   },
   {
    "path": "MANIFEST.sha256",
-   "sha256": "abdcacb5828c7b7afb8eb54a1db6ecf512d1d7a9499ab1c677286dd6d4462a2a",
-   "bytes": 15956
+   "sha256": "c7f34130a812266308f314a241b65c48a273df57e073efb4e3eabaf49aa7f777",
+   "bytes": 16311
   },
   {
    "path": "manifest.json",
-   "sha256": "5d1a1176db0b5c62df89d3967847ead57fa6325a692f18bc1a9a890d638472d4",
-   "bytes": 24262
+   "sha256": "6c5870276c8ff8a82219e8e63939d84fa907e679c1fbd1b684a7054755b925db",
+   "bytes": 24781
   },
   {
    "path": "recomputed_summary.json",

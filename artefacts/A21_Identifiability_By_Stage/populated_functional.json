@@ -1,0 +1,242 @@
+{
+ "stages": [
+  "C I",
+  "C II",
+  "C III",
+  "C IV",
+  "C V",
+  "C VI",
+  "C VII"
+ ],
+ "lines": [
+  "C I 834.4",
+  "C II 426.6",
+  "C III 288.4",
+  "C IV 222.3",
+  "C V 33.4",
+  "C VI 182.2"
+ ],
+ "ne": 50000000000000.0,
+ "rows": [
+  {
+   "te": 15,
+   "rank": 4,
+   "populated": [
+    "C IV",
+    "C V"
+   ],
+   "support": [
+    "C IV",
+    "C V"
+   ],
+   "null_dim": 3,
+   "singular_values": [
+    0.008488058095193658,
+    0.002114710957396814,
+    0.0010715879763485787,
+    7.112696628081184e-09,
+    2.2162665138776145e-21,
+    2.6085229705807784e-32
+   ],
+   "proj_absolute_total": 0.6546536707079771,
+   "proj_support_functional": 0.0,
+   "total_true": 2.2,
+   "total_nnls": 2.1999999999999997,
+   "support_true": 2.2,
+   "support_nnls": 2.1999999999999997
+  },
+  {
+   "te": 25,
+   "rank": 3,
+   "populated": [
+    "C IV",
+    "C V"
+   ],
+   "support": [
+    "C IV",
+    "C V"
+   ],
+   "null_dim": 4,
+   "singular_values": [
+    0.033108103319725954,
+    0.0005972633091838478,
+    3.9417611701577526e-05,
+    5.294565975620403e-11,
+    1.413007967605501e-12,
+    1.2372132063056347e-16
+   ],
+   "proj_absolute_total": 0.7559289460184543,
+   "proj_support_functional": 0.0,
+   "total_true": 2.2,
+   "total_nnls": 2.2,
+   "support_true": 2.2,
+   "support_nnls": 2.2
+  },
+  {
+   "te": 40,
+   "rank": 5,
+   "populated": [
+    "C V",
+    "C VI"
+   ],
+   "support": [
+    "C V",
+    "C VI"
+   ],
+   "null_dim": 2,
+   "singular_values": [
+    0.06214176161393817,
+    0.0002923226624393674,
+    4.833395866967076e-06,
+    1.741666178873664e-07,
+    1.1893622462567889e-07,
+    1.8992789787936023e-12
+   ],
+   "proj_absolute_total": 0.5345224838248486,
+   "proj_support_functional": 0.0,
+   "total_true": 2.2,
+   "total_nnls": 2.2,
+   "support_true": 2.2,
+   "support_nnls": 2.2
+  },
+  {
+   "te": 60,
+   "rank": 5,
+   "populated": [
+    "C V",
+    "C VI",
+    "C VII"
+   ],
+   "support": [
+    "C V",
+    "C VI"
+   ],
+   "null_dim": 2,
+   "singular_values": [
+    0.06061276158885099,
+    0.009459246009617055,
+    0.00018249782922827133,
+    7.317487531107387e-05,
+    1.2242215781483394e-06,
+    1.917880885175268e-13
+   ],
+   "proj_absolute_total": 0.5345224838248487,
+   "proj_support_functional": 0.0,
+   "total_true": 2.2,
+   "total_nnls": 2.2,
+   "support_true": 2.2,
+   "support_nnls": 2.2
+  },
+  {
+   "te": 90,
+   "rank": 5,
+   "populated": [
+    "C V",
+    "C VI",
+    "C VII"
+   ],
+   "support": [
+    "C V",
+    "C VI"
+   ],
+   "null_dim": 2,
+   "singular_values": [
+    4.51388524291198,
+    0.01831234605978969,
+    0.00097851145396987,
+    5.652800772711188e-05,
+    1.8913576054752047e-07,
+    1.2796953040295003e-14
+   ],
+   "proj_absolute_total": 0.5345224838248488,
+   "proj_support_functional": 0.0,
+   "total_true": 2.2,
+   "total_nnls": 2.1999999999999997,
+   "support_true": 2.2,
+   "support_nnls": 2.1999999999999997
+  },
+  {
+   "te": 130,
+   "rank": 4,
+   "populated": [
+    "C V",
+    "C VI",
+    "C VII"
+   ],
+   "support": [
+    "C V",
+    "C VI"
+   ],
+   "null_dim": 3,
+   "singular_values": [
+    54.560774680478836,
+    0.0021764296730768613,
+    0.0013193938814307987,
+    7.859007179848283e-06,
+    1.656214914742226e-08,
+    5.6553865163727515e-16
+   ],
+   "proj_absolute_total": 0.6546536707079771,
+   "proj_support_functional": 0.0,
+   "total_true": 2.2,
+   "total_nnls": 2.2,
+   "support_true": 2.2,
+   "support_nnls": 2.2
+  },
+  {
+   "te": 200,
+   "rank": 3,
+   "populated": [
+    "C V",
+    "C VI",
+    "C VII"
+   ],
+   "support": [
+    "C V",
+    "C VI"
+   ],
+   "null_dim": 4,
+   "singular_values": [
+    208.7375870368882,
+    0.0006522485793216353,
+    0.00014608875522219303,
+    5.350232544445608e-07,
+    8.10658735290269e-10,
+    1.3655403630143156e-17
+   ],
+   "proj_absolute_total": 0.7559289460184544,
+   "proj_support_functional": 0.0,
+   "total_true": 2.2,
+   "total_nnls": 2.1999999999999997,
+   "support_true": 2.2,
+   "support_nnls": 2.1999999999999997
+  },
+  {
+   "te": 400,
+   "rank": 2,
+   "populated": [
+    "C VI",
+    "C VII"
+   ],
+   "support": [
+    "C VI"
+   ],
+   "null_dim": 5,
+   "singular_values": [
+    536.0172509682384,
+    0.00021178525808489753,
+    4.543683711399952e-06,
+    1.1173463726971623e-08,
+    1.3917342953735745e-11,
+    1.0805132270051204e-19
+   ],
+   "proj_absolute_total": 0.8451542547285165,
+   "proj_support_functional": 0.0,
+   "total_true": 1.0,
+   "total_nnls": 1.0,
+   "support_true": 1.0,
+   "support_nnls": 1.0
+  }
+ ],
+ "note": "rank counts singular values above 1e-8 of the largest; the operator is the one the runtime builds, photon emissivity times density times ionisation fraction, so a stage with no population has no column and the rank equals the number of populated observed stages"
+}

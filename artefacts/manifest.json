@@ -1,6 +1,6 @@
 {
- "files": 150,
- "total_bytes": 2590366,
+ "files": 153,
+ "total_bytes": 2602668,
  "entries": [
   {
    "path": "A11_Rollout/t3e4_rollout.json",
@@ -206,6 +206,21 @@
    "path": "A20_Closed_Loop/replay_plant_closed_loop.json",
    "bytes": 2439,
    "sha256": "8c724b78a6f2cf97270b2ab878d7cf9d7342ad7f035f671dc7d11661a190d165"
+  },
+  {
+   "path": "A21_Identifiability_By_Stage/coverage_by_regime.json",
+   "bytes": 956,
+   "sha256": "8906b578c702a97e896f16841daf932aecc4501112c70c59c465082b324e5c76"
+  },
+  {
+   "path": "A21_Identifiability_By_Stage/populated_functional.json",
+   "bytes": 4690,
+   "sha256": "c53bd75cb7a22a3eb0b1f4ac2ec5a1ec0483072e964b15d6dc05a1b9a8dffffa"
+  },
+  {
+   "path": "A21_Identifiability_By_Stage/seven_unknowns.json",
+   "bytes": 3328,
+   "sha256": "daf25e688d5d3413953d6dc69f2813ffec10d234ad4da347bb2cfc3bdca9f655"
   },
   {
    "path": "A3_A4_Identifiability/ident4/ident4_report.json",
@@ -614,13 +629,13 @@
   },
   {
    "path": "source_code/stage23_review_audit.py",
-   "bytes": 20861,
-   "sha256": "87eb032bb0373a84853113d031c52c0cf2fba4ec7b68e01ec781381cd34e893f"
+   "bytes": 22503,
+   "sha256": "70e0691e21876f7cd3e530d2e24af25a5bbd4a9fcc664185f9462b95537989dd"
   },
   {
    "path": "source_code/stage7_build_package.py",
-   "bytes": 20727,
-   "sha256": "01e62f354551d8e6903e70f716287053e3085478e526168b95eae5d35a724dc3"
+   "bytes": 21090,
+   "sha256": "bbdaac9108352b251172a79f7a236af61ff6f8c2b9ed97484eee1b26b2e2838a"
   },
   {
    "path": "source_code/stage7_docx_probe.py",
@@ -694,8 +709,8 @@
   },
   {
    "path": "source_code/verify_numbers.py",
-   "bytes": 21516,
-   "sha256": "01f798cb6460c0bf6bd6b72355bcd2be4f813a044cde9787db37a9faec80d830"
+   "bytes": 22839,
+   "sha256": "80f14d6dee9445ec3fb5adcd431d38bfaba382aafbf56de675b9b3e35bf2a646"
   },
   {
    "path": "stage14_P0/AUDIT.md",
