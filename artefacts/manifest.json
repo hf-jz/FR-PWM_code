@@ -1,6 +1,6 @@
 {
- "files": 153,
- "total_bytes": 2602668,
+ "files": 167,
+ "total_bytes": 5696346,
  "entries": [
   {
    "path": "A11_Rollout/t3e4_rollout.json",
@@ -221,6 +221,76 @@
    "path": "A21_Identifiability_By_Stage/seven_unknowns.json",
    "bytes": 3328,
    "sha256": "daf25e688d5d3413953d6dc69f2813ffec10d234ad4da347bb2cfc3bdca9f655"
+  },
+  {
+   "path": "A22_SD_TIF/EVIDENCE.md",
+   "bytes": 2429,
+   "sha256": "2e147e8144d4c7966ffcdbe8f1f6624911eeab453020e60986870be4080b4d14"
+  },
+  {
+   "path": "A22_SD_TIF/benchmarks.json",
+   "bytes": 1838,
+   "sha256": "d4ee2783b8504e8f4815d86968cdf5c1f075d9a03c636bb1edcd68e78e17ff11"
+  },
+  {
+   "path": "A22_SD_TIF/cases.json",
+   "bytes": 70153,
+   "sha256": "2309fd615352098e3952c9cd515d0bd2f45a319f2706b0b3171e87b82b75b511"
+  },
+  {
+   "path": "A22_SD_TIF/inputs/README.md",
+   "bytes": 1686,
+   "sha256": "21271279f9350f9793b1c6edff1a01869b79cf8814cd3b8af567f083fe9bd5dc"
+  },
+  {
+   "path": "A22_SD_TIF/inputs/level2_28315.npz",
+   "bytes": 253178,
+   "sha256": "16f6e885e0e8492200c4c07228eb37f73a0f3b4a6016597901c7823d80e53e07"
+  },
+  {
+   "path": "A22_SD_TIF/inputs/level2_28316.npz",
+   "bytes": 330698,
+   "sha256": "96f491c911fd3d7ea07ce3f1a0e2dbf2127cf5402150e777972412b68ea249d9"
+  },
+  {
+   "path": "A22_SD_TIF/inputs/level2_28317.npz",
+   "bytes": 276434,
+   "sha256": "03bf4df97652f3d71145f659d6ca2869634a29b0d1eb21a0ac53501c46fdc938"
+  },
+  {
+   "path": "A22_SD_TIF/inputs/level2_28318.npz",
+   "bytes": 268682,
+   "sha256": "a114945058abcd7cef17d106187f3e5e387d66e9d5ed66688bb511bd2112eb52"
+  },
+  {
+   "path": "A22_SD_TIF/inputs/level2_28319.npz",
+   "bytes": 315194,
+   "sha256": "e39a0d463571daa23ab5732ddcda78a74706a0496f442c5ee1cdf69ce8b0d341"
+  },
+  {
+   "path": "A22_SD_TIF/inputs/level2_28320.npz",
+   "bytes": 322946,
+   "sha256": "9ec9574a51b381d5893eeded0a1e2938580bfb3807817ba1b42ce60a7d0f5461"
+  },
+  {
+   "path": "A22_SD_TIF/inputs/level2_28321.npz",
+   "bytes": 193746,
+   "sha256": "fb77c417ebd9f7c8433c6fea34f989d402890e052c701c5599ce191b64ac75b6"
+  },
+  {
+   "path": "A22_SD_TIF/inputs/level2_28322.npz",
+   "bytes": 364290,
+   "sha256": "d4b9a8e90b9ef0769f744a3a841c3151cd34f0704572bc6ff439d87c6b70b2f1"
+  },
+  {
+   "path": "A22_SD_TIF/inputs/level2_28323.npz",
+   "bytes": 382378,
+   "sha256": "b9d9eee3e740c6d246120059bd9a29df5423289f06e51aa35c6b9d2d6deac459"
+  },
+  {
+   "path": "A22_SD_TIF/inputs/level2_28324.npz",
+   "bytes": 310026,
+   "sha256": "4ccd7991b3151528fc3ea8a6740d93d5d0df3236f5babc33797b6da7169b4451"
   },
   {
    "path": "A3_A4_Identifiability/ident4/ident4_report.json",

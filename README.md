@@ -10,17 +10,33 @@
 
 # FR-PWM: code and archived records
 
-Code and the A1--A16 records behind every quantitative claim in the manuscript.
+Code and the A1--A22 records behind every quantitative claim in the manuscript.
 
 | folder | content |
 |---|---|
-| `figures/` | one script per figure, plus the identifiability table and the temperature sweep |
+| `figures/` | one script per figure, plus the identifiability tables and the temperature sweep |
 | `analysis/` | identifiability, ablation, contraction, timing, QP, conformal, bias-injection and spectral-provenance studies |
-| `tools/` | the package check and the manifest verifier a reader can run without the paper source |
+| `analysis/sdtif/` | the identifiability calculus of Section 3: Jacobian, whitened SVD, complete null space, target projection, nuisance profiling, robustness, state certificate, declared specifications and the real-data case |
+| `tools/` | the package check, the manifest verifier and the manifest builder a reader can run without the paper source |
 | `library/` | the modelling library the scripts import |
-| `artefacts/` | the A1--A15 records, a SHA-256 manifest and the recomputed summaries |
+| `artefacts/` | the A1--A22 records, a SHA-256 manifest and the recomputed summaries |
 
 Released under the MIT licence; see `LICENSE`.
+
+## The identifiability calculus (record A22)
+
+```bash
+python3 analysis/sdtif_run.py          # six closed-form benchmarks, then the plasmid cases
+python3 figures/make_table_sdtif.py    # Tables 5 and 6 of the paper, from the A22 record
+python3 analysis/sdtif_run.py --skip-plasma   # benchmarks only, needs no external data
+python3 tools/fetch_mast_level2.py            # re-fetch the ten MAST shots (needs network and `zstd`)
+```
+
+`analysis/sdtif_run.py` asserts the seven analytic benchmarks before touching a plasma model, then writes
+`artefacts/A22_SD_TIF/{benchmarks.json,cases.json,EVIDENCE.md}`, the ten `inputs/level2_*.npz` shots and the
+   campaign table. `core.py` holds no physics; `plasma.py`
+holds the three carbon operators, the transport case and the state map. The plasma cases need `ADAS_FULL`
+and `SPEC2CONC`; without them the script stops naming the variable rather than substituting data.
 
 ## What runs with nothing installed
 
@@ -30,7 +46,7 @@ naming what is missing rather than substituting data.
 
 | group | scripts | what is missing |
 |---|---|---|
-| ADAS release | `analysis/stage53_certified_bound.py`, `analysis/stage55_determinism.py`, `analysis/stage57_closed_loop.py`, `analysis/stage59_model_loop.py`, `analysis/stage64_seven_unknowns.py`, `analysis/stage65_populated_functional.py` | `ADAS_FULL` |
+| ADAS release | `analysis/stage53_certified_bound.py`, `analysis/stage55_determinism.py`, `analysis/stage57_closed_loop.py`, `analysis/stage59_model_loop.py`, `analysis/stage64_seven_unknowns.py`, `analysis/stage65_populated_functional.py`, `analysis/sdtif_run.py` | `ADAS_FULL` (the last one only for its plasma cases; `--skip-plasma` runs the benchmarks alone) |
 | ADAS and the plasma_spec2conc package | `figures/stage30_grid_crlb.py` | `ADAS_FULL`, `SPEC2CONC` |
 | strahl-cpp build | `analysis/ident_4combos.py` | `STRAHL_CPP` |
 | the fairmast reader | `analysis/stage40_postlock_checks.py` | the `fairmast_zarr` module |
@@ -42,9 +58,9 @@ naming what is missing rather than substituting data.
 
 | number | what it is | where it is checked |
 |---|---|---|
-| 150 | files in the archived record package (`artefacts/manifest.json`, field `files`) | not verified by the shipped tool: the record package travels as a zip beside the paper |
-| 86 | files tracked in the repository manifest (`artefacts/manifest_repo.json`) | `tools/check_manifest.py`, which prints "86 files checked, 0 problems" |
-| 18 of 34 | scripts that run with no external data | the table above |
+| 167 | files in the archived record package (`artefacts/manifest.json`, field `files`) | not verified by the shipped tool: the record package travels as a zip beside the paper |
+| 100 | files tracked in the repository manifest (`artefacts/manifest_repo.json`) | `tools/check_manifest.py`, which prints "100 files checked, 0 problems" |
+| 20 of 38 | scripts that run with no external data | the table above; `analysis/sdtif_run.py --skip-plasma` needs nothing at all |
 
 The canonical check is `python3 tools/check_manifest.py`: it verifies the repository files against their digests and exits non-zero on any mismatch. The record count is a property of the archive and the script count a property of the environment, so all three are stated rather than reconciled.
 

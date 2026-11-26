@@ -1,0 +1,110 @@
+{
+ "E1 linear, two null directions": {
+  "rank": 2,
+  "null_dim": 2,
+  "gamma": {
+   "q12": 0.0,
+   "q34": 0.0,
+   "d12": 1.0,
+   "q13": 0.707107,
+   "t13": 0.707107
+  },
+  "target_std": [
+   Infinity,
+   Infinity,
+   Infinity,
+   Infinity,
+   Infinity
+  ]
+ },
+ "E2 nonlinear, local rank change": {
+  "regular_rank": 2,
+  "degenerate_rank": 1,
+  "null_direction": [
+   -0.4472,
+   0.8944
+  ],
+  "gamma_degenerate": {
+   "th1": 0.4472,
+   "th1sq_plus": 0.0
+  }
+ },
+ "E3 nuisance calibration parameter": {
+  "gamma_fixed": 0.0,
+  "gamma_free": 0.707107,
+  "profiled_information": 0.0,
+  "nuisance_rank": 1,
+  "finite_bound_reported_despite_unidentifiable": true,
+  "class_free": "unidentifiable"
+ },
+ "E4 state sweep, rank transition": {
+  "gamma_sum": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "gamma_th1": [
+   0.7071,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "ranks": [
+   1,
+   2,
+   2,
+   2,
+   2
+  ],
+  "coarse_grid_would_call_it": [
+   2,
+   2,
+   2
+  ],
+  "certified_away_from_crossing": true,
+  "certified_across_crossing": false,
+  "subspace_distance_0_to_03": 0.7071
+ },
+ "E5 finite perturbation along null": {
+  "sigma": 0.03,
+  "null_direction": [
+   -0.7071,
+   0.7071
+  ],
+  "sweep": [
+   {
+    "amplitude": 0.01,
+    "whitened_change": 0.0
+   },
+   {
+    "amplitude": 0.03,
+    "whitened_change": 0.0
+   },
+   {
+    "amplitude": 0.1,
+    "whitened_change": 0.0
+   },
+   {
+    "amplitude": 0.3,
+    "whitened_change": 0.0
+   }
+  ],
+  "gamma_sum": 0.0
+ },
+ "E6 Weyl / Davis-Kahan robustness": {
+  "P_bound": 2e-05,
+  "structural_certified_at_1e_3": true,
+  "certified_at_10": false,
+  "gap": 100.0,
+  "unobservable_subspace_drift": 0.00086,
+  "structural_rank_upper_at_1e_3": 3
+ },
+ "E7 analytic bound, independent projector": {
+  "bound_analytic": 2e-06,
+  "bound_computed": 2e-06,
+  "projector_independent_path": 0.0
+ }
+}

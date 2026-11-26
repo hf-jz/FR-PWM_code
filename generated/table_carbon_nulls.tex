@@ -1,0 +1,59 @@
+\begin{table}[htbp]
+\centering
+\caption{Carbon, per node, from artefact A22. (a) Unconditional inversion: seven free charge-state densities from six lines, column $k$ the emissivity of the line of stage $k$. The operator is diagonal, so with three per cent relative noise on each line every observed stage is equally conditioned and the seventh singular value is an exact zero at every node because no line of the fully stripped stage exists; the structural rank is six and the structural null space one-dimensional everywhere. (b) Conditional inversion: total concentration and temperature from the same lines, populations following the ionisation balance. $\Gamma=0$ at every node, so the concentration is determined wherever the data resolve it; a dagger marks a bound computed over a subspace that does not span the whole target gradient, hence a lower bound rather than the target's uncertainty. (c) The same lines with the equilibrium fractions folded into the columns, as in the earlier draft: the unknown is a scale per stage, a stage with no population leaves a zero column, and the rank is the count of populated and observed stages.}
+\label{tab:carbon}
+\small
+\begin{tabular}{@{}rrrrrrl@{}}
+\toprule
+$T_e$ (eV) & rank$_{\mathrm{str}}$ & rank$_{\mathrm{prac}}$ & $\sigma_7/\sigma_1$ & $\Gamma(N_{\mathrm{tot}})$ & $\Gamma(N_{\mathrm{obs}})$ & class of $N_{\mathrm{obs}}$ \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{(a) seven free stage densities, $n_e=10^{14}$~cm$^{-3}$}}\\
+\addlinespace[2pt]
+10 & 6 & 6 & 0.0e+00 & 0.3780 & 0.0e+00 & fully-identifiable \\
+15 & 6 & 6 & 0.0e+00 & 0.3780 & 0.0e+00 & fully-identifiable \\
+25 & 6 & 6 & 0.0e+00 & 0.3780 & 0.0e+00 & fully-identifiable \\
+30 & 6 & 6 & 0.0e+00 & 0.3780 & 0.0e+00 & fully-identifiable \\
+40 & 6 & 6 & 0.0e+00 & 0.3780 & 0.0e+00 & fully-identifiable \\
+60 & 6 & 6 & 0.0e+00 & 0.3780 & 0.0e+00 & fully-identifiable \\
+90 & 6 & 6 & 0.0e+00 & 0.3780 & 0.0e+00 & fully-identifiable \\
+130 & 6 & 6 & 0.0e+00 & 0.3780 & 0.0e+00 & fully-identifiable \\
+200 & 6 & 6 & 0.0e+00 & 0.3780 & 0.0e+00 & fully-identifiable \\
+400 & 6 & 6 & 0.0e+00 & 0.3780 & 0.0e+00 & fully-identifiable \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{(b) conditional, $\theta=(\ln c,\ln T_e)$, target $c$}}\\
+\addlinespace[2pt]
+$T_e$ (eV) & rank$_{\mathrm{str}}$ & rank$_{\mathrm{prac}}$ & $\sigma_2/\sigma_1$ & $\Gamma(c)$ & $\sigma(c)$\,\% & class of $c$ \\
+\midrule
+10 & 2 & 2 & 9.3e-03 & 0.0e+00 & 0.56 & fully-identifiable \\
+15 & 2 & 1 & 1.2e-03 & 0.0e+00 & 0.44 & weakly-identifiable$^{\dagger}$ \\
+25 & 2 & 1 & 2.7e-04 & 0.0e+00 & 0.43 & weakly-identifiable$^{\dagger}$ \\
+30 & 2 & 1 & 1.6e-04 & 0.0e+00 & 0.43 & weakly-identifiable$^{\dagger}$ \\
+40 & 2 & 1 & 1.7e-03 & 0.0e+00 & 0.43 & weakly-identifiable$^{\dagger}$ \\
+60 & 2 & 2 & 6.2e-02 & 0.0e+00 & 0.55 & fully-identifiable \\
+90 & 2 & 2 & 7.7e-02 & 0.0e+00 & 0.69 & fully-identifiable \\
+130 & 2 & 2 & 2.8e-01 & 0.0e+00 & 1.71 & fully-identifiable \\
+200 & 2 & 1 & 2.4e-02 & 0.0e+00 & 8.22 & weakly-identifiable$^{\dagger}$ \\
+400 & 2 & 0 & 6.0e-03 & 0.0e+00 & --- & unidentifiable$^{\dagger}$ \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{(c) the same lines with the ionisation balance folded into the columns, unknown a scale per stage}}\\
+\addlinespace[2pt]
+$T_e$ (eV) & rank$_{\mathrm{str}}$ & rank$_{\mathrm{prac}}$ & occupied & $\Gamma(N_{\mathrm{tot}})$ & $\Gamma(N_{\mathrm{obs}})$ & --- \\
+\midrule
+10 & 5 & 1 & 5 & 0.5345 & 0.4082 & --- \\
+15 & 6 & 1 & 5 & 0.3780 & 0.0000 & --- \\
+25 & 5 & 1 & 6 & 0.5345 & 0.4082 & --- \\
+30 & 5 & 1 & 6 & 0.5345 & 0.4082 & --- \\
+40 & 5 & 1 & 6 & 0.5345 & 0.4082 & --- \\
+60 & 5 & 1 & 5 & 0.5345 & 0.4082 & --- \\
+90 & 5 & 1 & 5 & 0.5345 & 0.4082 & --- \\
+130 & 5 & 0 & 5 & 0.5345 & 0.4082 & --- \\
+200 & 4 & 0 & 5 & 0.6547 & 0.5774 & --- \\
+400 & 4 & 0 & 4 & 0.6547 & 0.5774 & --- \\
+real MAST 28315, $\Gamma(T_i)$ gain free & 0.7071 & 0.7071 & amplitude tied to calibration \\
+idem, $\Gamma(\ln L_T)$ gain free & 0 & 1.1e-15 & $\sigma=0.38$\% at 6.8\% noise \\
+idem, 15\% calibration error on $\ln L_T$ & 0 & 1.3e-15 & worst corner \\
+idem, noise multiplier certified & --- & 6.91 & refused above it \\
+campaign 28315--28324, $\Gamma(T_i)$ / $\Gamma(\ln L_T)$ & $2^{-1/2}$ / 0 & 10 / 10 of 10 & certified in 9 \\
+\bottomrule
+\end{tabular}
+\end{table}

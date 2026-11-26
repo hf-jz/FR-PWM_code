@@ -1,0 +1,32 @@
+\begin{table}[htbp]
+\centering
+\caption{The calculus against closed-form answers and applied, from artefact A22. $\Gamma$ is the fraction of the target gradient in the unobservable subspace, so $\Gamma=0$ means the observations fix the target to first order and $\Gamma>0$ means they cannot at any signal-to-noise.}
+\label{tab:sdtif}
+\small
+\begin{tabular}{@{}lrrl@{}}
+\toprule
+case & analytic & computed & verdict \\
+\midrule
+linear, $\Gamma(q_{13})$, rank 2 & 0.7071 & 0.7071 & $2^{-1/2}$ \\
+nonlinear, singular point, rank & 1 & 1 & lost on $\theta_2=2\theta_1^2$ \\
+nonlinear, $\Gamma(\theta_1)$ there & 0.4472 & 0.4472 & $1/\sqrt5$ \\
+nuisance gain, $\Gamma(n_z)$ gain known & 0 & 0.0e+00 & identifiable \\
+nuisance gain, $\Gamma(n_z)$ gain free & 0.7071 & 0.7071 & profiled information 0 \\
+rank transition, certified away & --- & yes & a 2\,\% box is covered \\
+rank transition, certified across & --- & no & refused, as it must be \\
+$\|P_0'-P_0\|$ at $\|\Delta J\|=10^{-3}$ & $\leq2.0e-05$ & 8.6e-04 & Weyl / Davis--Kahan \\
+bound on a sum of two, $c^{\mathsf T}\mathcal F^{+}c$ & 2.0e-06 & 2.0e-06 & closed form, $2\sigma^2$ \\
+null projector, second code path & 0 & 0.0e+00 & eigendecomposition vs SVD \\
+\midrule
+transport, $\Gamma(D)$, source amplitude free & 0.5774 & 0.5774 & $1/\sqrt3$ \\
+transport, $\Gamma(D/V)$ & 0 & 3.9e-16 & the ratio survives the symmetry \\
+three lines, unknown gain, $\sigma_2/\sigma_1$ & --- & 2.1e-05 & density--gain separation \\
+idem, $\sigma(n_e)$ (\% with interferometer) & --- & 2.00 & from 1.0e-02 to 49.8 \\
+real MAST 28315, $\Gamma(T_i)$ gain free & 0.7071 & 0.7071 & amplitude tied to calibration \\
+idem, $\Gamma(\ln L_T)$ gain free & 0 & 1.1e-15 & $\sigma=0.38$\% at 6.8\% noise \\
+idem, 15\% calibration error on $\ln L_T$ & 0 & 1.3e-15 & worst corner \\
+idem, noise multiplier certified & --- & 6.91 & refused above it \\
+campaign 28315--28324, $\Gamma(T_i)$ / $\Gamma(\ln L_T)$ & $2^{-1/2}$ / 0 & 10 / 10 of 10 & certified in 9 \\
+\bottomrule
+\end{tabular}
+\end{table}
