@@ -1,6 +1,6 @@
 {
- "files": 167,
- "total_bytes": 5696346,
+ "files": 168,
+ "total_bytes": 5697044,
  "entries": [
   {
    "path": "A11_Rollout/t3e4_rollout.json",
@@ -291,6 +291,11 @@
    "path": "A22_SD_TIF/inputs/level2_28324.npz",
    "bytes": 310026,
    "sha256": "4ccd7991b3151528fc3ea8a6740d93d5d0df3236f5babc33797b6da7169b4451"
+  },
+  {
+   "path": "A23_Barrier_Admissibility/admissibility.json",
+   "bytes": 698,
+   "sha256": "1d812ce2869dac2acac30c04b58755b9ac3a955d202237b6963d12f5cdb0ba9e"
   },
   {
    "path": "A3_A4_Identifiability/ident4/ident4_report.json",

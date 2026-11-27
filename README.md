@@ -30,6 +30,7 @@ python3 analysis/sdtif_run.py          # six closed-form benchmarks, then the pl
 python3 figures/make_table_sdtif.py    # Tables 5 and 6 of the paper, from the A22 record
 python3 analysis/sdtif_run.py --skip-plasma   # benchmarks only, needs no external data
 python3 tools/fetch_mast_level2.py            # re-fetch the ten MAST shots (needs network and `zstd`)
+python3 analysis/p0_admissibility.py          # the barrier admissibility breakpoints (record A23)
 ```
 
 `analysis/sdtif_run.py` asserts the seven analytic benchmarks before touching a plasma model, then writes
@@ -58,9 +59,9 @@ naming what is missing rather than substituting data.
 
 | number | what it is | where it is checked |
 |---|---|---|
-| 167 | files in the archived record package (`artefacts/manifest.json`, field `files`) | not verified by the shipped tool: the record package travels as a zip beside the paper |
-| 100 | files tracked in the repository manifest (`artefacts/manifest_repo.json`) | `tools/check_manifest.py`, which prints "100 files checked, 0 problems" |
-| 20 of 38 | scripts that run with no external data | the table above; `analysis/sdtif_run.py --skip-plasma` needs nothing at all |
+| 168 | files in the archived record package (`artefacts/manifest.json`, field `files`) | not verified by the shipped tool: the record package travels as a zip beside the paper |
+| 101 | files tracked in the repository manifest (`artefacts/manifest_repo.json`) | `tools/check_manifest.py`, which prints "101 files checked, 0 problems" |
+| 21 of 39 | scripts that run with no external data | the table above; `analysis/sdtif_run.py --skip-plasma` needs nothing at all |
 
 The canonical check is `python3 tools/check_manifest.py`: it verifies the repository files against their digests and exits non-zero on any mismatch. The record count is a property of the archive and the script count a property of the environment, so all three are stated rather than reconciled.
 

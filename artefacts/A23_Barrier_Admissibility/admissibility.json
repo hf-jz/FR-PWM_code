@@ -1,0 +1,26 @@
+{
+ "constants": {
+  "alpha": 0.3,
+  "eps_eV": 20.0,
+  "Lf": 13.148607574247645,
+  "wbar_eV": 6.384468017867107,
+  "Lh": 1.0,
+  "h_lim_eV": 350.0
+ },
+ "delta_eV": 283.35661950282,
+ "invariant_set_requires_h_eV": 404.79517071831435,
+ "invariant_set_nonempty": true,
+ "nominal_margin_supported": false,
+ "eps_star_eV": 17.230290533024665,
+ "eps_star_percent_of_400": 4.307572633256166,
+ "eps_reduction_factor": 1.1607465330701612,
+ "Lf_star": 11.230776599106644,
+ "Lf_star_over_Lf": 0.8541418956865675,
+ "alpha_star": 0.18376781968842415,
+ "terms": {
+  "error_term_eV": 262.9721514849529,
+  "nominal_barrier_eV": 244.99999999999997,
+  "process_term_eV": 6.384468017867107,
+  "slope_term_eV": 14.0
+ }
+}
