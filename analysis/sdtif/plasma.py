@@ -15,6 +15,11 @@ import sys
 
 import numpy as np
 
+def fmt_bound(v):
+    """Print a bound, or say there is none.  Never a number that looks like one."""
+    return "none" if v is None or not np.isfinite(v) else "%.3f" % v
+
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 _ROOT = HERE
 while not os.path.exists(os.path.join(_ROOT, "paths.py")) and os.path.dirname(_ROOT) != _ROOT:
@@ -333,8 +338,14 @@ def case_E(te_grid=None, ne_grid=None):
                 delta_max_coarse=float(max(r["delta_J"] for r in coarse)),
                 delta_max_fine=float(max(r["delta_J"] for r in fine)),
                 gamma_max=float(max(r["gamma"] for r in coarse + fine)),
-                rel_sigma_min=float(min(999.0 if r["rel_sigma"] is None else r["rel_sigma"] for r in coarse + fine)),
-                rel_sigma_max=float(max(999.0 if r["rel_sigma"] is None else r["rel_sigma"] for r in coarse + fine)))
+                # a node without a bound reports none: substituting 999 for "no number" is the
+                # same class of error the paper refuses, and a reader would take it for a bound
+                rel_sigma_min=float(min(np.inf if r["rel_sigma"] is None else r["rel_sigma"]
+                                        for r in coarse + fine)),
+                rel_sigma_max=float(max(np.inf if r["rel_sigma"] is None else r["rel_sigma"]
+                                        for r in coarse + fine)),
+                n_no_bound=int(sum(1 for r in coarse + fine if r["rel_sigma"] is None)),
+                n_nodes=len(coarse + fine))
 
 
 # ------------------------------------------------------------------------------ case A2
@@ -560,10 +571,11 @@ def main():
                                           r["targets"]["N_obs"]["relative_sigma"] else None
                                           for r in rows_a[:4]])
     print("B conditional: Gamma(c) %s" % sorted({round(r["gamma_c"], 6) for r in rows_b}))
-    ks = [999.0 if r["rel_sigma_te_known"] is None else r["rel_sigma_te_known"] for r in rows_b]
-    fs = [999.0 if r["rel_sigma_te_free"] is None else r["rel_sigma_te_free"] for r in rows_b]
-    print("   sigma_c (Te known) %.3f .. %.3f  (Te free) %.3f .. %.3f" % (
-        min(ks), max(ks), min(fs), max(fs)))
+    ks = [np.inf if r["rel_sigma_te_known"] is None else r["rel_sigma_te_known"] for r in rows_b]
+    fs = [np.inf if r["rel_sigma_te_free"] is None else r["rel_sigma_te_free"] for r in rows_b]
+    print("   sigma_c (Te known) %s .. %s  (Te free) %s .. %s   nodes without a bound: %d of %d" % (
+        fmt_bound(min(ks)), fmt_bound(max(ks)), fmt_bound(min(fs)), fmt_bound(max(fs)),
+        sum(1 for v in ks if not np.isfinite(v)), len(ks)))
     print("   rank_num %s rank_prac %s" % (sorted({r["rank_num"] for r in rows_b}),
                                            sorted({r["rank_prac"] for r in rows_b})))
     c = out["case_C_gain"]

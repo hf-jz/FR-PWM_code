@@ -360,6 +360,20 @@ def e9_edge_cases():
     eff, rank_b = profile(F, 1)
     out["nuisance_rank_deficient"] = dict(rank=r6.rank_num, nuisance_rank=rank_b,
                                           profile_finite=bool(np.all(np.isfinite(eff))))
+    # (7) a constraint that restricts the feasible perturbations to an active boundary.  The
+    # tool handles it by appending the constraint as one more observation row, which is the only
+    # mechanism it needs: an equality constraint removes a direction from the tangent space, so a
+    # target that was unidentifiable can become identifiable, and never the reverse.
+    A7 = np.array([[1.0, 1.0, 0.0], [0.0, 0.0, 0.0]])
+    tg7 = dict(g=(1.0, np.array([0.0, 0.0, 1.0])))
+    before = localize(from_operator(A7, cov=1e-4, targets=tg7))
+    after = localize(from_operator(np.vstack([A7, [0.0, 0.0, 1.0]]), cov=1e-4, targets=tg7))
+    out["active_constraint"] = dict(gamma_free=before.targets["g"]["gamma"],
+                                    gamma_constrained=after.targets["g"]["gamma"],
+                                    rank_free=before.rank_num, rank_constrained=after.rank_num)
+    assert abs(before.targets["g"]["gamma"] - 1.0) < 1e-12, "unconstrained, the target is null"
+    assert after.targets["g"]["gamma"] < 1e-12, "the constraint must remove the null direction"
+    assert after.rank_num > before.rank_num
     return out
 
 

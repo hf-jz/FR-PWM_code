@@ -225,6 +225,12 @@
    "rank": 1,
    "nuisance_rank": 1,
    "profile_finite": true
+  },
+  "active_constraint": {
+   "gamma_free": 1.0,
+   "gamma_constrained": 0.0,
+   "rank_free": 1,
+   "rank_constrained": 2
   }
  }
 }

@@ -15,7 +15,7 @@ two JSON records in this directory; nothing is typed in.
 | E6 Weyl / Davis-Kahan robustness | `{"P_bound": 0.021052631578947368, "bound_holds_everywhere": true, "certified_at_10": false, "drift": 0.01791545078604693, "gap": 95.0, "rank_lost_at": 4.0, "structural_certified_at_1e_3": true, "sweep": [{"bound": 1.0526315789473685e-07, "delta": 1e-05, "drift": 8.091234094991417e-08, "rank_preserve` |
 | E7 analytic bound, independent projector | `{"bound_analytic": 2e-06, "bound_computed": 2e-06, "projector_independent_path": 0.0}` |
 | E8 generic diagnostic operators | `{"correlated_noise": {"gamma_total_coloured": 0.7094138241225704, "gamma_total_white": 0.7094138241225704, "sigma_total_coloured": 0.012425866288435184, "sigma_total_white": 0.021421961229408096}, "integral": {"gamma_centroid": 0.0, "gamma_total": 0.0, "null_dim": 0, "rank": 6}, "nonlinear": {"rank_` |
-| E9 edge cases | `{"m_gt_n_rank_deficient": {"gamma_ratio": 1.0000000000000002, "rank": 1}, "m_lt_n_null_gt1": {"gamma_sum": 9.61481343191782e-17, "null_dim": 2, "rank": 2}, "nuisance_rank_deficient": {"nuisance_rank": 1, "profile_finite": true, "rank": 1}, "repeated_singular_values": {"gap": 100.0, "rank": 4}, "scal` |
+| E9 edge cases | `{"active_constraint": {"gamma_constrained": 0.0, "gamma_free": 1.0, "rank_constrained": 2, "rank_free": 1}, "m_gt_n_rank_deficient": {"gamma_ratio": 1.0000000000000002, "rank": 1}, "m_lt_n_null_gt1": {"gamma_sum": 9.61481343191782e-17, "null_dim": 2, "rank": 2}, "nuisance_rank_deficient": {"nuisance` |
 
 ## Carbon, six lines and seven stages, 20 nodes
 

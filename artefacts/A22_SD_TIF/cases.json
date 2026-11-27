@@ -3221,7 +3221,9 @@
   "delta_max_fine": 1839.7467894700128,
   "gamma_max": 0.0,
   "rel_sigma_min": 5.419011964872103e-06,
-  "rel_sigma_max": 999.0
+  "rel_sigma_max": Infinity,
+  "n_no_bound": 6,
+  "n_nodes": 51
  },
  "case_D_sources": {
   "unknown_source": {
