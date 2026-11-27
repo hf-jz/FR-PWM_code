@@ -305,9 +305,25 @@ def case_E(te_grid=None, ne_grid=None):
                             rel_sigma=res_n[i].targets["c"]["relative_sigma"]))
         return out
 
+    def domain_certificate(rows):
+        """Level 3 of the state-domain table, with the Lipschitz constant measured, not assumed.
+
+        delta_max is the largest whitened variation between adjacent nodes of the refined grid:
+        an *estimated* upper bound on the variation across the box, so the level is recorded as
+        'empirical' and a rigorous interval bound is not claimed.
+        """
+        finite = [r for r in rows if np.isfinite(r["delta_J"])]
+        g_min = min(r["gap"] for r in finite)
+        d_max = max(r["delta_J"] for r in finite)
+        return dict(g_min=float(g_min), delta_max=float(d_max),
+                    continuous=bool(d_max < g_min / 2.0),
+                    level="empirical-continuous" if d_max < g_min / 2.0 else "node-only")
+
     dens_coarse = density_sweep([2e13, 5e13, 1e14])
     dens_fine = density_sweep(list(np.exp(np.linspace(np.log(2e13), np.log(1e14), 12))))
     return dict(coarse=coarse, fine=fine, density_coarse=dens_coarse, density_fine=dens_fine,
+                certificate_te=domain_certificate(fine),
+                certificate_ne=domain_certificate(dens_fine),
                 n_certified_coarse=int(sum(r["certified"] for r in coarse)),
                 n_certified_fine=int(sum(r["certified"] for r in fine)),
                 n_certified_density_coarse=int(sum(r["certified"] for r in dens_coarse)),
@@ -353,6 +369,50 @@ def case_A_weighted():
                                               relative_sigma=v["relative_sigma"])
                                       for k, v in r.targets.items()}))
     return rows
+
+
+# ---------------------------------------------------- transport: the three source assumptions
+def case_D_sources():
+    """The three source assumptions of Section 2.1, each with its own Jacobian and null space.
+
+    unknown      S is a free amplitude and the profile fixes only the scaling direction
+    shape_known  S = A s(rho) with s fixed: one unknown amplitude, same scaling direction
+    measured     S is data: the scaling direction is gone and D, V separate
+    """
+    from frpwm.invert.dv_inversion import transport_solve, par_D, par_V
+    rho = np.linspace(0.02, 1.0, 40)
+    Vp = 4 * np.pi ** 2 * 1.7 * (0.6 * rho) ** 2 / 0.6 + 1.0
+    shape = np.exp(-((rho - 0.92) / 0.05) ** 2)
+    D0, V0, S0, VREF, TAU = 1.0, -1.5, 1.0, 10.0, 1e30
+    ch = np.linspace(0.1, 0.9, 8)
+    out = {}
+
+    def solve(th, free_src):
+        return transport_solve(par_D(rho, np.exp(th[0])), par_V(rho, th[1] * VREF),
+                               np.exp(th[2]) * shape if free_src else S0 * shape,
+                               TAU, rho, Vp, n_bc=0.0)
+
+    for name, free_src, th0 in (("unknown_source", True, [np.log(D0), V0 / VREF, np.log(S0)]),
+                                ("shape_known_amplitude", True, [np.log(D0), V0 / VREF, np.log(S0)]),
+                                ("measured_source", False, [np.log(D0), V0 / VREF, 0.0])):
+        theta = np.array(th0) if free_src else np.array([np.log(D0), V0 / VREF])
+        h = (lambda t, f=free_src: np.log(np.maximum(np.interp(ch, rho, solve(
+            np.r_[t, np.log(S0)] if not f else t, f)), 1e-300)))
+        tg = (dict(D=(D0, np.array([1.0, 0.0, 0.0])), V=(abs(V0), np.array([0.0, VREF, 0.0])),
+                   source=(S0, np.array([0.0, 0.0, S0])),
+                   D_over_V=(D0 / abs(V0), np.array([1.0, -1.0 / (V0 / VREF), 0.0])))
+              if free_src else
+              dict(D=(D0, np.array([1.0, 0.0])), V=(abs(V0), np.array([0.0, VREF]))))
+        sc = np.array([1.0, V0 / VREF, 1.0]) if free_src else np.array([1.0, V0 / VREF])
+        p = from_model(h, theta, cov=NOISE ** 2, scales=sc, targets=tg, step=1e-4)
+        r = localize(p, eps_req=EPS_REQ)
+        out[name] = dict(rank=r.rank_num, rank_prac=r.rank_prac, null_dim=int(theta.size - r.rank_num),
+                         singular_values=[float(x) for x in r.s],
+                         null_basis=[[float(v) for v in c] for c in r.V0.T],
+                         targets={k: dict(gamma=v["gamma"], gamma_weak=v["gamma_weak"],
+                                          sigma=v["sigma"], cls=v["cls"])
+                                  for k, v in r.targets.items()})
+    return out
 
 
 # ------------------------------------------------------- case F real device data (MAST CXRS)
@@ -486,6 +546,7 @@ def main():
                case_B_conditional=rows_b,
                case_C_gain=case_C(), case_D_transport=case_D())
     out["case_E_map"] = case_E()
+    out["case_D_sources"] = case_D_sources()
     out["case_F_realdata"] = case_F_realdata()
     with open(os.path.join(dest, "cases.json"), "w") as f:
         json.dump(out, f, indent=1)

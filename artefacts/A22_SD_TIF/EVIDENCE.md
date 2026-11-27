@@ -7,13 +7,15 @@ two JSON records in this directory; nothing is typed in.
 
 | case | result |
 |---|---|
-| E1 linear, two null directions | `{"gamma": {"d12": 1.0, "q12": 0.0, "q13": 0.707107, "q34": 0.0, "t13": 0.707107}, "null_dim": 2, "rank": 2, "target_std": [Infinity, Infinity, Infinity, Infinity, Infinity]}` |
+| E1 linear, two null directions | `{"gamma": {"d12": 1.0, "q12": 0.0, "q13": 0.707107, "q34": 0.0, "t13": 0.707107}, "null_dim": 2, "pseudo_values": {"d12": null, "q12": null, "q13": null, "q34": null, "t13": null}, "rank": 2, "target_std": [null, null, null, null, null]}` |
 | E2 nonlinear, local rank change | `{"degenerate_rank": 1, "gamma_degenerate": {"th1": 0.4472, "th1sq_plus": 0.0}, "null_direction": [-0.4472, 0.8944], "regular_rank": 2}` |
 | E3 nuisance calibration parameter | `{"class_free": "unidentifiable", "finite_bound_reported_despite_unidentifiable": true, "gamma_fixed": 0.0, "gamma_free": 0.707107, "nuisance_rank": 1, "profiled_information": 0.0}` |
 | E4 state sweep, rank transition | `{"certified_across_crossing": false, "certified_away_from_crossing": true, "coarse_grid_would_call_it": [2, 2, 2], "gamma_sum": [0.0, 0.0, 0.0, 0.0, 0.0], "gamma_th1": [0.7071, 0.0, 0.0, 0.0, 0.0], "ranks": [1, 2, 2, 2, 2], "subspace_distance_0_to_03": 0.7071}` |
 | E5 finite perturbation along null | `{"gamma_sum": 0.0, "null_direction": [-0.7071, 0.7071], "sigma": 0.03, "sweep": [{"amplitude": 0.01, "whitened_change": 0.0}, {"amplitude": 0.03, "whitened_change": 0.0}, {"amplitude": 0.1, "whitened_change": 0.0}, {"amplitude": 0.3, "whitened_change": 0.0}]}` |
-| E6 Weyl / Davis-Kahan robustness | `{"P_bound": 2e-05, "certified_at_10": false, "gap": 100.0, "structural_certified_at_1e_3": true, "structural_rank_upper_at_1e_3": 3, "unobservable_subspace_drift": 0.00086}` |
+| E6 Weyl / Davis-Kahan robustness | `{"P_bound": 0.021052631578947368, "bound_holds_everywhere": true, "certified_at_10": false, "drift": 0.01791545078604693, "gap": 95.0, "rank_lost_at": 4.0, "structural_certified_at_1e_3": true, "sweep": [{"bound": 1.0526315789473685e-07, "delta": 1e-05, "drift": 8.091234094991417e-08, "rank_preserve` |
 | E7 analytic bound, independent projector | `{"bound_analytic": 2e-06, "bound_computed": 2e-06, "projector_independent_path": 0.0}` |
+| E8 generic diagnostic operators | `{"correlated_noise": {"gamma_total_coloured": 0.7094138241225704, "gamma_total_white": 0.7094138241225704, "sigma_total_coloured": 0.012425866288435184, "sigma_total_white": 0.021421961229408096}, "integral": {"gamma_centroid": 0.0, "gamma_total": 0.0, "null_dim": 0, "rank": 6}, "nonlinear": {"rank_` |
+| E9 edge cases | `{"m_gt_n_rank_deficient": {"gamma_ratio": 1.0000000000000002, "rank": 1}, "m_lt_n_null_gt1": {"gamma_sum": 9.61481343191782e-17, "null_dim": 2, "rank": 2}, "nuisance_rank_deficient": {"nuisance_rank": 1, "profile_finite": true, "rank": 1}, "repeated_singular_values": {"gap": 100.0, "rank": 4}, "scal` |
 
 ## Carbon, six lines and seven stages, 20 nodes
 

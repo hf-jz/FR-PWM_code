@@ -10,12 +10,19 @@
    "t13": 0.707107
   },
   "target_std": [
-   Infinity,
-   Infinity,
-   Infinity,
-   Infinity,
-   Infinity
-  ]
+   null,
+   null,
+   null,
+   null,
+   null
+  ],
+  "pseudo_values": {
+   "q12": null,
+   "q34": null,
+   "d12": null,
+   "q13": null,
+   "t13": null
+  }
  },
  "E2 nonlinear, local rank change": {
   "regular_rank": 2,
@@ -95,16 +102,129 @@
   "gamma_sum": 0.0
  },
  "E6 Weyl / Davis-Kahan robustness": {
-  "P_bound": 2e-05,
+  "gap": 95.0,
+  "sweep": [
+   {
+    "delta": 1e-05,
+    "drift": 8.091234094991417e-08,
+    "bound": 1.0526315789473685e-07,
+    "rank_preserved": true
+   },
+   {
+    "delta": 0.0001,
+    "drift": 8.974005729167166e-07,
+    "bound": 1.0526315789473685e-06,
+    "rank_preserved": true
+   },
+   {
+    "delta": 0.001,
+    "drift": 6.4770036056925505e-06,
+    "bound": 1.0526315789473684e-05,
+    "rank_preserved": true
+   },
+   {
+    "delta": 0.01,
+    "drift": 5.951022264101618e-05,
+    "bound": 0.00010526315789473685,
+    "rank_preserved": true
+   },
+   {
+    "delta": 0.1,
+    "drift": 0.000750510162575472,
+    "bound": 0.0010526315789473684,
+    "rank_preserved": true
+   },
+   {
+    "delta": 0.5,
+    "drift": 0.00400413775618769,
+    "bound": 0.005263157894736842,
+    "rank_preserved": true
+   },
+   {
+    "delta": 1.0,
+    "drift": 0.00954633402548688,
+    "bound": 0.010526315789473684,
+    "rank_preserved": true
+   },
+   {
+    "delta": 2.0,
+    "drift": 0.01791545078604693,
+    "bound": 0.021052631578947368,
+    "rank_preserved": true
+   }
+  ],
+  "tol_num": 10.0,
+  "P_bound": 0.021052631578947368,
+  "drift": 0.01791545078604693,
+  "bound_holds_everywhere": true,
+  "unobservable_subspace_drift": 0.01791545078604693,
   "structural_certified_at_1e_3": true,
   "certified_at_10": false,
-  "gap": 100.0,
-  "unobservable_subspace_drift": 0.00086,
-  "structural_rank_upper_at_1e_3": 3
+  "rank_lost_at": 4.0
  },
  "E7 analytic bound, independent projector": {
   "bound_analytic": 2e-06,
   "bound_computed": 2e-06,
   "projector_independent_path": 0.0
+ },
+ "E8 generic diagnostic operators": {
+  "integral": {
+   "rank": 6,
+   "null_dim": 0,
+   "gamma_total": 0.0,
+   "gamma_centroid": 0.0
+  },
+  "point": {
+   "rank": 6,
+   "gamma_total": 0.0
+  },
+  "nonlinear": {
+   "rank_regular": 6,
+   "rank_at_zero": 0
+  },
+  "correlated_noise": {
+   "gamma_total_white": 0.7094138241225704,
+   "gamma_total_coloured": 0.7094138241225704,
+   "sigma_total_white": 0.021421961229408096,
+   "sigma_total_coloured": 0.012425866288435184
+  },
+  "unknown_calibration": {
+   "rank": 6,
+   "gamma_total": 0.925820099772552,
+   "gamma_shape": 3.0506341347543336e-16,
+   "status": "the gain column is the constant vector, so the total is indistinguishable from a common-mode scale while the shape is not"
+  }
+ },
+ "E9 edge cases": {
+  "m_lt_n_null_gt1": {
+   "rank": 2,
+   "null_dim": 2,
+   "gamma_sum": 9.61481343191782e-17
+  },
+  "m_gt_n_rank_deficient": {
+   "rank": 1,
+   "gamma_ratio": 1.0000000000000002
+  },
+  "repeated_singular_values": {
+   "rank": 4,
+   "gap": 100.0
+  },
+  "scales_six_decades": {
+   "rank": 2,
+   "gamma_diff": 0.0,
+   "sigma_diff": 0.0070710678118654745
+  },
+  "target_in_null": {
+   "gamma_pure": 0.9999999999999999,
+   "gamma_partial": 0.49999999999999994,
+   "sigma_pure": null,
+   "sigma_partial": 0.011180339887498949,
+   "pseudo_pure": 0.0
+  },
+  "nuisance_rank_deficient": {
+   "rank": 1,
+   "nuisance_rank": 1,
+   "profile_finite": true
+  }
  }
 }

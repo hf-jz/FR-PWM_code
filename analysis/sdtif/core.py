@@ -45,8 +45,21 @@ class Problem:
             self.scales = np.full(n, float(self.scales.reshape(-1)[0]))
         assert self.scales.shape == (n,), "one scale per parameter"
         m = self.J.shape[0]
-        c = self.cov
-        self.cov = np.eye(m) * float(c) if np.isscalar(c) or np.size(c) == 1 else np.asarray(c, float)
+        c = np.asarray(self.cov, float)
+        # three accepted forms, everything else refused: a scalar variance, a length-m vector of
+        # per-channel variances, or a full m x m covariance.  The vector form used to slip through
+        # as a 1-D array and fail later inside cholesky, which is a confusing place to learn it.
+        if c.ndim == 0 or (c.ndim == 1 and c.size == 1):
+            self.cov = np.eye(m) * float(c.reshape(-1)[0])
+        elif c.ndim == 1:
+            if c.size != m:
+                raise ValueError("covariance has %d variances but the operator has %d rows" % (c.size, m))
+            self.cov = np.diag(c)
+        elif c.shape == (m, m):
+            self.cov = c
+        else:
+            raise ValueError("covariance must be a scalar, a length-%d vector or %dx%d, got %s"
+                             % (m, m, m, c.shape))
         if not self.names:
             self.names = tuple("theta%d" % (i + 1) for i in range(n))
 
@@ -96,7 +109,8 @@ class Result:
     P0: np.ndarray
     Pobs: np.ndarray
     selfcheck: dict
-    P_unobs: np.ndarray = None      # projector on the practically unobservable subspace
+    P_unobs: np.ndarray = None      # projector on the structural null space (kept for callers)
+    P_weak: np.ndarray = None       # projector on the weak subspace r_prac < i <= r_num
     meta: dict = field(default_factory=dict)
     targets: dict = field(default_factory=dict)
 
@@ -130,11 +144,13 @@ def localize(problem, eps_req=0.1, tol_num=None):
     r_num = int(np.sum(s_full > tol_n))
     r_prac = int(np.sum(s_full * eps_req > 1.0))              # 1/s_i <= eps_req
     V = Vt.T
-    V0 = V[:, r_num:]
+    r_prac = min(r_prac, r_num)      # a direction cannot be practically resolvable and structurally null
+    V0 = V[:, r_num:]                # structural null space, dimension n - r_struct
     P0 = V0 @ V0.T if V0.size else np.zeros((n, n))
     Pobs = np.eye(n) - P0
-    Vw = V[:, r_prac:]                                        # practically unobservable subspace
-    P_unobs = Vw @ Vw.T if Vw.size else np.zeros((n, n))
+    Vw = V[:, r_prac:r_num]          # weak subspace: resolved numerically, not to the accuracy required
+    P_weak = Vw @ Vw.T if Vw.size else np.zeros((n, n))
+    P_unobs = P0.copy()              # kept for callers that mean the structural null space
     e = dict(symmetry=float(np.linalg.norm(P0 - P0.T)),
              idempotence=float(np.linalg.norm(P0 @ P0 - P0)),
              annihilates=float(np.linalg.norm(Jt @ P0) / s1),
@@ -142,8 +158,10 @@ def localize(problem, eps_req=0.1, tol_num=None):
              orthonormal_basis=float(np.linalg.norm(V0.T @ V0 - np.eye(V0.shape[1]))) if V0.size else 0.0)
     res = Result(problem=problem, Jt=Jt, U=U, s=s_full, Vt=Vt, rank_num=r_num,
                  rank_prac=r_prac, tol_num=tol_n, tol_prac=1.0 / eps_req, V0=V0,
-                 V_weak=V[:, r_prac:], P0=P0, Pobs=Pobs, selfcheck=e,
-                 P_unobs=P_unobs, meta=dict(eps_req=eps_req))
+                 V_weak=Vw, P0=P0, Pobs=Pobs, selfcheck=e,
+                 P_unobs=P_unobs, P_weak=P_weak,
+                 meta=dict(eps_req=eps_req, r_struct=r_num, r_prac=r_prac,
+                           weak_dim=int(r_num - r_prac), null_dim=int(n - r_num)))
     for name, spec in problem.targets.items():
         val, grad = spec if isinstance(spec, (tuple, list)) else (None, spec)
         res.targets[name] = analyze_target(res, name, np.atleast_1d(np.asarray(grad, float)), val)
@@ -151,52 +169,66 @@ def localize(problem, eps_req=0.1, tol_num=None):
 
 
 def analyze_target(res, name, grad_theta, value=None, eps_target=None):
-    """Null-space projection and marginal bound of one target functional.
+    """Three quantities per target, never mixed.
 
-    Returns Gamma (null fraction), the bound, and the class.  A target that fails the
-    structural test gets no finite number: the reported value is the identifiable
-    combination itself, which is what a caller may print.
+    gamma        structural: the fraction of the target gradient in the numerical null space.
+                 gamma > 0 means no estimator recovers the target, at any signal-to-noise.
+    gamma_weak   the fraction in the weak subspace (numerically resolvable, below the accuracy
+                 the problem requires).  A target with gamma = 0 and gamma_weak > 0 is
+                 identifiable in principle and not to the required precision.
+    sigma_obs    the bound on the *identifiable projection* q_obs, whose gradient is
+                 (I - P0) c_z.  This is the only object that may be called a Cramer-Rao
+                 bound: the pseudo-inverse value on the full target ignores the part of the
+                 gradient no direction can reach, so it is reported separately as
+                 pseudo_inverse_value and is never a bound on q.
     """
     eps_target = res.meta.get("eps_req", 0.1) if eps_target is None else eps_target
     cz = res.problem.scales * grad_theta
     nz = np.linalg.norm(cz)
     if nz <= 0:
         raise ValueError("target gradient is zero in %s" % name)
-    proj = res.P0 @ cz
-    gamma = float(np.linalg.norm(proj) / nz)
+    gamma = float(np.linalg.norm(res.P0 @ cz) / nz)
+    gamma_weak = float(np.linalg.norm(res.P_weak @ cz) / nz)
     r = res.rank_prac
-    var = None
+    c_obs = res.Pobs @ cz                       # gradient of the identifiable projection
+    c_weak = res.P_weak @ cz
+    # bound on q_obs, using only the directions that resolve it to the required accuracy
+    var_obs = None
+    if r > 0 and np.linalg.norm(c_obs) > 1e-12 * nz:
+        Vr = res.Vt[:r].T
+        var_obs = float(np.sum(((Vr.T @ c_obs) / res.s[:r]) ** 2))
+    # the number an unguarded caller would print: the pseudo-inverse on the full gradient
+    var_ps = None
     if r > 0:
-        Vr = res.Vt[:r].T                       # observable directions in z
-        coeff = Vr.T @ cz
-        var = float(np.sum((coeff / res.s[:r]) ** 2))
-    # gradient component that no resolvable direction can reach: the bound below is then a
-    # lower bound on the target's uncertainty, not the uncertainty itself
-    Vr = res.Vt[:r].T
-    c_res = cz - (Vr @ (Vr.T @ cz) if r > 0 else 0.0)
-    unresolved = float(np.linalg.norm(c_res) / nz)
-    # identifiable part: the target seen through the observable subspace
-    c_obs = res.Pobs @ cz
-    rel = None if var is None else float(np.sqrt(var) / abs(value)) if value not in (None, 0) else float(np.sqrt(var))
+        Vr = res.Vt[:r].T
+        var_ps = float(np.sum(((Vr.T @ cz) / res.s[:r]) ** 2))
+    unresolved = float(np.linalg.norm(c_obs - (res.Vt[:r].T @ (res.Vt[:r].T.T @ c_obs))) / nz) if r > 0 \
+        else float(np.linalg.norm(c_obs) / nz)
+    sig = None if var_obs is None else float(np.sqrt(var_obs))
+    scale = abs(value) if value not in (None, 0) else 1.0
+    rel = None if sig is None else float(sig / scale)
     if gamma > 1e-8:
-        cls, reason = UNIDENT, "null_space"
-    elif var is None:
+        cls, reason = UNIDENT, "structural_null_space"
+    elif var_obs is None:
         cls, reason = UNIDENT, "no_resolvable_direction"
     elif rel > 1.0:
         cls, reason = UNIDENT, "bound_exceeds_variation_scale"
-    elif unresolved > 1e-8:
-        cls, reason = WEAK, "partially_resolved_bound_is_lower_bound"
+    elif unresolved > 1e-8 or gamma_weak > 1e-8:
+        cls, reason = WEAK, "partly_resolved_bound_is_lower_bound"
     elif rel <= eps_target:
         cls, reason = FULLY, "bound_below_requirement"
     else:
         cls, reason = WEAK, "bound_above_requirement"
-    return dict(target=name, gamma=gamma, null_norm=float(np.linalg.norm(proj)),
-                sigma=float(np.sqrt(var)) if var is not None else float("inf"),
-                relative_sigma=rel, cls=cls, reason=reason,
-                unresolved_fraction=unresolved,
+    return dict(target=name, gamma=gamma, gamma_weak=gamma_weak,
+                gamma_total=float(np.sqrt(max(0.0, 1.0 - (1 - gamma) ** 2))),
+                sigma=sig, sigma_obs=sig, sigma_weak=None if not np.linalg.norm(c_weak) else 0.0,
+                relative_sigma=rel,
+                pseudo_inverse_value=None if var_ps is None else float(np.sqrt(var_ps)),
+                pseudo_inverse_is_bound=False,
+                cls=cls, reason=reason, unresolved_fraction=unresolved,
                 identifiable_fraction=float(np.linalg.norm(c_obs) / nz),
-                value=None if value is None else float(value),
-                eps_target=eps_target)
+                weak_fraction=gamma_weak,
+                value=None if value is None else float(value), eps_target=eps_target)
 
 
 # ------------------------------------------------------------------------- nuisance
@@ -218,6 +250,18 @@ def profile(F, n_theta):
 
 
 # ----------------------------------------------------------------------- robustness
+def whitened_norm(problem, dJ):
+    """||L^{-1} dJ S||_2: the perturbation norm the bounds are stated in.
+
+    Perturbing the physical Jacobian by dJ is not the same as perturbing the whitened,
+    scale-normalised operator by dJ; comparing a Monte-Carlo drift against a bound computed
+    for a different norm is the defect this function removes.
+    """
+    L = np.linalg.cholesky(problem.cov) if problem.cov.shape[0] > 1 else np.sqrt(problem.cov)
+    Y = np.linalg.solve(L, np.asarray(dJ, float)) if np.ndim(L) == 2 else np.asarray(dJ, float) / float(L)
+    return float(np.linalg.norm(Y * problem.scales[None, :], 2))
+
+
 def robust(res, delta_J, target_names=None):
     """Bounds valid for every operator within ||dJ||_2 <= delta_J.
 
@@ -234,7 +278,7 @@ def robust(res, delta_J, target_names=None):
     out = dict(delta_J=float(delta_J),
                rank_prac_lower=int(np.sum(s - delta_J > res.tol_prac)),
                rank_prac_upper=int(np.sum(s + delta_J > res.tol_prac)))
-    gap = float(s[r - 1] - (s[r] if r < s.size else 0.0))
+    gap = float(s[r - 1] - (s[r] if r < s.size else 0.0))   # structural gap at the declared rank
     out["gap"] = gap
     out["rank_stable"] = bool(out["rank_prac_lower"] == out["rank_prac_upper"] == rp)
     # the structural null direction must not become practically observable
@@ -250,6 +294,7 @@ def robust(res, delta_J, target_names=None):
     for nm in names:
         g = res.targets[nm]["gamma"]
         out["targets"][nm] = dict(gamma=g, gamma_upper=float(min(1.0, g + out["P_bound"])),
+                                  gamma_weak=res.targets[nm].get("gamma_weak", 0.0),
                                   verdict="certain" if (g == 0 and out["certified"]) else
                                           ("at risk" if g + out["P_bound"] > 1e-8 else "open"))
     return out
@@ -262,27 +307,39 @@ def subspace_distance(P1, P2):
     return float(np.linalg.norm(P1 - P2) / denom)
 
 
-def state_certificate(nodes, lipschitz, target_names=None, radius=0.05):
-    """State-box certificate from a set of analysed nodes and a Jacobian Lipschitz bound.
+def state_certificate(nodes, lipschitz, target_names=None, radius=0.05, level=None):
+    """Certificate over a state box, with the level of the claim reported rather than implied.
 
-    nodes     : list of (xi, Result); xi has the same coordinate as `lipschitz`
-    lipschitz : d ||Jt|| / d xi, measured on a refined grid (a bound for xi in the box)
-    radius    : half-width of the state box around each node in xi units
-    A target is certified over the box only if every node's Weyl interval keeps the rank
-    and every node's Gamma upper bound stays below 1e-8.
+    nodes     : list of (xi, Result) analysed at grid nodes covering the box
+    lipschitz : d||Jt||/dxi, measured on the same grid as a sup over the box's edges
+    radius    : half-width of the box around each node, in xi units
+
+    Three levels, and only the third certifies a continuum:
+      "node"       the inequality holds at the sampled nodes and nowhere else is claimed;
+      "refined"    the inequality holds on a grid that was refined until every interval passed;
+      "continuous" delta_max = lipschitz*radius + node_delta < g_min/2 with g_min the smallest
+                   structural gap over the nodes, so every state in the box is covered by
+                   Weyl and Davis-Kahan, not just the samples.
     """
     names = target_names or list(nodes[0][1].targets)
-    delta = float(lipschitz) * radius
+    g_min = min(float(robust(res, 0.0)["gap"]) for _, res in nodes)
+    node_delta = max(float(robust(res, 0.0)["delta_J"]) for _, res in nodes)
+    delta_box = float(lipschitz) * radius
+    delta_max = delta_box + node_delta
     rows = {nm: dict(gamma_max=0.0, gamma_upper_max=0.0, certified=True, nodes=0) for nm in names}
     for xi, res in nodes:
-        rb = robust(res, delta, names)
+        rb = robust(res, delta_box, names)
         for nm in names:
             rows[nm]["nodes"] += 1
             rows[nm]["gamma_max"] = max(rows[nm]["gamma_max"], rb["targets"][nm]["gamma"])
             rows[nm]["gamma_upper_max"] = max(rows[nm]["gamma_upper_max"],
                                               rb["targets"][nm]["gamma_upper"])
             rows[nm]["certified"] &= bool(rb["certified"] and rb["rank_stable"])
-    return dict(delta_J=delta, radius=radius, lipschitz=float(lipschitz), targets=rows)
+    continuous = bool(delta_max < g_min / 2.0) and all(r["certified"] for r in rows.values())
+    lvl = level or ("continuous" if continuous else
+                    ("refined" if all(r["certified"] for r in rows.values()) else "node"))
+    return dict(delta_J=delta_max, delta_box=delta_box, radius=radius, lipschitz=float(lipschitz),
+                g_min=g_min, continuous=continuous, level=lvl, targets=rows)
 
 
 def fingerprint(arr):
@@ -336,7 +393,7 @@ def systematic_box(res, rel, cols=None):
             spread[k].append(float(np.linalg.norm(P0 @ cz) / np.linalg.norm(cz)))
     delta = float(s[0] * rel)          # ||J diag(eps)||_2 <= ||J||_2 * max|eps|
     r = res.rank_num
-    gap = float(s[r - 1] - (s[r] if r < s.size else 0.0))
+    gap = float(s[r - 1] - (s[r] if r < s.size else 0.0))   # structural gap at the declared rank
     for k, gs in spread.items():
         g0 = res.targets[k]["gamma"]
         out["targets"][k] = dict(gamma_nominal=g0, gamma_min=min(gs), gamma_max=max(gs),

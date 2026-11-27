@@ -2,7 +2,7 @@
 \centering
 \caption{The calculus against closed-form answers and applied, from artefact A22. $\Gamma$ is the fraction of the target gradient in the unobservable subspace, so $\Gamma=0$ means the observations fix the target to first order and $\Gamma>0$ means they cannot at any signal-to-noise.}
 \label{tab:sdtif}
-\small
+\footnotesize
 \begin{tabular}{@{}lrrl@{}}
 \toprule
 case & analytic & computed & verdict \\
@@ -14,7 +14,8 @@ nuisance gain, $\Gamma(n_z)$ gain known & 0 & 0.0e+00 & identifiable \\
 nuisance gain, $\Gamma(n_z)$ gain free & 0.7071 & 0.7071 & profiled information 0 \\
 rank transition, certified away & --- & yes & a 2\,\% box is covered \\
 rank transition, certified across & --- & no & refused, as it must be \\
-$\|P_0'-P_0\|$ at $\|\Delta J\|=10^{-3}$ & $\leq2.0e-05$ & 8.6e-04 & Weyl / Davis--Kahan \\
+$\|P_0'-P_0\|$, $\delta_J=2.0$, gap 95 & $\leq0.0211$ & 0.0179 & holds across the sweep \\
+pseudo-inverse on a pure-null target & --- & 0.0 & not a bound (E9) \\
 bound on a sum of two, $c^{\mathsf T}\mathcal F^{+}c$ & 2.0e-06 & 2.0e-06 & closed form, $2\sigma^2$ \\
 null projector, second code path & 0 & 0.0e+00 & eigendecomposition vs SVD \\
 \midrule
@@ -26,6 +27,8 @@ real MAST 28315, $\Gamma(T_i)$ gain free & 0.7071 & 0.7071 & amplitude tied to c
 idem, $\Gamma(\ln L_T)$ gain free & 0 & 1.1e-15 & $\sigma=0.38$\% at 6.8\% noise \\
 idem, 15\% calibration error on $\ln L_T$ & 0 & 1.3e-15 & worst corner \\
 idem, noise multiplier certified & --- & 6.91 & refused above it \\
+continuous certificate, $n_e$ axis & $\delta_J<g/2$ & 5.9$<$62.6 & empirical level \\
+transport, measured source, $\Gamma(D)$ & 0 & 0.0 & the data break the symmetry \\
 campaign 28315--28324, $\Gamma(T_i)$ / $\Gamma(\ln L_T)$ & $2^{-1/2}$ / 0 & 10 / 10 of 10 & certified in 9 \\
 \bottomrule
 \end{tabular}

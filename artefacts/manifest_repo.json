@@ -1,5 +1,5 @@
 {
- "files": 101,
+ "files": 102,
  "entries": [
   {
    "path": "A11_Rollout/t3e4_rollout.json",
@@ -228,18 +228,18 @@
   },
   {
    "path": "A22_SD_TIF/EVIDENCE.md",
-   "bytes": 2429,
-   "sha256": "2e147e8144d4c7966ffcdbe8f1f6624911eeab453020e60986870be4080b4d14"
+   "bytes": 3285,
+   "sha256": "908eee864262c105cab032a6b9ca14643d22e04d84e5d8afd1cf092e7cefedbc"
   },
   {
    "path": "A22_SD_TIF/benchmarks.json",
-   "bytes": 1838,
-   "sha256": "d4ee2783b8504e8f4815d86968cdf5c1f075d9a03c636bb1edcd68e78e17ff11"
+   "bytes": 4469,
+   "sha256": "3c6628ad18b6d0f4ccb80f5ef2fa50c3804c1068212f9ff9c1cf195a390e0a01"
   },
   {
    "path": "A22_SD_TIF/cases.json",
-   "bytes": 70153,
-   "sha256": "2309fd615352098e3952c9cd515d0bd2f45a319f2706b0b3171e87b82b75b511"
+   "bytes": 72871,
+   "sha256": "847287fd06c39ded16743a4a81659448a12a5adc2ee36552d86ec3a2abe95fa1"
   },
   {
    "path": "A22_SD_TIF/inputs/README.md",
@@ -295,6 +295,11 @@
    "path": "A22_SD_TIF/inputs/level2_28324.npz",
    "bytes": 310026,
    "sha256": "4ccd7991b3151528fc3ea8a6740d93d5d0df3236f5babc33797b6da7169b4451"
+  },
+  {
+   "path": "A22_SD_TIF/state_maps.json",
+   "bytes": 18726,
+   "sha256": "a290fddeae2f82ba11a52ccfa626afdb1634cb9028ca171f98805350d25db891"
   },
   {
    "path": "A23_Barrier_Admissibility/admissibility.json",
@@ -493,13 +498,13 @@
   },
   {
    "path": "MANIFEST.sha256",
-   "sha256": "945420561455462935e84c5cdbd5e2501f43bfb4eceb7f5c6eb62d98a46e1954",
-   "bytes": 17796
+   "sha256": "ab77a1aedda8ac4a29045dfafee138be1777df17897cbb81860dbe30c87f6931",
+   "bytes": 17889
   },
   {
    "path": "manifest.json",
-   "sha256": "58b28c2fce429bd681dddab2e761cfd0c9360d0fa2b16a724f8b643528658cf9",
-   "bytes": 27111
+   "sha256": "8ffa4b08e4099b05a1fa2170bbcfeb0ae3bbb38548155c1bea5cc9cebb6cad65",
+   "bytes": 27260
   },
   {
    "path": "recomputed_summary.json",

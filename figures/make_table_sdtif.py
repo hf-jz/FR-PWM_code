@@ -36,6 +36,8 @@ def main():
     e3, e4 = b["E3 nuisance calibration parameter"], b["E4 state sweep, rank transition"]
     e6 = b["E6 Weyl / Davis-Kahan robustness"]
     e7 = b["E7 analytic bound, independent projector"]
+    e9 = b["E9 edge cases"]
+    c2 = c["case_D_sources"]
     gl = g["singular_values_lines_only"]
     gw = g["singular_values_with_interferometer"]
     sw = g["relative_sigma_with_interferometer"]
@@ -48,7 +50,7 @@ def main():
         r"$\Gamma=0$ means the observations fix the target to first order and $\Gamma>0$ means "
         r"they cannot at any signal-to-noise.}",
         r"\label{tab:sdtif}",
-        r"\small",
+        r"\footnotesize",
         r"\begin{tabular}{@{}lrrl@{}}",
         r"\toprule",
         r"case & analytic & computed & verdict \\",
@@ -62,8 +64,10 @@ def main():
         % ("yes" if e4["certified_away_from_crossing"] else "no"),
         r"rank transition, certified across & --- & %s & refused, as it must be \\"
         % ("yes" if e4["certified_across_crossing"] else "no"),
-        r"$\|P_0'-P_0\|$ at $\|\Delta J\|=10^{-3}$ & $\leq%.1e$ & %.1e & Weyl / Davis--Kahan \\"
+        r"$\|P_0'-P_0\|$, $\delta_J=2.0$, gap 95 & $\leq%.4f$ & %.4f & holds across the sweep \\"
         % (e6["P_bound"], e6["unobservable_subspace_drift"]),
+        r"pseudo-inverse on a pure-null target & --- & %.1f & not a bound (E9) \\"
+        % e9["target_in_null"]["pseudo_pure"],
         r"bound on a sum of two, $c^{\mathsf T}\mathcal F^{+}c$ & %.1e & %.1e & closed form, $2\sigma^2$ \\"
         % (e7["bound_analytic"], e7["bound_computed"]),
         r"null projector, second code path & 0 & %.1e & eigendecomposition vs SVD \\"
@@ -86,6 +90,10 @@ def main():
         r"idem, noise multiplier certified & --- & %.2f & refused above it \\"
         % max(b2 for _, b2 in fs["certified"]) if fs["certified"] else
         (r"idem, noise multiplier certified & --- & none & refused at every level \\"),
+        r"continuous certificate, $n_e$ axis & $\delta_J<g/2$ & %.1f$<$%.1f & empirical level \\"
+        % (e["certificate_ne"]["delta_max"], e["certificate_ne"]["g_min"]),
+        r"transport, measured source, $\Gamma(D)$ & 0 & %.1f & the data break the symmetry \\"
+        % c2["measured_source"]["targets"]["D"]["gamma"],
         r"campaign 28315--28324, $\Gamma(T_i)$ / $\Gamma(\ln L_T)$ & $2^{-1/2}$ / 0 & "
         r"%.0f / %.0f of %.0f & certified in %.0f \\"
         % (ms["amplitude_degenerate"], ms["shape_identifiable"], ms["n_shots"],
@@ -113,6 +121,25 @@ def main():
                        ("%.1f" % m["certified_mu"]) if m["certified_mu"] >= 1.0 else "---"))
     rows += [r"\bottomrule", r"\end{tabular}", r"\end{table}"]
     open(os.path.join(OUT, "table_mast_map.tex"), "w").write("\n".join(rows) + "\n")
+
+    # ------------------------------------------- equilibrium-weighted operator, per node
+    w = c["case_A_weighted"]
+    rows = [r"\begin{table}[htbp]", r"\centering",
+            r"\caption{The equilibrium-weighted six-by-seven operator on the same grid, from artefact A22. "
+            r"$T_e$ in eV, $n_e$ in m$^{-3}$, occupied the number of stages carrying population. The null "
+            r"space has more than one dimension wherever the weighted columns are rank deficient, so no "
+            r"single vector is printed: the full basis and the projector of every node are in the record.}",
+            r"\label{tab:nullspace}", r"\small",
+            r"\begin{tabular}{@{}rrrrrrr@{}}", r"\toprule",
+            r"$T_e$ & $n_e$ & occupied & rank & $\dim\,\mathrm{Null}$ & $\Gamma(N_{\mathrm{tot}})$ & "
+            r"$\Gamma(N_{\mathrm{obs}})$ \\", r"\midrule"]
+    for row in w:
+        rows.append(r"%.0f & %.0e & %d & %d & %d & %.3f & %.3f \\"
+                    % (row["te"], row["ne"], row["occupied"], row["rank_num"],
+                       len(row["null_basis"]), row["targets"]["N_tot"]["gamma"],
+                       row["targets"]["N_obs"]["gamma"]))
+    rows += [r"\bottomrule", r"\end{tabular}", r"\end{table}"]
+    open(os.path.join(OUT, "table_weighted_nulls.tex"), "w").write("\n".join(rows) + "\n")
 
     # --------------------------------------------------------------- carbon table
     lines = [
@@ -186,6 +213,10 @@ def main():
         r"idem, noise multiplier certified & --- & %.2f & refused above it \\"
         % max(b2 for _, b2 in fs["certified"]) if fs["certified"] else
         (r"idem, noise multiplier certified & --- & none & refused at every level \\"),
+        r"continuous certificate, $n_e$ axis & $\delta_J<g/2$ & %.1f$<$%.1f & empirical level \\"
+        % (e["certificate_ne"]["delta_max"], e["certificate_ne"]["g_min"]),
+        r"transport, measured source, $\Gamma(D)$ & 0 & %.1f & the data break the symmetry \\"
+        % c2["measured_source"]["targets"]["D"]["gamma"],
         r"campaign 28315--28324, $\Gamma(T_i)$ / $\Gamma(\ln L_T)$ & $2^{-1/2}$ / 0 & "
         r"%.0f / %.0f of %.0f & certified in %.0f \\"
         % (ms["amplitude_degenerate"], ms["shape_identifiable"], ms["n_shots"],

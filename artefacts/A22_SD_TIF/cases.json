@@ -2500,8 +2500,8 @@
    "T_e": "weakly_identifiable"
   },
   "reason_lines_only": {
-   "n_e": "partially_resolved_bound_is_lower_bound",
-   "T_e": "partially_resolved_bound_is_lower_bound"
+   "n_e": "partly_resolved_bound_is_lower_bound",
+   "T_e": "partly_resolved_bound_is_lower_bound"
   },
   "singular_values_with_interferometer": [
    478.69761908591937,
@@ -2520,7 +2520,7 @@
   },
   "reason_with_interferometer": {
    "n_e": "bound_below_requirement",
-   "T_e": "partially_resolved_bound_is_lower_bound"
+   "T_e": "partly_resolved_bound_is_lower_bound"
   },
   "relative_sigma_with_interferometer": {
    "n_e": 0.019999999594873825,
@@ -2549,17 +2549,17 @@
    "D0": {
     "gamma": 0.577350269189626,
     "cls": "unidentifiable",
-    "relative_sigma": 0.0052735110193415395
+    "relative_sigma": 0.00527351101934154
    },
    "V0": {
     "gamma": 0.5773502691896254,
     "cls": "unidentifiable",
-    "relative_sigma": 0.00039410228373873776
+    "relative_sigma": 0.00039410228373873684
    },
    "source_amplitude": {
     "gamma": 0.5773502691896263,
     "cls": "unidentifiable",
-    "relative_sigma": 0.004879408735602803
+    "relative_sigma": 0.004879408735602802
    },
    "D_over_V": {
     "gamma": 3.865904340312231e-16,
@@ -3199,6 +3199,18 @@
     "rel_sigma": 0.014902297022293901
    }
   ],
+  "certificate_te": {
+   "g_min": 0.01657822205905407,
+   "delta_max": 1839.7467894700128,
+   "continuous": false,
+   "level": "node-only"
+  },
+  "certificate_ne": {
+   "g_min": 62.57651965046963,
+   "delta_max": 5.936354495745031,
+   "continuous": true,
+   "level": "empirical-continuous"
+  },
   "n_certified_coarse": 0,
   "n_certified_fine": 0,
   "n_certified_density_coarse": 0,
@@ -3210,6 +3222,118 @@
   "gamma_max": 0.0,
   "rel_sigma_min": 5.419011964872103e-06,
   "rel_sigma_max": 999.0
+ },
+ "case_D_sources": {
+  "unknown_source": {
+   "rank": 2,
+   "rank_prac": 1,
+   "null_dim": 1,
+   "singular_values": [
+    138.9775680735198,
+    5.750397007978835,
+    4.791246967529902e-15
+   ],
+   "null_basis": [
+    [
+     0.577350269189626,
+     0.5773502691896254,
+     0.5773502691896262
+    ]
+   ],
+   "targets": {
+    "D": {
+     "gamma": 0.577350269189626,
+     "gamma_weak": 0.35989532178879025,
+     "sigma": 0.00527351101934154,
+     "cls": "unidentifiable"
+    },
+    "V": {
+     "gamma": 0.5773502691896254,
+     "gamma_weak": 0.8146574512835999,
+     "sigma": 0.0005911534256081053,
+     "cls": "unidentifiable"
+    },
+    "source": {
+     "gamma": 0.5773502691896263,
+     "gamma_weak": 0.45476212949480826,
+     "sigma": 0.004879408735602802,
+     "cls": "unidentifiable"
+    },
+    "D_over_V": {
+     "gamma": 3.865904340312231e-16,
+     "gamma_weak": 0.8305342307009511,
+     "sigma": 0.005667613303080278,
+     "cls": "weakly_identifiable"
+    }
+   }
+  },
+  "shape_known_amplitude": {
+   "rank": 2,
+   "rank_prac": 1,
+   "null_dim": 1,
+   "singular_values": [
+    138.9775680735198,
+    5.750397007978835,
+    4.791246967529902e-15
+   ],
+   "null_basis": [
+    [
+     0.577350269189626,
+     0.5773502691896254,
+     0.5773502691896262
+    ]
+   ],
+   "targets": {
+    "D": {
+     "gamma": 0.577350269189626,
+     "gamma_weak": 0.35989532178879025,
+     "sigma": 0.00527351101934154,
+     "cls": "unidentifiable"
+    },
+    "V": {
+     "gamma": 0.5773502691896254,
+     "gamma_weak": 0.8146574512835999,
+     "sigma": 0.0005911534256081053,
+     "cls": "unidentifiable"
+    },
+    "source": {
+     "gamma": 0.5773502691896263,
+     "gamma_weak": 0.45476212949480826,
+     "sigma": 0.004879408735602802,
+     "cls": "unidentifiable"
+    },
+    "D_over_V": {
+     "gamma": 3.865904340312231e-16,
+     "gamma_weak": 0.8305342307009511,
+     "sigma": 0.005667613303080278,
+     "cls": "weakly_identifiable"
+    }
+   }
+  },
+  "measured_source": {
+   "rank": 2,
+   "rank_prac": 1,
+   "null_dim": 0,
+   "singular_values": [
+    102.169210640243,
+    4.516082550446496
+   ],
+   "null_basis": [],
+   "targets": {
+    "D": {
+     "gamma": 0.0,
+     "gamma_weak": 0.07556790390704023,
+     "sigma": 0.009759698169171738,
+     "cls": "weakly_identifiable"
+    },
+    "V": {
+     "gamma": 0.0,
+     "gamma_weak": 0.9971406580313009,
+     "sigma": 0.0011094522033618674,
+     "cls": "weakly_identifiable"
+    }
+   }
+  }
  },
  "case_F_realdata": {
   "shot": 28315,
@@ -3240,21 +3364,21 @@
    "T_absolute": {
     "gamma": 0.7071067811865478,
     "cls": "unidentifiable",
-    "reason": "null_space",
+    "reason": "structural_null_space",
     "sigma": 0.00987237609237776,
     "relative_sigma": 2.3511753394898563e-05
    },
    "ln_L_T": {
     "gamma": 1.112794815875437e-15,
     "cls": "weakly_identifiable",
-    "reason": "partially_resolved_bound_is_lower_bound",
+    "reason": "partly_resolved_bound_is_lower_bound",
     "sigma": 0.0038325666749972655,
     "relative_sigma": 0.0038325666749972655
    },
    "T_shape_coeff": {
     "gamma": 1.1127948158754372e-15,
     "cls": "weakly_identifiable",
-    "reason": "partially_resolved_bound_is_lower_bound",
+    "reason": "partly_resolved_bound_is_lower_bound",
     "sigma": 0.0012056300561960425,
     "relative_sigma": 0.0038325666749972655
    }
