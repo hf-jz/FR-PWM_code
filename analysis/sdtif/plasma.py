@@ -85,6 +85,18 @@ def ref_noise(te, ne):
     return np.maximum(NOISE * (e @ np.full(7, C_FRAC * ne / 7.0)), 1e-30)
 
 
+def measurement_mask(A, n_ref, sig):
+    """Columns a measurement can see.
+
+    A column whose contribution at the reference scale stays under the per-line noise on every
+    line carries no Fisher information: the stage it represents cannot be counted, so for an
+    identifiability statement it is zero.  Used by every operator that folds the ionisation
+    balance into its columns, so the table, the figure and the text share one rule.
+    """
+    contrib = np.abs(np.asarray(A) * np.asarray(n_ref)[None, :])
+    return np.any(contrib > np.asarray(sig).reshape(-1, 1), axis=0)
+
+
 def targets_unconditional(n_ref):
     tot = n_ref.sum()
     qv = np.arange(1, 8, dtype=float)
@@ -365,17 +377,49 @@ def case_A_weighted():
             A0 = emissivity(te, ne)
             fr = fractions(te, ne)
             fv = np.array([fr.get(q, 0.0) for q in range(1, 8)])
-            A = A0 * fv[None, :]
             n_ref = np.full(7, C_FRAC * ne / 7.0)
             sig = ref_noise(te, ne)
-            p = from_operator(A, cov=np.diag(sig ** 2), scales=n_ref.copy(),
-                              targets=targets_unconditional(n_ref), names=STAGES,
-                              meta=dict(te=te, ne=ne, mode="equilibrium_weighted"))
-            r = localize(p, eps_req=EPS_REQ)
+
+            # Two decompositions, one rule each, both reported.
+            #   raw       every column the abundance leaves nonzero.  A column twenty decades
+            #             under the noise still counts, so the rank can exceed the number of
+            #             stages that physically populate -- this is the inconsistency the
+            #             earlier table carried, and it is kept here so it stays visible.
+            #   measured  a column whose signal at the reference scale stays under the per-line
+            #             noise is set to zero.  Such a column contributes no Fisher information,
+            #             so rank_meas <= occupied by construction.
+            A_raw = A0 * fv[None, :]
+            live = measurement_mask(A_raw, n_ref, sig)
+            A_meas = A_raw * live[None, :]
+
+            tgt = lambda: targets_unconditional(n_ref)
+            r_raw = localize(from_operator(A_raw, cov=np.diag(sig ** 2), scales=n_ref.copy(),
+                                           targets=tgt(), names=STAGES,
+                                           meta=dict(te=te, ne=ne, mode="weighted_raw")),
+                             eps_req=EPS_REQ)
+            r = localize(from_operator(A_meas, cov=np.diag(sig ** 2), scales=n_ref.copy(),
+                                       targets=tgt(), names=STAGES,
+                                       meta=dict(te=te, ne=ne, mode="weighted_measured")),
+                         eps_req=EPS_REQ)
+            assert r.rank_num <= int(live.sum()), (
+                "%d nonzero columns cannot support rank %d" % (int(live.sum()), r.rank_num))
             rows.append(dict(te=te, ne=ne, rank_num=r.rank_num, rank_prac=r.rank_prac,
+                             # counted structurally: any column with a nonzero entry counts.
+                             # A rank counted at the numerical floor is decided by the last
+                             # digits when columns sit twenty decades down, which is exactly
+                             # the fragility that produced the earlier table.
+                             rank_raw=int(min(A_raw.shape[0], np.sum(np.any(A_raw != 0.0, axis=0)))),
+                             rank_raw_exceeds_occupied=int(r_raw.rank_num > int(live.sum())),
                              singular_values=[float(x) for x in r.s],
+                             singular_values_raw=[float(x) for x in r_raw.s],
+                             matrix=[[float(x) for x in row] for row in A_meas],
+                             matrix_raw=[[float(x) for x in row] for row in A_raw],
+                             scales=[float(x) for x in n_ref],
+                             eps_req=float(EPS_REQ),
                              null_basis=[[float(x) for x in c] for c in r.V0.T],
-                             occupied=int(np.sum(fv > 1e-12)),
+                             occupied=int(live.sum()),
+                             occupied_by_population=int(np.sum(fv > 1e-12)),
+                             noise_floor=[float(x) for x in np.asarray(sig).ravel()],
                              targets={k: dict(gamma=v["gamma"], cls=v["cls"],
                                               relative_sigma=v["relative_sigma"])
                                       for k, v in r.targets.items()}))

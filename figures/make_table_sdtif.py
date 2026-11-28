@@ -125,19 +125,29 @@ def main():
     # ------------------------------------------- equilibrium-weighted operator, per node
     w = c["case_A_weighted"]
     rows = [r"\begin{table}[htbp]", r"\centering",
-            r"\caption{The equilibrium-weighted six-by-seven operator on the same grid, from artefact A22. "
-            r"$T_e$ in eV, $n_e$ in m$^{-3}$, occupied the number of stages carrying population. The null "
-            r"space has more than one dimension wherever the weighted columns are rank deficient, so no "
-            r"single vector is printed: the full basis and the projector of every node are in the record.}",
+            r"\caption{The equilibrium-weighted six-by-seven operator on the same grid, from artefact "
+            r"A22, with two decompositions of one matrix. pop is the number of stages whose population "
+            r"exceeds $10^{-12}$ of the total; meas is the number of columns whose emission at the "
+            r"reference scale rises above the per-line noise. $r_{\mathrm{raw}}$ keeps every nonzero "
+            r"column, so on this operator it can and does exceed pop: a column twenty decades under the "
+            r"noise still counts as a column while representing a stage no measurement can see, which is "
+            r"the inconsistency the earlier version of this table carried; $r_{\mathrm{meas}}$ zeroes "
+            r"those columns first and never exceeds meas. The $\Gamma$ columns are computed on the "
+            r"measured operator. The thresholds are $\tau_{\mathrm{num}}=\max(m,n)\epsilon\sigma_1$, "
+            r"never below the differentiation floor, and $\tau_{\mathrm{prac}}=1/\epsilon_{\mathrm{req}}"
+            r"=10$; a node whose thresholds are unordered is refused rather than graded. Every null "
+            r"space here is higher-dimensional, so no single vector is printed: the basis and the "
+            r"projector of each node are in the record.}",
             r"\label{tab:nullspace}", r"\small",
-            r"\begin{tabular}{@{}rrrrrrr@{}}", r"\toprule",
-            r"$T_e$ & $n_e$ & occupied & rank & $\dim\,\mathrm{Null}$ & $\Gamma(N_{\mathrm{tot}})$ & "
-            r"$\Gamma(N_{\mathrm{obs}})$ \\", r"\midrule"]
+            r"\begin{tabular}{@{}rrrrrrrrr@{}}", r"\toprule",
+            r"$T_e$ & $n_e$ & pop & meas & $r_{\mathrm{raw}}$ & $r_{\mathrm{meas}}$ & "
+            r"$\dim\,\mathrm{Null}$ & $\Gamma(N_{\mathrm{tot}})$ & $\Gamma(N_{\mathrm{obs}})$ \\",
+            r"\midrule"]
     for row in w:
-        rows.append(r"%.0f & %.0e & %d & %d & %d & %.3f & %.3f \\"
-                    % (row["te"], row["ne"], row["occupied"], row["rank_num"],
-                       len(row["null_basis"]), row["targets"]["N_tot"]["gamma"],
-                       row["targets"]["N_obs"]["gamma"]))
+        rows.append(r"%.0f & %.0e & %d & %d & %d & %d & %d & %.3f & %.3f \\"
+                    % (row["te"], row["ne"], row["occupied_by_population"], row["occupied"],
+                       row["rank_raw"], row["rank_num"], len(row["null_basis"]),
+                       row["targets"]["N_tot"]["gamma"], row["targets"]["N_obs"]["gamma"]))
     rows += [r"\bottomrule", r"\end{tabular}", r"\end{table}"]
     open(os.path.join(OUT, "table_weighted_nulls.tex"), "w").write("\n".join(rows) + "\n")
 

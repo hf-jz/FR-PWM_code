@@ -36,6 +36,11 @@ def main(sub):
         man["files"] = len(man["entries"])
         if "total_bytes" in man:
             man["total_bytes"] = sum(e["bytes"] for e in man["entries"])
+        gone = [e["path"] for e in man["entries"]
+                if not os.path.exists(os.path.join(ART, e["path"]))]
+        if gone:
+            raise SystemExit("%s lists %d files that are not on disk, first: %s"
+                             % (name, len(gone), gone[:3]))
         with open(p, "w") as f:
             json.dump(man, f, indent=1)
         print("%s: %d entries (%d for %s)" % (name, man["files"], len(rows), sub))

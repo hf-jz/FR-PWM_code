@@ -1,5 +1,5 @@
 {
- "files": 102,
+ "files": 101,
  "entries": [
   {
    "path": "A11_Rollout/t3e4_rollout.json",
@@ -238,8 +238,8 @@
   },
   {
    "path": "A22_SD_TIF/cases.json",
-   "bytes": 72910,
-   "sha256": "f4cf35b1ac1efd0b1be92d34eb856a89d64305cc0c0042857662e83ec13b586e"
+   "bytes": 113319,
+   "sha256": "0783162b64fca56020baeb9c716b7d71a9baa67396994769e7202f83adfc8308"
   },
   {
    "path": "A22_SD_TIF/inputs/README.md",
@@ -298,13 +298,18 @@
   },
   {
    "path": "A22_SD_TIF/state_maps.json",
-   "bytes": 18726,
-   "sha256": "a290fddeae2f82ba11a52ccfa626afdb1634cb9028ca171f98805350d25db891"
+   "bytes": 18880,
+   "sha256": "4f0fafa9ee455b880218e2306c98334294321a9f57f002b1011ce8e9d8dc9b4f"
   },
   {
    "path": "A23_Barrier_Admissibility/admissibility.json",
    "bytes": 698,
    "sha256": "1d812ce2869dac2acac30c04b58755b9ac3a955d202237b6963d12f5cdb0ba9e"
+  },
+  {
+   "path": "A24_Independent_Audit/report.json",
+   "bytes": 36832,
+   "sha256": "1f4ecb1c0115673d4be98bd6f802d9ead71afb0e4b37e32bd75de9ceccac6dbf"
   },
   {
    "path": "A3_A4_Identifiability/ident4/ident4_report.json",
@@ -497,19 +502,10 @@
    "bytes": 225
   },
   {
-   "path": "MANIFEST.sha256",
-   "sha256": "87a10c93cb070e188eb95f66cd2f98f7f605567da8dc78bfab3b4bd83c838b8a",
-   "bytes": 17889
-  },
-  {
-   "path": "manifest.json",
-   "sha256": "114c46abdc097e537758fa06a76f15faea27127aae789d0456b7c8d33ef33ebb",
-   "bytes": 27260
-  },
-  {
    "path": "recomputed_summary.json",
    "sha256": "aad8b01f2b3c22f6faad9cb14d9d60a0b840108284759f18bf160aaf2faead68",
    "bytes": 4720
   }
- ]
+ ],
+ "note": "The two manifest files are the root of trust and are therefore not listed in it; everything else is verified against it."
 }

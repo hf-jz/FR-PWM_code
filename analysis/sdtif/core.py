@@ -141,6 +141,16 @@ def localize(problem, eps_req=0.1, tol_num=None):
     fd = problem.meta.get("fd_rel_change")
     if fd and tol_num is None:
         tol_n = max(tol_n, 100.0 * max(fd) * s1)
+    # The two thresholds must be ordered, or the two subspaces they define are not nested and
+    # P_weak has no meaning: r_prac <= r_struct is a consequence of tau_prac >= tau_num, not an
+    # assumption.  A problem that violates it is refused rather than graded.
+    tol_p = 1.0 / eps_req
+    if tol_p < tol_n:
+        raise ValueError(
+            "thresholds out of order: tau_prac=%.3e < tau_num=%.3e (eps_req=%g, s1=%.3e). "
+            "The practical rank would exceed the structural rank and the weak subspace would "
+            "not be a subset of the resolvable one; sharpen eps_req or relax the numerical "
+            "threshold before grading this node." % (tol_p, tol_n, eps_req, s1))
     r_num = int(np.sum(s_full > tol_n))
     r_prac = int(np.sum(s_full * eps_req > 1.0))              # 1/s_i <= eps_req
     V = Vt.T

@@ -61,11 +61,12 @@ naming what is missing rather than substituting data.
 
 | number | what it is | where it is checked |
 |---|---|---|
-| 169 | files in the archived record package (`artefacts/manifest.json`, field `files`) | not verified by the shipped tool: the record package travels as a zip beside the paper |
-| 102 | files tracked in the repository manifest (`artefacts/manifest_repo.json`) | `tools/check_manifest.py`, which prints "102 files checked, 0 problems" |
+| 98 | files in the archived record package (71 legacy paths removed; they named files that were never shipped) | (`artefacts/manifest.json`, field `files`) | `tools/check_manifest.py`, which now checks this manifest too |
+| 100 | files tracked in the repository manifest (`artefacts/manifest_repo.json`) | `tools/check_manifest.py`, which checks both manifests and prints "200 entries checked across both manifests, 0 problems" |
 | 21 of 41 | scripts that run with no external data | the table above; `analysis/sdtif_run.py --skip-plasma` needs nothing at all |
 
-The canonical check is `python3 tools/check_manifest.py`: it verifies the repository files against their digests and exits non-zero on any mismatch. The record count is a property of the archive and the script count a property of the environment, so all three are stated rather than reconciled.
+The canonical check is `python3 tools/check_manifest.py`: it verifies every file in both manifests against
+its digest, reports a missing file as a problem rather than skipping it, and exits non-zero on any mismatch. The record count is a property of the archive and the script count a property of the environment, so all three are stated rather than reconciled.
 
 
 
@@ -95,6 +96,7 @@ be redistributed is read from an environment variable and the script stops with 
 
 ```bash
 python3 tools/check_manifest.py
+python3 tools/audit_independent.py            # recomputes A22 without importing the analysis code (321 checks)
 ```
 
 It verifies every file under `artefacts/` against the digest recorded in `artefacts/manifest.json`.

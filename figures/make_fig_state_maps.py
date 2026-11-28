@@ -38,11 +38,16 @@ def cell(te, ne):
     ee = plasma.emissivity(te, ne)                     # 6 x 7, line k against stage k+1
     fr = plasma.fractions(te, ne)
     f = np.array([fr[q] for q in range(1, 8)])
+    # the same operator, the same scale and the same noise as case A_weighted, so a value read off
+    # this figure is the value in the table
+    n_ref = np.full(7, plasma.C_FRAC * ne / 7.0)
+    sig_w = plasma.ref_noise(te, ne)
+    live = plasma.measurement_mask(ee * f[None, :], n_ref, sig_w)
     A_un = ee
-    A_w = ee * f[None, :]
+    A_w = (ee * f[None, :]) * live[None, :]
     tg_un = dict(N_tot=(1.0, np.ones(7)), N_obs=(1.0, np.r_[np.ones(6), 0.0]))
-    r_un = localize(Problem(A_un, np.diag(np.full(6, plasma.NOISE ** 2)), np.ones(7), targets=tg_un))
-    r_w = localize(Problem(A_w, np.diag(np.full(6, plasma.NOISE ** 2)), np.ones(7), targets=tg_un))
+    r_un = localize(Problem(A_un, np.diag(sig_w ** 2), n_ref, targets=tg_un))
+    r_w = localize(Problem(A_w, np.diag(sig_w ** 2), n_ref, targets=tg_un))
     # conditional model: concentration and temperature, six lines
     def hh(x):
         tt = np.exp(x[1])
@@ -61,7 +66,7 @@ def cell(te, ne):
     pc = Problem(J, np.diag(sig ** 2), np.array([1.0, 1.0]),
                  targets=dict(c=(plasma.C_FRAC * ne, np.array([plasma.C_FRAC * ne, 0.0]))))
     r_c = localize(pc, eps_req=plasma.EPS_REQ)
-    return dict(occupied=int(np.sum(f > 1e-8)),
+    return dict(occupied=int(live.sum()), rank_raw=None,
                 gap_w=float(r_w.s[3] - r_w.s[4]) if r_w.s.size > 4 else 0.0,
                 gamma_tot_un=float(r_un.targets["N_tot"]["gamma"]),
                 gamma_tot_w=float(r_w.targets["N_tot"]["gamma"]),

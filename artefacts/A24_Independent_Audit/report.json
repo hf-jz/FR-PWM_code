@@ -1,0 +1,1825 @@
+{
+ "nodes": [
+  {
+   "node": "10 eV, 2e+13",
+   "rank": 2,
+   "rank_prac": 2,
+   "nullity": 5,
+   "gamma": {
+    "N_tot": 0.8451542547285166,
+    "N_obs": 0.816496580927726
+   }
+  },
+  {
+   "node": "10 eV, 1e+14",
+   "rank": 2,
+   "rank_prac": 1,
+   "nullity": 5,
+   "gamma": {
+    "N_tot": 0.8451542547285166,
+    "N_obs": 0.816496580927726
+   }
+  },
+  {
+   "node": "15 eV, 2e+13",
+   "rank": 2,
+   "rank_prac": 1,
+   "nullity": 5,
+   "gamma": {
+    "N_tot": 0.8451542547285166,
+    "N_obs": 0.816496580927726
+   }
+  },
+  {
+   "node": "15 eV, 1e+14",
+   "rank": 2,
+   "rank_prac": 1,
+   "nullity": 5,
+   "gamma": {
+    "N_tot": 0.8451542547285166,
+    "N_obs": 0.816496580927726
+   }
+  },
+  {
+   "node": "25 eV, 2e+13",
+   "rank": 1,
+   "rank_prac": 1,
+   "nullity": 6,
+   "gamma": {
+    "N_tot": 0.9258200997725514,
+    "N_obs": 0.9128709291752769
+   }
+  },
+  {
+   "node": "25 eV, 1e+14",
+   "rank": 1,
+   "rank_prac": 1,
+   "nullity": 6,
+   "gamma": {
+    "N_tot": 0.9258200997725515,
+    "N_obs": 0.9128709291752768
+   }
+  },
+  {
+   "node": "30 eV, 2e+13",
+   "rank": 1,
+   "rank_prac": 1,
+   "nullity": 6,
+   "gamma": {
+    "N_tot": 0.9258200997725514,
+    "N_obs": 0.9128709291752769
+   }
+  },
+  {
+   "node": "30 eV, 1e+14",
+   "rank": 1,
+   "rank_prac": 1,
+   "nullity": 6,
+   "gamma": {
+    "N_tot": 0.9258200997725515,
+    "N_obs": 0.9128709291752768
+   }
+  },
+  {
+   "node": "40 eV, 2e+13",
+   "rank": 1,
+   "rank_prac": 1,
+   "nullity": 6,
+   "gamma": {
+    "N_tot": 0.9258200997725514,
+    "N_obs": 0.9128709291752769
+   }
+  },
+  {
+   "node": "40 eV, 1e+14",
+   "rank": 1,
+   "rank_prac": 1,
+   "nullity": 6,
+   "gamma": {
+    "N_tot": 0.9258200997725515,
+    "N_obs": 0.9128709291752768
+   }
+  },
+  {
+   "node": "60 eV, 2e+13",
+   "rank": 2,
+   "rank_prac": 1,
+   "nullity": 5,
+   "gamma": {
+    "N_tot": 0.8451542547285166,
+    "N_obs": 0.816496580927726
+   }
+  },
+  {
+   "node": "60 eV, 1e+14",
+   "rank": 2,
+   "rank_prac": 1,
+   "nullity": 5,
+   "gamma": {
+    "N_tot": 0.8451542547285166,
+    "N_obs": 0.816496580927726
+   }
+  },
+  {
+   "node": "90 eV, 2e+13",
+   "rank": 2,
+   "rank_prac": 1,
+   "nullity": 5,
+   "gamma": {
+    "N_tot": 0.8451542547285166,
+    "N_obs": 0.816496580927726
+   }
+  },
+  {
+   "node": "90 eV, 1e+14",
+   "rank": 2,
+   "rank_prac": 1,
+   "nullity": 5,
+   "gamma": {
+    "N_tot": 0.8451542547285166,
+    "N_obs": 0.816496580927726
+   }
+  },
+  {
+   "node": "130 eV, 2e+13",
+   "rank": 1,
+   "rank_prac": 0,
+   "nullity": 6,
+   "gamma": {
+    "N_tot": 0.9258200997725514,
+    "N_obs": 0.9128709291752769
+   }
+  },
+  {
+   "node": "130 eV, 1e+14",
+   "rank": 1,
+   "rank_prac": 0,
+   "nullity": 6,
+   "gamma": {
+    "N_tot": 0.9258200997725515,
+    "N_obs": 0.9128709291752768
+   }
+  },
+  {
+   "node": "200 eV, 2e+13",
+   "rank": 1,
+   "rank_prac": 0,
+   "nullity": 6,
+   "gamma": {
+    "N_tot": 0.9258200997725514,
+    "N_obs": 0.9128709291752769
+   }
+  },
+  {
+   "node": "200 eV, 1e+14",
+   "rank": 1,
+   "rank_prac": 0,
+   "nullity": 6,
+   "gamma": {
+    "N_tot": 0.9258200997725515,
+    "N_obs": 0.9128709291752768
+   }
+  },
+  {
+   "node": "400 eV, 2e+13",
+   "rank": 0,
+   "rank_prac": 0,
+   "nullity": 7,
+   "gamma": {
+    "N_tot": 1.0,
+    "N_obs": 1.0
+   }
+  },
+  {
+   "node": "400 eV, 1e+14",
+   "rank": 0,
+   "rank_prac": 0,
+   "nullity": 7,
+   "gamma": {
+    "N_tot": 1.0,
+    "N_obs": 1.0
+   }
+  }
+ ],
+ "manifest": {
+  "files": 99,
+  "mismatched": [],
+  "missing": []
+ },
+ "robustness": {
+  "gap": 95.0,
+  "tightest_at": 1.0,
+  "tightest_margin": 1.1026552979783066,
+  "bound_holds_everywhere": true
+ },
+ "checks": [
+  {
+   "check": "manifest.entries",
+   "ok": true,
+   "detail": "99 listed, 99 claimed"
+  },
+  {
+   "check": "manifest.hash_matches",
+   "ok": true,
+   "detail": "mismatched: []"
+  },
+  {
+   "check": "manifest.files_present",
+   "ok": true,
+   "detail": "missing: []"
+  },
+  {
+   "check": "spectra[10 eV, 2e+13]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[10 eV, 2e+13]",
+   "ok": true,
+   "detail": "2 vs stored 2"
+  },
+  {
+   "check": "rank_prac[10 eV, 2e+13]",
+   "ok": true,
+   "detail": "2 vs stored 2"
+  },
+  {
+   "check": "thresholds_ordered[10 eV, 2e+13]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 3.51e-14"
+  },
+  {
+   "check": "occupancy[10 eV, 2e+13]",
+   "ok": true,
+   "detail": "rank 2, occupied 2"
+  },
+  {
+   "check": "nullity[10 eV, 2e+13]",
+   "ok": true,
+   "detail": "5 vs 5 vectors"
+  },
+  {
+   "check": "projector_idempotent[10 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[10 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[10 eV, 2e+13]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 3.510e-14"
+  },
+  {
+   "check": "rank_raw[10 eV, 2e+13]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[10 eV, 2e+13]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[10 eV, 2e+13]",
+   "ok": true,
+   "detail": "0.8451542547 vs stored 0.8451542547"
+  },
+  {
+   "check": "gamma_in_unit[10 eV, 2e+13,N_tot]",
+   "ok": true,
+   "detail": "0.845154"
+  },
+  {
+   "check": "gamma_N_obs[10 eV, 2e+13]",
+   "ok": true,
+   "detail": "0.8164965809 vs stored 0.8164965809"
+  },
+  {
+   "check": "gamma_in_unit[10 eV, 2e+13,N_obs]",
+   "ok": true,
+   "detail": "0.816497"
+  },
+  {
+   "check": "spectra[10 eV, 1e+14]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[10 eV, 1e+14]",
+   "ok": true,
+   "detail": "2 vs stored 2"
+  },
+  {
+   "check": "rank_prac[10 eV, 1e+14]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "thresholds_ordered[10 eV, 1e+14]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 3.63e-14"
+  },
+  {
+   "check": "occupancy[10 eV, 1e+14]",
+   "ok": true,
+   "detail": "rank 2, occupied 2"
+  },
+  {
+   "check": "nullity[10 eV, 1e+14]",
+   "ok": true,
+   "detail": "5 vs 5 vectors"
+  },
+  {
+   "check": "projector_idempotent[10 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[10 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[10 eV, 1e+14]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 3.635e-14"
+  },
+  {
+   "check": "rank_raw[10 eV, 1e+14]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[10 eV, 1e+14]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[10 eV, 1e+14]",
+   "ok": true,
+   "detail": "0.8451542547 vs stored 0.8451542547"
+  },
+  {
+   "check": "gamma_in_unit[10 eV, 1e+14,N_tot]",
+   "ok": true,
+   "detail": "0.845154"
+  },
+  {
+   "check": "gamma_N_obs[10 eV, 1e+14]",
+   "ok": true,
+   "detail": "0.8164965809 vs stored 0.8164965809"
+  },
+  {
+   "check": "gamma_in_unit[10 eV, 1e+14,N_obs]",
+   "ok": true,
+   "detail": "0.816497"
+  },
+  {
+   "check": "spectra[15 eV, 2e+13]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[15 eV, 2e+13]",
+   "ok": true,
+   "detail": "2 vs stored 2"
+  },
+  {
+   "check": "rank_prac[15 eV, 2e+13]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "thresholds_ordered[15 eV, 2e+13]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 5.01e-14"
+  },
+  {
+   "check": "occupancy[15 eV, 2e+13]",
+   "ok": true,
+   "detail": "rank 2, occupied 2"
+  },
+  {
+   "check": "nullity[15 eV, 2e+13]",
+   "ok": true,
+   "detail": "5 vs 5 vectors"
+  },
+  {
+   "check": "projector_idempotent[15 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[15 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[15 eV, 2e+13]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 5.010e-14"
+  },
+  {
+   "check": "rank_raw[15 eV, 2e+13]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[15 eV, 2e+13]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[15 eV, 2e+13]",
+   "ok": true,
+   "detail": "0.8451542547 vs stored 0.8451542547"
+  },
+  {
+   "check": "gamma_in_unit[15 eV, 2e+13,N_tot]",
+   "ok": true,
+   "detail": "0.845154"
+  },
+  {
+   "check": "gamma_N_obs[15 eV, 2e+13]",
+   "ok": true,
+   "detail": "0.8164965809 vs stored 0.8164965809"
+  },
+  {
+   "check": "gamma_in_unit[15 eV, 2e+13,N_obs]",
+   "ok": true,
+   "detail": "0.816497"
+  },
+  {
+   "check": "spectra[15 eV, 1e+14]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[15 eV, 1e+14]",
+   "ok": true,
+   "detail": "2 vs stored 2"
+  },
+  {
+   "check": "rank_prac[15 eV, 1e+14]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "thresholds_ordered[15 eV, 1e+14]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 5.03e-14"
+  },
+  {
+   "check": "occupancy[15 eV, 1e+14]",
+   "ok": true,
+   "detail": "rank 2, occupied 2"
+  },
+  {
+   "check": "nullity[15 eV, 1e+14]",
+   "ok": true,
+   "detail": "5 vs 5 vectors"
+  },
+  {
+   "check": "projector_idempotent[15 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[15 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[15 eV, 1e+14]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 5.025e-14"
+  },
+  {
+   "check": "rank_raw[15 eV, 1e+14]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[15 eV, 1e+14]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[15 eV, 1e+14]",
+   "ok": true,
+   "detail": "0.8451542547 vs stored 0.8451542547"
+  },
+  {
+   "check": "gamma_in_unit[15 eV, 1e+14,N_tot]",
+   "ok": true,
+   "detail": "0.845154"
+  },
+  {
+   "check": "gamma_N_obs[15 eV, 1e+14]",
+   "ok": true,
+   "detail": "0.8164965809 vs stored 0.8164965809"
+  },
+  {
+   "check": "gamma_in_unit[15 eV, 1e+14,N_obs]",
+   "ok": true,
+   "detail": "0.816497"
+  },
+  {
+   "check": "spectra[25 eV, 2e+13]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[25 eV, 2e+13]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "rank_prac[25 eV, 2e+13]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "thresholds_ordered[25 eV, 2e+13]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 5.16e-14"
+  },
+  {
+   "check": "occupancy[25 eV, 2e+13]",
+   "ok": true,
+   "detail": "rank 1, occupied 1"
+  },
+  {
+   "check": "nullity[25 eV, 2e+13]",
+   "ok": true,
+   "detail": "6 vs 6 vectors"
+  },
+  {
+   "check": "projector_idempotent[25 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[25 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[25 eV, 2e+13]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 5.163e-14"
+  },
+  {
+   "check": "rank_raw[25 eV, 2e+13]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[25 eV, 2e+13]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[25 eV, 2e+13]",
+   "ok": true,
+   "detail": "0.9258200998 vs stored 0.9258200998"
+  },
+  {
+   "check": "gamma_in_unit[25 eV, 2e+13,N_tot]",
+   "ok": true,
+   "detail": "0.925820"
+  },
+  {
+   "check": "gamma_N_obs[25 eV, 2e+13]",
+   "ok": true,
+   "detail": "0.9128709292 vs stored 0.9128709292"
+  },
+  {
+   "check": "gamma_in_unit[25 eV, 2e+13,N_obs]",
+   "ok": true,
+   "detail": "0.912871"
+  },
+  {
+   "check": "spectra[25 eV, 1e+14]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[25 eV, 1e+14]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "rank_prac[25 eV, 1e+14]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "thresholds_ordered[25 eV, 1e+14]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 5.16e-14"
+  },
+  {
+   "check": "occupancy[25 eV, 1e+14]",
+   "ok": true,
+   "detail": "rank 1, occupied 1"
+  },
+  {
+   "check": "nullity[25 eV, 1e+14]",
+   "ok": true,
+   "detail": "6 vs 6 vectors"
+  },
+  {
+   "check": "projector_idempotent[25 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[25 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[25 eV, 1e+14]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 5.164e-14"
+  },
+  {
+   "check": "rank_raw[25 eV, 1e+14]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[25 eV, 1e+14]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[25 eV, 1e+14]",
+   "ok": true,
+   "detail": "0.9258200998 vs stored 0.9258200998"
+  },
+  {
+   "check": "gamma_in_unit[25 eV, 1e+14,N_tot]",
+   "ok": true,
+   "detail": "0.925820"
+  },
+  {
+   "check": "gamma_N_obs[25 eV, 1e+14]",
+   "ok": true,
+   "detail": "0.9128709292 vs stored 0.9128709292"
+  },
+  {
+   "check": "gamma_in_unit[25 eV, 1e+14,N_obs]",
+   "ok": true,
+   "detail": "0.912871"
+  },
+  {
+   "check": "spectra[30 eV, 2e+13]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[30 eV, 2e+13]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "rank_prac[30 eV, 2e+13]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "thresholds_ordered[30 eV, 2e+13]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 5.17e-14"
+  },
+  {
+   "check": "occupancy[30 eV, 2e+13]",
+   "ok": true,
+   "detail": "rank 1, occupied 1"
+  },
+  {
+   "check": "nullity[30 eV, 2e+13]",
+   "ok": true,
+   "detail": "6 vs 6 vectors"
+  },
+  {
+   "check": "projector_idempotent[30 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[30 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[30 eV, 2e+13]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 5.170e-14"
+  },
+  {
+   "check": "rank_raw[30 eV, 2e+13]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[30 eV, 2e+13]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[30 eV, 2e+13]",
+   "ok": true,
+   "detail": "0.9258200998 vs stored 0.9258200998"
+  },
+  {
+   "check": "gamma_in_unit[30 eV, 2e+13,N_tot]",
+   "ok": true,
+   "detail": "0.925820"
+  },
+  {
+   "check": "gamma_N_obs[30 eV, 2e+13]",
+   "ok": true,
+   "detail": "0.9128709292 vs stored 0.9128709292"
+  },
+  {
+   "check": "gamma_in_unit[30 eV, 2e+13,N_obs]",
+   "ok": true,
+   "detail": "0.912871"
+  },
+  {
+   "check": "spectra[30 eV, 1e+14]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[30 eV, 1e+14]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "rank_prac[30 eV, 1e+14]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "thresholds_ordered[30 eV, 1e+14]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 5.17e-14"
+  },
+  {
+   "check": "occupancy[30 eV, 1e+14]",
+   "ok": true,
+   "detail": "rank 1, occupied 1"
+  },
+  {
+   "check": "nullity[30 eV, 1e+14]",
+   "ok": true,
+   "detail": "6 vs 6 vectors"
+  },
+  {
+   "check": "projector_idempotent[30 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[30 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[30 eV, 1e+14]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 5.170e-14"
+  },
+  {
+   "check": "rank_raw[30 eV, 1e+14]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[30 eV, 1e+14]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[30 eV, 1e+14]",
+   "ok": true,
+   "detail": "0.9258200998 vs stored 0.9258200998"
+  },
+  {
+   "check": "gamma_in_unit[30 eV, 1e+14,N_tot]",
+   "ok": true,
+   "detail": "0.925820"
+  },
+  {
+   "check": "gamma_N_obs[30 eV, 1e+14]",
+   "ok": true,
+   "detail": "0.9128709292 vs stored 0.9128709292"
+  },
+  {
+   "check": "gamma_in_unit[30 eV, 1e+14,N_obs]",
+   "ok": true,
+   "detail": "0.912871"
+  },
+  {
+   "check": "spectra[40 eV, 2e+13]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[40 eV, 2e+13]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "rank_prac[40 eV, 2e+13]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "thresholds_ordered[40 eV, 2e+13]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 5.13e-14"
+  },
+  {
+   "check": "occupancy[40 eV, 2e+13]",
+   "ok": true,
+   "detail": "rank 1, occupied 1"
+  },
+  {
+   "check": "nullity[40 eV, 2e+13]",
+   "ok": true,
+   "detail": "6 vs 6 vectors"
+  },
+  {
+   "check": "projector_idempotent[40 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[40 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[40 eV, 2e+13]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 5.128e-14"
+  },
+  {
+   "check": "rank_raw[40 eV, 2e+13]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[40 eV, 2e+13]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[40 eV, 2e+13]",
+   "ok": true,
+   "detail": "0.9258200998 vs stored 0.9258200998"
+  },
+  {
+   "check": "gamma_in_unit[40 eV, 2e+13,N_tot]",
+   "ok": true,
+   "detail": "0.925820"
+  },
+  {
+   "check": "gamma_N_obs[40 eV, 2e+13]",
+   "ok": true,
+   "detail": "0.9128709292 vs stored 0.9128709292"
+  },
+  {
+   "check": "gamma_in_unit[40 eV, 2e+13,N_obs]",
+   "ok": true,
+   "detail": "0.912871"
+  },
+  {
+   "check": "spectra[40 eV, 1e+14]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[40 eV, 1e+14]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "rank_prac[40 eV, 1e+14]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "thresholds_ordered[40 eV, 1e+14]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 5.12e-14"
+  },
+  {
+   "check": "occupancy[40 eV, 1e+14]",
+   "ok": true,
+   "detail": "rank 1, occupied 1"
+  },
+  {
+   "check": "nullity[40 eV, 1e+14]",
+   "ok": true,
+   "detail": "6 vs 6 vectors"
+  },
+  {
+   "check": "projector_idempotent[40 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[40 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[40 eV, 1e+14]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 5.124e-14"
+  },
+  {
+   "check": "rank_raw[40 eV, 1e+14]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[40 eV, 1e+14]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[40 eV, 1e+14]",
+   "ok": true,
+   "detail": "0.9258200998 vs stored 0.9258200998"
+  },
+  {
+   "check": "gamma_in_unit[40 eV, 1e+14,N_tot]",
+   "ok": true,
+   "detail": "0.925820"
+  },
+  {
+   "check": "gamma_N_obs[40 eV, 1e+14]",
+   "ok": true,
+   "detail": "0.9128709292 vs stored 0.9128709292"
+  },
+  {
+   "check": "gamma_in_unit[40 eV, 1e+14,N_obs]",
+   "ok": true,
+   "detail": "0.912871"
+  },
+  {
+   "check": "spectra[60 eV, 2e+13]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[60 eV, 2e+13]",
+   "ok": true,
+   "detail": "2 vs stored 2"
+  },
+  {
+   "check": "rank_prac[60 eV, 2e+13]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "thresholds_ordered[60 eV, 2e+13]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 3.88e-14"
+  },
+  {
+   "check": "occupancy[60 eV, 2e+13]",
+   "ok": true,
+   "detail": "rank 2, occupied 2"
+  },
+  {
+   "check": "nullity[60 eV, 2e+13]",
+   "ok": true,
+   "detail": "5 vs 5 vectors"
+  },
+  {
+   "check": "projector_idempotent[60 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[60 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[60 eV, 2e+13]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 3.877e-14"
+  },
+  {
+   "check": "rank_raw[60 eV, 2e+13]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[60 eV, 2e+13]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[60 eV, 2e+13]",
+   "ok": true,
+   "detail": "0.8451542547 vs stored 0.8451542547"
+  },
+  {
+   "check": "gamma_in_unit[60 eV, 2e+13,N_tot]",
+   "ok": true,
+   "detail": "0.845154"
+  },
+  {
+   "check": "gamma_N_obs[60 eV, 2e+13]",
+   "ok": true,
+   "detail": "0.8164965809 vs stored 0.8164965809"
+  },
+  {
+   "check": "gamma_in_unit[60 eV, 2e+13,N_obs]",
+   "ok": true,
+   "detail": "0.816497"
+  },
+  {
+   "check": "spectra[60 eV, 1e+14]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[60 eV, 1e+14]",
+   "ok": true,
+   "detail": "2 vs stored 2"
+  },
+  {
+   "check": "rank_prac[60 eV, 1e+14]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "thresholds_ordered[60 eV, 1e+14]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 3.80e-14"
+  },
+  {
+   "check": "occupancy[60 eV, 1e+14]",
+   "ok": true,
+   "detail": "rank 2, occupied 2"
+  },
+  {
+   "check": "nullity[60 eV, 1e+14]",
+   "ok": true,
+   "detail": "5 vs 5 vectors"
+  },
+  {
+   "check": "projector_idempotent[60 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[60 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[60 eV, 1e+14]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 3.802e-14"
+  },
+  {
+   "check": "rank_raw[60 eV, 1e+14]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[60 eV, 1e+14]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[60 eV, 1e+14]",
+   "ok": true,
+   "detail": "0.8451542547 vs stored 0.8451542547"
+  },
+  {
+   "check": "gamma_in_unit[60 eV, 1e+14,N_tot]",
+   "ok": true,
+   "detail": "0.845154"
+  },
+  {
+   "check": "gamma_N_obs[60 eV, 1e+14]",
+   "ok": true,
+   "detail": "0.8164965809 vs stored 0.8164965809"
+  },
+  {
+   "check": "gamma_in_unit[60 eV, 1e+14,N_obs]",
+   "ok": true,
+   "detail": "0.816497"
+  },
+  {
+   "check": "spectra[90 eV, 2e+13]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[90 eV, 2e+13]",
+   "ok": true,
+   "detail": "2 vs stored 2"
+  },
+  {
+   "check": "rank_prac[90 eV, 2e+13]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "thresholds_ordered[90 eV, 2e+13]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 3.07e-14"
+  },
+  {
+   "check": "occupancy[90 eV, 2e+13]",
+   "ok": true,
+   "detail": "rank 2, occupied 2"
+  },
+  {
+   "check": "nullity[90 eV, 2e+13]",
+   "ok": true,
+   "detail": "5 vs 5 vectors"
+  },
+  {
+   "check": "projector_idempotent[90 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[90 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[90 eV, 2e+13]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 3.072e-14"
+  },
+  {
+   "check": "rank_raw[90 eV, 2e+13]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[90 eV, 2e+13]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[90 eV, 2e+13]",
+   "ok": true,
+   "detail": "0.8451542547 vs stored 0.8451542547"
+  },
+  {
+   "check": "gamma_in_unit[90 eV, 2e+13,N_tot]",
+   "ok": true,
+   "detail": "0.845154"
+  },
+  {
+   "check": "gamma_N_obs[90 eV, 2e+13]",
+   "ok": true,
+   "detail": "0.8164965809 vs stored 0.8164965809"
+  },
+  {
+   "check": "gamma_in_unit[90 eV, 2e+13,N_obs]",
+   "ok": true,
+   "detail": "0.816497"
+  },
+  {
+   "check": "spectra[90 eV, 1e+14]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[90 eV, 1e+14]",
+   "ok": true,
+   "detail": "2 vs stored 2"
+  },
+  {
+   "check": "rank_prac[90 eV, 1e+14]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "thresholds_ordered[90 eV, 1e+14]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 3.09e-14"
+  },
+  {
+   "check": "occupancy[90 eV, 1e+14]",
+   "ok": true,
+   "detail": "rank 2, occupied 2"
+  },
+  {
+   "check": "nullity[90 eV, 1e+14]",
+   "ok": true,
+   "detail": "5 vs 5 vectors"
+  },
+  {
+   "check": "projector_idempotent[90 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[90 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[90 eV, 1e+14]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 3.094e-14"
+  },
+  {
+   "check": "rank_raw[90 eV, 1e+14]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[90 eV, 1e+14]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[90 eV, 1e+14]",
+   "ok": true,
+   "detail": "0.8451542547 vs stored 0.8451542547"
+  },
+  {
+   "check": "gamma_in_unit[90 eV, 1e+14,N_tot]",
+   "ok": true,
+   "detail": "0.845154"
+  },
+  {
+   "check": "gamma_N_obs[90 eV, 1e+14]",
+   "ok": true,
+   "detail": "0.8164965809 vs stored 0.8164965809"
+  },
+  {
+   "check": "gamma_in_unit[90 eV, 1e+14,N_obs]",
+   "ok": true,
+   "detail": "0.816497"
+  },
+  {
+   "check": "spectra[130 eV, 2e+13]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[130 eV, 2e+13]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "rank_prac[130 eV, 2e+13]",
+   "ok": true,
+   "detail": "0 vs stored 0"
+  },
+  {
+   "check": "thresholds_ordered[130 eV, 2e+13]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 1.32e-14"
+  },
+  {
+   "check": "occupancy[130 eV, 2e+13]",
+   "ok": true,
+   "detail": "rank 1, occupied 1"
+  },
+  {
+   "check": "nullity[130 eV, 2e+13]",
+   "ok": true,
+   "detail": "6 vs 6 vectors"
+  },
+  {
+   "check": "projector_idempotent[130 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[130 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[130 eV, 2e+13]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 1.319e-14"
+  },
+  {
+   "check": "rank_raw[130 eV, 2e+13]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[130 eV, 2e+13]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[130 eV, 2e+13]",
+   "ok": true,
+   "detail": "0.9258200998 vs stored 0.9258200998"
+  },
+  {
+   "check": "gamma_in_unit[130 eV, 2e+13,N_tot]",
+   "ok": true,
+   "detail": "0.925820"
+  },
+  {
+   "check": "gamma_N_obs[130 eV, 2e+13]",
+   "ok": true,
+   "detail": "0.9128709292 vs stored 0.9128709292"
+  },
+  {
+   "check": "gamma_in_unit[130 eV, 2e+13,N_obs]",
+   "ok": true,
+   "detail": "0.912871"
+  },
+  {
+   "check": "spectra[130 eV, 1e+14]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[130 eV, 1e+14]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "rank_prac[130 eV, 1e+14]",
+   "ok": true,
+   "detail": "0 vs stored 0"
+  },
+  {
+   "check": "thresholds_ordered[130 eV, 1e+14]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 1.29e-14"
+  },
+  {
+   "check": "occupancy[130 eV, 1e+14]",
+   "ok": true,
+   "detail": "rank 1, occupied 1"
+  },
+  {
+   "check": "nullity[130 eV, 1e+14]",
+   "ok": true,
+   "detail": "6 vs 6 vectors"
+  },
+  {
+   "check": "projector_idempotent[130 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[130 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[130 eV, 1e+14]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 1.292e-14"
+  },
+  {
+   "check": "rank_raw[130 eV, 1e+14]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[130 eV, 1e+14]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[130 eV, 1e+14]",
+   "ok": true,
+   "detail": "0.9258200998 vs stored 0.9258200998"
+  },
+  {
+   "check": "gamma_in_unit[130 eV, 1e+14,N_tot]",
+   "ok": true,
+   "detail": "0.925820"
+  },
+  {
+   "check": "gamma_N_obs[130 eV, 1e+14]",
+   "ok": true,
+   "detail": "0.9128709292 vs stored 0.9128709292"
+  },
+  {
+   "check": "gamma_in_unit[130 eV, 1e+14,N_obs]",
+   "ok": true,
+   "detail": "0.912871"
+  },
+  {
+   "check": "spectra[200 eV, 2e+13]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[200 eV, 2e+13]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "rank_prac[200 eV, 2e+13]",
+   "ok": true,
+   "detail": "0 vs stored 0"
+  },
+  {
+   "check": "thresholds_ordered[200 eV, 2e+13]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 2.75e-15"
+  },
+  {
+   "check": "occupancy[200 eV, 2e+13]",
+   "ok": true,
+   "detail": "rank 1, occupied 1"
+  },
+  {
+   "check": "nullity[200 eV, 2e+13]",
+   "ok": true,
+   "detail": "6 vs 6 vectors"
+  },
+  {
+   "check": "projector_idempotent[200 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[200 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[200 eV, 2e+13]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 2.753e-15"
+  },
+  {
+   "check": "rank_raw[200 eV, 2e+13]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[200 eV, 2e+13]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[200 eV, 2e+13]",
+   "ok": true,
+   "detail": "0.9258200998 vs stored 0.9258200998"
+  },
+  {
+   "check": "gamma_in_unit[200 eV, 2e+13,N_tot]",
+   "ok": true,
+   "detail": "0.925820"
+  },
+  {
+   "check": "gamma_N_obs[200 eV, 2e+13]",
+   "ok": true,
+   "detail": "0.9128709292 vs stored 0.9128709292"
+  },
+  {
+   "check": "gamma_in_unit[200 eV, 2e+13,N_obs]",
+   "ok": true,
+   "detail": "0.912871"
+  },
+  {
+   "check": "spectra[200 eV, 1e+14]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[200 eV, 1e+14]",
+   "ok": true,
+   "detail": "1 vs stored 1"
+  },
+  {
+   "check": "rank_prac[200 eV, 1e+14]",
+   "ok": true,
+   "detail": "0 vs stored 0"
+  },
+  {
+   "check": "thresholds_ordered[200 eV, 1e+14]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 2.70e-15"
+  },
+  {
+   "check": "occupancy[200 eV, 1e+14]",
+   "ok": true,
+   "detail": "rank 1, occupied 1"
+  },
+  {
+   "check": "nullity[200 eV, 1e+14]",
+   "ok": true,
+   "detail": "6 vs 6 vectors"
+  },
+  {
+   "check": "projector_idempotent[200 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[200 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[200 eV, 1e+14]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 2.702e-15"
+  },
+  {
+   "check": "rank_raw[200 eV, 1e+14]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[200 eV, 1e+14]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[200 eV, 1e+14]",
+   "ok": true,
+   "detail": "0.9258200998 vs stored 0.9258200998"
+  },
+  {
+   "check": "gamma_in_unit[200 eV, 1e+14,N_tot]",
+   "ok": true,
+   "detail": "0.925820"
+  },
+  {
+   "check": "gamma_N_obs[200 eV, 1e+14]",
+   "ok": true,
+   "detail": "0.9128709292 vs stored 0.9128709292"
+  },
+  {
+   "check": "gamma_in_unit[200 eV, 1e+14,N_obs]",
+   "ok": true,
+   "detail": "0.912871"
+  },
+  {
+   "check": "spectra[400 eV, 2e+13]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[400 eV, 2e+13]",
+   "ok": true,
+   "detail": "0 vs stored 0"
+  },
+  {
+   "check": "rank_prac[400 eV, 2e+13]",
+   "ok": true,
+   "detail": "0 vs stored 0"
+  },
+  {
+   "check": "thresholds_ordered[400 eV, 2e+13]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 0.00e+00"
+  },
+  {
+   "check": "occupancy[400 eV, 2e+13]",
+   "ok": true,
+   "detail": "rank 0, occupied 0"
+  },
+  {
+   "check": "nullity[400 eV, 2e+13]",
+   "ok": true,
+   "detail": "7 vs 7 vectors"
+  },
+  {
+   "check": "projector_idempotent[400 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[400 eV, 2e+13]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[400 eV, 2e+13]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 0.000e+00"
+  },
+  {
+   "check": "rank_raw[400 eV, 2e+13]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[400 eV, 2e+13]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[400 eV, 2e+13]",
+   "ok": true,
+   "detail": "1.0000000000 vs stored 1.0000000000"
+  },
+  {
+   "check": "gamma_in_unit[400 eV, 2e+13,N_tot]",
+   "ok": true,
+   "detail": "1.000000"
+  },
+  {
+   "check": "gamma_N_obs[400 eV, 2e+13]",
+   "ok": true,
+   "detail": "1.0000000000 vs stored 1.0000000000"
+  },
+  {
+   "check": "gamma_in_unit[400 eV, 2e+13,N_obs]",
+   "ok": true,
+   "detail": "1.000000"
+  },
+  {
+   "check": "spectra[400 eV, 1e+14]",
+   "ok": true,
+   "detail": "max rel diff 0.00e+00"
+  },
+  {
+   "check": "rank_num[400 eV, 1e+14]",
+   "ok": true,
+   "detail": "0 vs stored 0"
+  },
+  {
+   "check": "rank_prac[400 eV, 1e+14]",
+   "ok": true,
+   "detail": "0 vs stored 0"
+  },
+  {
+   "check": "thresholds_ordered[400 eV, 1e+14]",
+   "ok": true,
+   "detail": "tau_prac 1.00e+01, tau_num 0.00e+00"
+  },
+  {
+   "check": "occupancy[400 eV, 1e+14]",
+   "ok": true,
+   "detail": "rank 0, occupied 0"
+  },
+  {
+   "check": "nullity[400 eV, 1e+14]",
+   "ok": true,
+   "detail": "7 vs 7 vectors"
+  },
+  {
+   "check": "projector_idempotent[400 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_symmetric[400 eV, 1e+14]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "projector_annihilates[400 eV, 1e+14]",
+   "ok": true,
+   "detail": "||J P0|| = 0.000e+00, tau_num 0.000e+00"
+  },
+  {
+   "check": "rank_raw[400 eV, 1e+14]",
+   "ok": true,
+   "detail": "6 vs stored 6"
+  },
+  {
+   "check": "raw_exceeds_occupied_flag[400 eV, 1e+14]",
+   "ok": true,
+   "detail": "flag disagrees with the numbers"
+  },
+  {
+   "check": "gamma_N_tot[400 eV, 1e+14]",
+   "ok": true,
+   "detail": "1.0000000000 vs stored 1.0000000000"
+  },
+  {
+   "check": "gamma_in_unit[400 eV, 1e+14,N_tot]",
+   "ok": true,
+   "detail": "1.000000"
+  },
+  {
+   "check": "gamma_N_obs[400 eV, 1e+14]",
+   "ok": true,
+   "detail": "1.0000000000 vs stored 1.0000000000"
+  },
+  {
+   "check": "gamma_in_unit[400 eV, 1e+14,N_obs]",
+   "ok": true,
+   "detail": "1.000000"
+  },
+  {
+   "check": "nodes_audited",
+   "ok": true,
+   "detail": "20 nodes"
+  },
+  {
+   "check": "dk_recompute[delta=1e-05]",
+   "ok": true,
+   "detail": "1.052632e-07 vs 1.052632e-07"
+  },
+  {
+   "check": "dk_holds[delta=1e-05]",
+   "ok": true,
+   "detail": "drift 8.0912e-08, bound 1.0526e-07"
+  },
+  {
+   "check": "dk_recompute[delta=1e-04]",
+   "ok": true,
+   "detail": "1.052632e-06 vs 1.052632e-06"
+  },
+  {
+   "check": "dk_holds[delta=1e-04]",
+   "ok": true,
+   "detail": "drift 8.9740e-07, bound 1.0526e-06"
+  },
+  {
+   "check": "dk_recompute[delta=1e-03]",
+   "ok": true,
+   "detail": "1.052632e-05 vs 1.052632e-05"
+  },
+  {
+   "check": "dk_holds[delta=1e-03]",
+   "ok": true,
+   "detail": "drift 6.4770e-06, bound 1.0526e-05"
+  },
+  {
+   "check": "dk_recompute[delta=1e-02]",
+   "ok": true,
+   "detail": "1.052632e-04 vs 1.052632e-04"
+  },
+  {
+   "check": "dk_holds[delta=1e-02]",
+   "ok": true,
+   "detail": "drift 5.9510e-05, bound 1.0526e-04"
+  },
+  {
+   "check": "dk_recompute[delta=1e-01]",
+   "ok": true,
+   "detail": "1.052632e-03 vs 1.052632e-03"
+  },
+  {
+   "check": "dk_holds[delta=1e-01]",
+   "ok": true,
+   "detail": "drift 7.5051e-04, bound 1.0526e-03"
+  },
+  {
+   "check": "dk_recompute[delta=5e-01]",
+   "ok": true,
+   "detail": "5.263158e-03 vs 5.263158e-03"
+  },
+  {
+   "check": "dk_holds[delta=5e-01]",
+   "ok": true,
+   "detail": "drift 4.0041e-03, bound 5.2632e-03"
+  },
+  {
+   "check": "dk_recompute[delta=1e+00]",
+   "ok": true,
+   "detail": "1.052632e-02 vs 1.052632e-02"
+  },
+  {
+   "check": "dk_holds[delta=1e+00]",
+   "ok": true,
+   "detail": "drift 9.5463e-03, bound 1.0526e-02"
+  },
+  {
+   "check": "dk_recompute[delta=2e+00]",
+   "ok": true,
+   "detail": "2.105263e-02 vs 2.105263e-02"
+  },
+  {
+   "check": "dk_holds[delta=2e+00]",
+   "ok": true,
+   "detail": "drift 1.7915e-02, bound 2.1053e-02"
+  },
+  {
+   "check": "dk_rank_preserved",
+   "ok": true,
+   "detail": "the bound is only stated where the dimension is unchanged"
+  }
+ ],
+ "n_checks": 321,
+ "n_failed": 0,
+ "failed": []
+}
